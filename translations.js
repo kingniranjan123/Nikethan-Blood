@@ -1,4 +1,4 @@
-﻿const TRANSLATIONS = {
+const TRANSLATIONS = {
   ta: {
     navTagline:"இரத்த பரிசோதனை நிலையம் — பேராவூரணி",
     navPackages:"தொகுப்புகள்", navServices:"சேவைகள்", navPrices:"விலைகள்", navContact:"தொடர்பு",
@@ -39,7 +39,23 @@
     loginLabel:"கடவுச்சொல்", loginPlaceholder:"கடவுச்சொல்லை உள்ளிடவும்...",
     loginError:"தவறான கடவுச்சொல். மீண்டும் முயற்சிக்கவும்.", loginBtn:"டாஷ்போர்டை அணுகவும் →",
     genderBoth:"👥 பொது", genderMale:"♂ ஆண்", genderFemale:"♀ பெண்",
-    colAddress:"முகவரி", colStatus:"நிலை", colActions:"செயல்கள்", colDate:"தேதி", colName:"பெயர்", colAge:"வயது", colGender:"பாலினம்", colPhone:"தொலைபேசி", colPackage:"தொகுப்பு"
+    colAddress:"முகவரி", colStatus:"நிலை", colActions:"செயல்கள்", colDate:"தேதி", colName:"பெயர்", colAge:"வயது", colGender:"பாலினம்", colPhone:"தொலைபேசி", colPackage:"தொகுப்பு",
+    heroStat1: "வாடிக்கையாளர்கள்", heroStat2: "சேவை பகுதி", heroStat3: "அறிக்கை வழங்கல்",
+    whyTitle: "ஏன் ஸ்ரீ நீவி லேப்?", whyBadge: "நம்பகமானது",
+    whyS1L1: "சேவை வழங்கிய நோயாளிகள் — சமூகத்தின் நம்பிக்கை", whyS1V1: "775+ நோயாளிகள்",
+    whyS1L2: "இலவச வீட்டு மாதிரி சேகரிப்பு", whyS1V2: "பேராவூரணி & 20கி.மீ சுற்றுவட்டம்",
+    whyS2L1: "விரைவான & துல்லியமான அறிக்கைகள்", whyS2V1: "24 மணி நேரத்தில் வழங்கப்படுகிறது",
+    whyS2L2: "அரசு சான்றிதழ் பெற்ற தரம்", whyS2V2: "NABL அங்கீகரிக்கப்பட்ட ஆய்வகம்",
+    whyS3L1: "மலிவான சுகாதார தொகுப்புகள்", whyS3V1: "வெறும் ₹499 முதல்",
+    whyS3L2: "100% பாதுகாப்பான & இரகசியமான", whyS3V2: "WhatsApp-ல் டிஜிட்டல் அறிக்கைகள்",
+    enqLabel: "விரைவான விசாரணை", enqTitle1: "முன்பதிவு செய்ய ", enqTitle2: "இலவச ஆலோசனை",
+    enqDesc: "உங்கள் விவரங்களை விடுங்கள், எங்கள் குழு 30 நிமிடங்களில் உங்களை அழைக்கும்.",
+    enqSuccessTitle: "விசாரணை சமர்ப்பிக்கப்பட்டது!", enqSuccessDesc: "எங்கள் குழு உங்களை விரைவில் தொடர்பு கொள்ளும். நன்றி!",
+    enqSubmitAnother: "மற்றொன்றை சமர்ப்பிக்கவும்", enqNameLabel: "முழு பெயர்",
+    enqNamePlaceholder: "உங்கள் முழு பெயரை உள்ளிடவும்", enqNameErr: "தயவுசெய்து உங்கள் முழு பெயரை உள்ளிடவும் (குறைந்தபட்சம் 2 எழுத்துக்கள்).",
+    enqPhoneLabel: "தொலைபேசி எண்", enqPhonePlaceholder: "10 இலக்க மொபைல் எண் (உதாரணம்: 9700200044)",
+    enqPhoneErr: "சரியான 10 இலக்க இந்திய மொபைல் எண்ணை உள்ளிடவும்.", enqSubmit: "விசாரணையை சமர்ப்பிக்கவும்",
+    enqPrivacy: "உங்கள் தகவல்கள் முழுமையாக பாதுகாப்பானவை மற்றும் இரகசியமானவை.", heroBtnEnq: "விசாரணை அனுப்பவும்"
   },
   en: {
     navTagline:"Blood Testing Lab — Peravurani",
@@ -81,7 +97,23 @@
     loginLabel:"Password", loginPlaceholder:"Enter password...",
     loginError:"Incorrect password. Please try again.", loginBtn:"Access Dashboard →",
     genderBoth:"👥 Unisex", genderMale:"♂ Male", genderFemale:"♀ Female",
-    colAddress:"Address", colStatus:"Status", colActions:"Actions", colDate:"Date", colName:"Name", colAge:"Age", colGender:"Gender", colPhone:"Phone", colPackage:"Package"
+    colAddress:"Address", colStatus:"Status", colActions:"Actions", colDate:"Date", colName:"Name", colAge:"Age", colGender:"Gender", colPhone:"Phone", colPackage:"Package",
+    heroStat1: "Clients Served", heroStat2: "Home Collection Area", heroStat3: "Report Delivery",
+    whyTitle: "Why Choose Sri Neevi Lab?", whyBadge: "Trusted",
+    whyS1L1: "Patients Served — Community Trusted", whyS1V1: "775+ Patients",
+    whyS1L2: "Free Home Sample Collection", whyS1V2: "Peravurani & 20km Area",
+    whyS2L1: "Fast & Accurate Reports", whyS2V1: "Delivered in 24 Hours",
+    whyS2L2: "Government Certified Quality", whyS2V2: "NABL Accredited Lab",
+    whyS3L1: "Affordable Health Packages", whyS3V1: "Starting ₹499 Only",
+    whyS3L2: "100% Safe & Confidential", whyS3V2: "Digital Reports on WhatsApp",
+    enqLabel: "QUICK ENQUIRY", enqTitle1: "Book a ", enqTitle2: "Free Consultation",
+    enqDesc: "Leave your details and our team will call you back within 30 minutes.",
+    enqSuccessTitle: "Enquiry Submitted!", enqSuccessDesc: "Our team will contact you shortly. Thank you!",
+    enqSubmitAnother: "Submit Another", enqNameLabel: "Full Name",
+    enqNamePlaceholder: "Enter your full name", enqNameErr: "Please enter your full name (at least 2 characters).",
+    enqPhoneLabel: "Phone Number", enqPhonePlaceholder: "10-digit mobile number (e.g. 9700200044)",
+    enqPhoneErr: "Please enter a valid 10-digit Indian mobile number.", enqSubmit: "Submit Enquiry",
+    enqPrivacy: "Your information is completely private and secure.", heroBtnEnq: "Send Enquiry"
   },
   hi: {
     navTagline:"रक्त परीक्षण प्रयोगशाला — पेरावुरानी",
@@ -123,6 +155,22 @@
     loginLabel:"पासवर्ड", loginPlaceholder:"पासवर्ड दर्ज करें...",
     loginError:"गलत पासवर्ड। कृपया पुनः प्रयास करें।", loginBtn:"डैशबोर्ड एक्सेस करें →",
     genderBoth:"👥 यूनिसेक्स", genderMale:"♂ पुरुष", genderFemale:"♀ महिला",
-    colAddress:"पता", colStatus:"स्थिति", colActions:"कार्रवाई", colDate:"तारीख", colName:"नाम", colAge:"आयु", colGender:"लिंग", colPhone:"फोन", colPackage:"पैकेज"
+    colAddress:"पता", colStatus:"स्थिति", colActions:"कार्रवाई", colDate:"तारीख", colName:"नाम", colAge:"आयु", colGender:"लिंग", colPhone:"फोन", colPackage:"पैकेज",
+    heroStat1: "ग्राहक", heroStat2: "सेवा क्षेत्र", heroStat3: "रिपोर्ट वितरण",
+    whyTitle: "श्री नीवी लैब क्यों?", whyBadge: "विश्वसनीय",
+    whyS1L1: "सेवा प्राप्त मरीज — समुदाय का विश्वास", whyS1V1: "775+ मरीज",
+    whyS1L2: "मुफ्त घर पर नमूना संग्रह", whyS1V2: "पेरावुरानी और 20किमी क्षेत्र",
+    whyS2L1: "तेज़ और सटीक रिपोर्ट", whyS2V1: "24 घंटे में वितरण",
+    whyS2L2: "सरकार द्वारा प्रमाणित गुणवत्ता", whyS2V2: "NABL मान्यता प्राप्त लैब",
+    whyS3L1: "किफायती स्वास्थ्य पैकेज", whyS3V1: "सिर्फ ₹499 से शुरू",
+    whyS3L2: "100% सुरक्षित और गोपनीय", whyS3V2: "WhatsApp पर डिजिटल रिपोर्ट",
+    enqLabel: "त्वरित पूछताछ", enqTitle1: "बुक करें ", enqTitle2: "मुफ्त परामर्श",
+    enqDesc: "अपना विवरण छोड़ें और हमारी टीम 30 मिनट के भीतर आपको कॉल करेगी।",
+    enqSuccessTitle: "पूछताछ जमा की गई!", enqSuccessDesc: "हमारी टीम जल्द ही आपसे संपर्क करेगी। धन्यवाद!",
+    enqSubmitAnother: "एक और जमा करें", enqNameLabel: "पूरा नाम",
+    enqNamePlaceholder: "अपना पूरा नाम दर्ज करें", enqNameErr: "कृपया अपना पूरा नाम दर्ज करें (कम से कम 2 अक्षर)।",
+    enqPhoneLabel: "फ़ोन नंबर", enqPhonePlaceholder: "10 अंकों का मोबाइल नंबर (उदाहरण: 9700200044)",
+    enqPhoneErr: "कृपया एक वैध 10 अंकों का भारतीय मोबाइल नंबर दर्ज करें।", enqSubmit: "पूछताछ जमा करें",
+    enqPrivacy: "आपकी जानकारी पूरी तरह से निजी और सुरक्षित है।", heroBtnEnq: "पूछताछ भेजें"
   }
 };

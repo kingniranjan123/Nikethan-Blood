@@ -311,6 +311,58 @@
         </div>
       </div>
 
+      <!-- ═══════════════════════════════ PAGE: ENQUIRIES ═══════════════════════════════ -->
+      <div class="page" id="page-enquiries">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
+          <div>
+            <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#128221; Customer Enquiries</h2>
+            <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Submitted from the website contact form</p>
+          </div>
+          <div style="display:flex;gap:.75rem">
+            <button class="btn btn-ghost" id="clearEnquiriesBtn" style="font-size:.85rem">&#128465; Clear All</button>
+            <button class="btn btn-primary" id="exportEnquiriesBtn" style="font-size:.85rem">&#8595; Export CSV</button>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+          <div class="stat-card" style="min-width:140px">
+            <div class="stat-card-icon">&#128221;</div>
+            <div class="stat-card-label">Total Enquiries</div>
+            <div class="stat-card-value" id="enqTotal">0</div>
+          </div>
+          <div class="stat-card" style="min-width:140px">
+            <div class="stat-card-icon">&#128308;</div>
+            <div class="stat-card-label">New (Unread)</div>
+            <div class="stat-card-value" id="enqNew" style="color:#dc2626">0</div>
+          </div>
+          <div class="stat-card" style="min-width:140px">
+            <div class="stat-card-icon">&#128202;</div>
+            <div class="stat-card-label">Today</div>
+            <div class="stat-card-value" id="enqToday">0</div>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+          <table class="data-table" style="width:100%">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Date &amp; Time</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="enquiriesTableBody">
+              <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet. They will appear here when customers submit the form.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
     </div><!-- /content-area -->
   </div><!-- /main-content -->
 </div><!-- /admin-layout -->
@@ -408,58 +460,6 @@
       <button class="btn btn-primary" style="flex:1" id="savePkgBtn">Save Package</button>
       <button class="btn btn-ghost" onclick="closePkgModal()">Cancel</button>
     </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════ PAGE: ENQUIRIES ═══════════════════════════════ -->
-<div class="page" id="page-enquiries">
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
-    <div>
-      <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#128221; Customer Enquiries</h2>
-      <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Submitted from the website contact form</p>
-    </div>
-    <div style="display:flex;gap:.75rem">
-      <button class="btn btn-ghost" id="clearEnquiriesBtn" style="font-size:.85rem">&#128465; Clear All</button>
-      <button class="btn btn-primary" id="exportEnquiriesBtn" style="font-size:.85rem">&#8595; Export CSV</button>
-    </div>
-  </div>
-
-  <!-- Stats row -->
-  <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
-    <div class="stat-card" style="min-width:140px">
-      <div class="stat-card-icon">&#128221;</div>
-      <div class="stat-card-label">Total Enquiries</div>
-      <div class="stat-card-value" id="enqTotal">0</div>
-    </div>
-    <div class="stat-card" style="min-width:140px">
-      <div class="stat-card-icon">&#128308;</div>
-      <div class="stat-card-label">New (Unread)</div>
-      <div class="stat-card-value" id="enqNew" style="color:#dc2626">0</div>
-    </div>
-    <div class="stat-card" style="min-width:140px">
-      <div class="stat-card-icon">&#128202;</div>
-      <div class="stat-card-label">Today</div>
-      <div class="stat-card-value" id="enqToday">0</div>
-    </div>
-  </div>
-
-  <!-- Table -->
-  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
-    <table class="data-table" style="width:100%">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Phone</th>
-          <th>Date &amp; Time</th>
-          <th>Status</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="enquiriesTableBody">
-        <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet. They will appear here when customers submit the form.</td></tr>
-      </tbody>
-    </table>
   </div>
 </div>
 
