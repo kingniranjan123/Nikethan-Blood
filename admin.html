@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sri Neevi Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="admin-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">🩸</div>
+      <div class="sidebar-logo-text">Sri Neevi <span>Admin</span></div>
+    </div>
+    <ul class="sidebar-nav">
+      <li class="sidebar-section-label">Management</li>
+      <li><a href="#" class="active" data-page="analytics" id="nav-analytics">
+        <span class="icon">📈</span> Analytics
+      </a></li>
+      <li><a href="#" data-page="clients" id="nav-clients">
+        <span class="icon">👥</span> Client List
+      </a></li>
+      <li><a href="#" data-page="packages" id="nav-packages">
+        <span class="icon">📦</span> Package List
+      </a></li>
+      <li><a href="#" data-page="prices" id="nav-prices">
+        <span class="icon">💰</span> Price List
+      </a></li>
+      <li class="sidebar-section-label">Tools</li>
+      <li><a href="#" data-page="parser" id="nav-parser">
+        <span class="icon">🔬</span> OCR Parser
+      </a></li>
+    </ul>
+    <div class="sidebar-footer">
+      <a href="index.html">🏠 Back to Site</a>
+      <a href="#" id="logoutBtn" style="margin-top:.5rem">🚪 Logout</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <div class="main-content">
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-title" id="topbarTitle">👥 Client List</div>
+      <div class="topbar-right" style="display:flex;align-items:center;gap:1rem">
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="ta" onclick="setLang('ta')">தமிழ்</button>
+          <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+          <button class="lang-btn" data-lang="hi" onclick="setLang('hi')">हिं</button>
+        </div>
+        <span class="topbar-badge">🔐 Admin Mode</span>
+        <span id="topbarDate" style="font-size:.8rem;color:var(--text-muted)"></span>
+      </div>
+    </div>
+
+    <div class="content-area">
+
+      <!-- ═══════════════════════════════ PAGE: ANALYTICS ═══════════════════════════════ -->
+      <div class="page active" id="page-analytics">
+        <div class="stat-cards" id="analyticsStatCards" style="margin-bottom: 2rem;">
+          <div class="stat-card"><div class="stat-card-icon">👥</div><div class="stat-card-label">Total Users</div><div class="stat-card-value" id="as-users">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">🔄</div><div class="stat-card-label">Repeated Users</div><div class="stat-card-value" id="as-repeats">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">💰</div><div class="stat-card-label">Total Revenue</div><div class="stat-card-value" id="as-revenue">₹0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">📈</div><div class="stat-card-label">Avg/Visit</div><div class="stat-card-value" id="as-avg">₹0</div></div>
+        </div>
+        
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;margin-bottom:1.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem">
+            <h3 style="font-size:1.1rem;margin:0">Weekly Sales (Revenue)</h3>
+          </div>
+          <div style="position:relative;height:300px;width:100%">
+            <canvas id="salesChart"></canvas>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:1rem;margin-top:0">Repeated Customers (Per Week)</h3>
+            <div style="position:relative;height:250px;width:100%">
+              <canvas id="repeatsChart"></canvas>
+            </div>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;">
+            <h3 style="font-size:1.1rem;margin-bottom:1rem;margin-top:0">Top 3 Tests (Last Week)</h3>
+            <ul id="as-top-tests" style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.75rem">
+              <li style="color:var(--text-muted)">Loading...</li>
+            </ul>
+            <h3 style="font-size:1.1rem;margin-bottom:1rem;margin-top:2rem">Other Key Stats</h3>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem;font-size:.9rem;color:var(--text-secondary)">
+              <li>Busiest Week: <strong id="as-busy-week" style="color:var(--text)">—</strong></li>
+              <li>Most Popular Package: <strong id="as-pop-pkg" style="color:var(--text)">—</strong></li>
+              <li>Male / Female Ratio: <strong id="as-gender-ratio" style="color:var(--text)">—</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem;">
+          <h3 style="font-size:1.1rem;margin-bottom:1rem;margin-top:0">Blood Test Types Breakdown (Per Week)</h3>
+          <div style="position:relative;height:350px;width:100%">
+            <canvas id="testsChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: CLIENTS ═══════════════════════════════ -->
+      <div class="page" id="page-clients">
+        <div class="stat-cards" id="clientStatCards">
+          <div class="stat-card"><div class="stat-card-icon">👥</div><div class="stat-card-label">Total Clients</div><div class="stat-card-value" id="sc-total">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">📅</div><div class="stat-card-label">Unique Dates</div><div class="stat-card-value" id="sc-dates">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">📊</div><div class="stat-card-label">Top Package</div><div class="stat-card-value" id="sc-top" style="font-size:1.1rem">—</div></div>
+          <div class="stat-card"><div class="stat-card-icon">📋</div><div class="stat-card-label">Pending Review</div><div class="stat-card-value" id="sc-pending">0</div></div>
+        </div>
+
+        <div class="section-hdr">
+          <h2>Client Register</h2>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <button class="btn btn-ghost btn-sm" id="addClientBtn">+ Add Client</button>
+            <button class="btn btn-success btn-sm" id="exportClientsBtn">⬇ Export CSV</button>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input type="text" class="search-input" id="clientSearch" placeholder="🔍 Search by name, phone, package..."/>
+          <select class="filter-select" id="clientGenderFilter">
+            <option value="">All Genders</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select>
+          <select class="filter-select" id="clientPkgFilter">
+            <option value="">All Packages</option>
+            <option>RBS</option><option>Sri Neevi Mini</option><option>Sri Neevi Basic</option>
+            <option>Sri Neevi Value</option><option>Sri Neevi Premium</option><option>Sri Neevi Elite</option>
+            <option>Thyroid</option><option>HbA1c</option><option>PPBS</option>
+          </select>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" id="clientsTable">
+            <thead>
+              <tr>
+                <th>#</th><th>Date</th><th>Name</th><th>Age</th><th>Gender</th>
+                <th>Phone</th><th>Package</th><th>Address</th><th>Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="clientsBody">
+              <tr><td colspan="9" class="no-data">
+                <div class="empty-state">
+                  <div class="icon">📂</div>
+                  <h3>No clients yet</h3>
+                  <p>Use the OCR Parser to import from images, or click "+ Add Client" to add manually.</p>
+                </div>
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div style="margin-top:.75rem;font-size:.78rem;color:var(--text-muted)" id="clientCount"></div>
+
+        <!-- CSV Import Zone -->
+        <div style="margin-top:1.5rem;background:var(--bg-card);border:2px dashed var(--border);border-radius:var(--radius-lg);padding:1.5rem;text-align:center" id="clientImportZone">
+          <input type="file" id="clientCsvInput" accept=".csv,.xlsx,.xls" style="display:none"/>
+          <div style="font-size:1.8rem;margin-bottom:.5rem">📂</div>
+          <div style="font-weight:600;color:var(--text-primary);margin-bottom:.25rem">Import / Update Client Data</div>
+          <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Upload a CSV file with columns: Date, Name, Age, Gender, Phone, Package, Address. New entries will be appended; existing phone numbers will be updated.</p>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('clientCsvInput').click()">Choose CSV File</button>
+          <div id="clientImportStatus" style="margin-top:.75rem;font-size:.82rem;color:var(--success)"></div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: PACKAGES ═══════════════════════════════ -->
+      <div class="page" id="page-packages">
+        <div class="section-hdr">
+          <h2>Package List</h2>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <button class="btn btn-ghost btn-sm" id="addPkgBtn">+ Add Package</button>
+            <button class="btn btn-success btn-sm" id="exportPkgBtn">⬇ Export CSV</button>
+          </div>
+        </div>
+        <div class="toolbar">
+          <input type="text" class="search-input" id="pkgSearch" placeholder="🔍 Search by package name or test..."/>
+          <select class="filter-select" id="pkgGenderFilter">
+            <option value="">All Types</option>
+            <option value="Both">Unisex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="pkgsTable">
+            <thead>
+              <tr>
+                <th>#</th><th>Package Name</th><th>Price (₹)</th><th>Original (₹)</th>
+                <th>Gender</th><th>Tests Included</th><th>Description</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="pkgsBody"></tbody>
+          </table>
+        </div>
+        <div style="margin-top:.75rem;font-size:.78rem;color:var(--text-muted)" id="pkgCount"></div>
+
+        <!-- CSV Import Zone -->
+        <div style="margin-top:1.5rem;background:var(--bg-card);border:2px dashed var(--border);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <input type="file" id="pkgCsvInput" accept=".csv" style="display:none"/>
+          <div style="font-size:1.8rem;margin-bottom:.5rem">📦</div>
+          <div style="font-weight:600;color:var(--text-primary);margin-bottom:.25rem">Import / Update Package Data</div>
+          <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Upload a CSV with columns: Package Name, Price, Original Price, Gender, Tests Included (separated by |), Description. Updates existing or appends new packages.</p>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('pkgCsvInput').click()">Choose CSV File</button>
+          <div id="pkgImportStatus" style="margin-top:.75rem;font-size:.82rem;color:var(--success)"></div>
+        </div>
+      </div>
+
+
+      <!-- ═══════════════════════════════ PAGE: PRICES ═══════════════════════════════ -->
+      <div class="page" id="page-prices">
+        <div class="section-hdr">
+          <h2>Price List</h2>
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <button class="btn btn-ghost btn-sm" id="addPriceBtn">+ Add Test</button>
+            <button class="btn btn-success btn-sm" id="exportPriceBtn">⬇ Export CSV</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table" id="priceTable">
+            <thead>
+              <tr><th>#</th><th>Test Name</th><th>MRP (₹)</th><th>Special Price (₹)</th><th>Our Price (₹)</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="priceBody"></tbody>
+          </table>
+        </div>
+        <!-- CSV Import Zone -->
+        <div style="margin-top:1.5rem;background:var(--bg-card);border:2px dashed var(--border);border-radius:var(--radius-lg);padding:1.5rem;text-align:center">
+          <input type="file" id="priceCsvInput" accept=".csv" style="display:none"/>
+          <div style="font-size:1.8rem;margin-bottom:.5rem">💰</div>
+          <div style="font-weight:600;color:var(--text-primary);margin-bottom:.25rem">Import / Update Price List</div>
+          <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Upload a CSV with columns: S.NO, INVESTIGATION NAME, MRP, SPL PRICE. Updates existing tests or appends new ones.</p>
+          <button class="btn btn-primary btn-sm" onclick="document.getElementById('priceCsvInput').click()">Choose CSV File</button>
+          <div id="priceImportStatus" style="margin-top:.75rem;font-size:.82rem;color:var(--success)"></div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: OCR PARSER ═══════════════════════════════ -->
+      <div class="page" id="page-parser">
+        <div class="section-hdr"><h2>🔬 OCR Image Parser</h2></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem">
+            <h3 style="margin-bottom:.75rem;font-size:1rem">How It Works</h3>
+            <ol style="color:var(--text-secondary);font-size:.85rem;padding-left:1.25rem;line-height:2">
+              <li>Select images from your <strong style="color:var(--text)">Client List</strong> folder</li>
+              <li>The OCR engine reads the handwritten text</li>
+              <li>Data is extracted: name, age, gender, phone, package</li>
+              <li>Review & edit in the table below</li>
+              <li>Export as CSV or save to Client List</li>
+            </ol>
+            <div style="margin-top:1rem;padding:.75rem;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:var(--radius);font-size:.8rem;color:var(--accent)">
+              ⚠️ Handwritten OCR accuracy is ~65-80%. Always review before exporting.
+            </div>
+          </div>
+          <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:1.5rem">
+            <h3 style="margin-bottom:.75rem;font-size:1rem">Parser Stats</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div><div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">Images Processed</div><div style="font-size:1.6rem;font-weight:800" id="statsImagesProcessed">0</div></div>
+              <div><div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">Records Extracted</div><div style="font-size:1.6rem;font-weight:800;color:var(--success)" id="statsRecords">0</div></div>
+              <div><div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">Errors</div><div style="font-size:1.6rem;font-weight:800;color:var(--danger)" id="statsErrors">0</div></div>
+              <div><div style="font-size:.75rem;color:var(--text-muted);margin-bottom:.25rem">Saved to List</div><div style="font-size:1.6rem;font-weight:800;color:var(--primary-light)" id="statsSaved">0</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ocr-drop-zone" id="ocrDropZone" onclick="document.getElementById('ocrFileInput').click()">
+          <input type="file" id="ocrFileInput" multiple accept="image/*" style="display:none"/>
+          <div class="icon">📷</div>
+          <h3>Drop Images Here or Click to Select</h3>
+          <p>Select multiple JPEG images from the Client List folder</p>
+          <p style="margin-top:.5rem;font-size:.78rem;color:var(--text-muted)">Supported: JPG, PNG, WEBP</p>
+        </div>
+
+        <div id="ocrProgressSection" style="display:none;margin-top:1.5rem">
+          <div style="display:flex;justify-content:space-between;margin-bottom:.5rem">
+            <span style="font-size:.85rem;font-weight:600">Processing Images...</span>
+            <span style="font-size:.85rem;color:var(--text-muted)" id="ocrProgressText">0 / 0</span>
+          </div>
+          <div class="progress-bar-wrap"><div class="progress-bar-fill" id="ocrProgressBar" style="width:0%"></div></div>
+          <div class="log-area" id="ocrLog"></div>
+          <div style="margin-top:1rem;display:flex;gap:.75rem">
+            <button class="btn btn-danger btn-sm" id="cancelOcrBtn">✕ Cancel</button>
+          </div>
+        </div>
+
+        <div id="ocrResultsSection" style="display:none;margin-top:1.5rem">
+          <div class="section-hdr">
+            <h2 style="font-size:1rem">Extracted Records — Review Before Saving</h2>
+            <div style="display:flex;gap:.75rem">
+              <button class="btn btn-primary btn-sm" id="saveOcrBtn">✅ Save All to Client List</button>
+              <button class="btn btn-success btn-sm" id="exportOcrBtn">⬇ Export OCR CSV</button>
+              <button class="btn btn-ghost btn-sm" id="clearOcrBtn">🗑 Clear</button>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead><tr><th>#</th><th>Date</th><th>Name</th><th>Age</th><th>G</th><th>Phone</th><th>Package</th><th>Confidence</th><th>✎</th></tr></thead>
+              <tbody id="ocrResultsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /content-area -->
+  </div><!-- /main-content -->
+</div><!-- /admin-layout -->
+
+<!-- ADD CLIENT MODAL -->
+<div class="modal-overlay" id="clientModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="clientModalTitle">Add New Client</h3>
+      <button class="close-btn" onclick="closeClientModal()">✕</button>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Visit Date</label>
+        <input type="date" class="form-input" id="fDate"/>
+      </div>
+      <div class="form-group">
+        <label>Serial No</label>
+        <input type="text" class="form-input" id="fSerial" placeholder="e.g. 1"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Patient Name *</label>
+      <input type="text" class="form-input" id="fName" placeholder="Full name"/>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Age</label>
+        <input type="number" class="form-input" id="fAge" placeholder="e.g. 45" min="1" max="120"/>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select class="form-input" id="fGender">
+          <option value="">Select</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" class="form-input" id="fPhone" placeholder="10-digit mobile"/>
+    </div>
+    <div class="form-group">
+      <label>Test Package</label>
+      <input type="text" class="form-input" id="fPackage" placeholder="e.g. Sri Neevi Basic, RBS, Thyroid"/>
+    </div>
+    <div style="display:flex;gap:.75rem;margin-top:.5rem">
+      <button class="btn btn-primary" style="flex:1" id="saveClientBtn">Save Client</button>
+      <button class="btn btn-ghost" onclick="closeClientModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- ADD PACKAGE MODAL -->
+<div class="modal-overlay" id="pkgModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3 id="pkgModalTitle">Add Package</h3>
+      <button class="close-btn" onclick="closePkgModal()">✕</button>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Package Name *</label>
+        <input type="text" class="form-input" id="pfName" placeholder="e.g. Sri Neevi Mini"/>
+      </div>
+      <div class="form-group">
+        <label>Gender</label>
+        <select class="form-input" id="pfGender">
+          <option value="Both">Unisex</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Price (₹) *</label>
+        <input type="number" class="form-input" id="pfPrice" placeholder="499"/>
+      </div>
+      <div class="form-group">
+        <label>Original Price (₹)</label>
+        <input type="number" class="form-input" id="pfOriginal" placeholder="999"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-input" id="pfDesc" placeholder="Brief description"/>
+    </div>
+    <div class="form-group">
+      <label>Tests Included (one per line) *</label>
+      <textarea class="form-input" id="pfTests" rows="6" placeholder="Complete Blood Count&#10;Lipid Profile&#10;HbA1c"></textarea>
+    </div>
+    <div style="display:flex;gap:.75rem;margin-top:.5rem">
+      <button class="btn btn-primary" style="flex:1" id="savePkgBtn">Save Package</button>
+      <button class="btn btn-ghost" onclick="closePkgModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="translations.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

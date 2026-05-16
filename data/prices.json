@@ -1,0 +1,14 @@
+[
+  { "id": 1, "test": "Hb", "mrp": 120, "splPrice": 70, "ourPrice": 100 },
+  { "id": 2, "test": "FBS (Fasting Blood Sugar)", "mrp": 60, "splPrice": 30, "ourPrice": 40 },
+  { "id": 3, "test": "PPBS (Post Prandial Blood Sugar)", "mrp": 60, "splPrice": 30, "ourPrice": 40 },
+  { "id": 4, "test": "CBC (Complete Blood Count)", "mrp": 400, "splPrice": 100, "ourPrice": 300 },
+  { "id": 5, "test": "Lipid Profile", "mrp": 550, "splPrice": 200, "ourPrice": 460 },
+  { "id": 6, "test": "HbA1c", "mrp": null, "splPrice": 150, "ourPrice": 450 },
+  { "id": 7, "test": "Urine Complete", "mrp": null, "splPrice": 90, "ourPrice": 120 },
+  { "id": 8, "test": "T. Cholesterol", "mrp": 180, "splPrice": 100, "ourPrice": 220 },
+  { "id": 9, "test": "Total TFT (Thyroid Function Test)", "mrp": null, "splPrice": 80, "ourPrice": 350 },
+  { "id": 10, "test": "Free TFT", "mrp": null, "splPrice": 120, "ourPrice": 450 },
+  { "id": 11, "test": "Thyroid Profile", "mrp": null, "splPrice": 220, "ourPrice": 600 },
+  { "id": 12, "test": "LFT (Liver Function Test)", "mrp": null, "splPrice": 200, "ourPrice": 450 }
+]

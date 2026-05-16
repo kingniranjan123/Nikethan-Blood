@@ -1,0 +1,14 @@
+{
+  "appName": "QnQ Diagnostics",
+  "tagline": "Your Health Journey Begins Here",
+  "contactPhone": "1800 570 8888",
+  "contactEmail": "qnqdiagnostics@gmail.com",
+  "address": "Chennai, Tamil Nadu",
+  "passwordHash": "a3f5e4d2b7c1e9f0a2d4b6c8e0f1a3d5b7c9e1f3a5d7b9c1e3f5a7d9b1c3e5",
+  "branding": {
+    "primaryColor": "#7C3AED",
+    "accentColor": "#F59E0B",
+    "darkBg": "#0B0B1A"
+  },
+  "sessionKey": "qnq_admin_session"
+}

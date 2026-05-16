@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ta" id="htmlRoot">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ஸ்ரீ நீவி லேப் — இரத்த பரிசோதனை நிலையம், பேராவூரணி</title>
+  <meta name="description" content="Sri Neevi Lab - NABL Accredited blood testing laboratory in Peravurani serving 20km surrounding areas. Free home collection."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ─── FLOATING CHIPS ─── */
+    .hero-visual-wrap{position:relative;padding:40px 30px 40px 30px}
+    .floating-chip{
+      position:absolute;border-radius:14px;padding:.65rem 1.1rem;
+      display:flex;align-items:center;gap:.5rem;font-size:.82rem;font-weight:700;
+      backdrop-filter:blur(12px);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.12);
+      z-index:5;
+    }
+    .floating-chip-1{
+      top:0;left:0;
+      background:rgba(16,185,129,0.18);border:1.5px solid rgba(16,185,129,0.45);color:#059669;
+      animation:float 4s ease-in-out infinite;
+    }
+    .floating-chip-2{
+      bottom:0;right:0;
+      background:rgba(220,38,38,0.13);border:1.5px solid rgba(220,38,38,0.35);color:#dc2626;
+      animation:float 5s ease-in-out 1s infinite;
+    }
+    /* ─── LANGUAGE SWITCHER ─── */
+    .lang-switcher{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:3px;margin-right:.5rem}
+    .lang-btn{padding:.3rem .65rem;border-radius:7px;border:none;background:transparent;color:var(--text-secondary);font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.03em;font-family:inherit}
+    .lang-btn.active{background:var(--gradient-primary);color:#fff;box-shadow:0 2px 10px rgba(124,58,237,.4)}
+    .lang-btn:hover:not(.active){background:rgba(255,255,255,.1);color:var(--text-primary)}
+    /* ─── NABL / LOCATION BADGES ─── */
+    .nabl-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(16,185,129,.12);border:1.5px solid rgba(16,185,129,.35);color:#059669;padding:.3rem .8rem;border-radius:100px;font-size:.75rem;font-weight:800;letter-spacing:.02em}
+    .location-pill{
+      display:inline-flex;align-items:center;gap:.4rem;
+      background:linear-gradient(135deg,rgba(220,38,38,.1),rgba(37,99,235,.1));
+      border:1.5px solid rgba(220,38,38,.3);color:#dc2626;
+      padding:.35rem 1rem;border-radius:100px;font-size:.8rem;font-weight:800;
+      box-shadow:0 2px 8px rgba(220,38,38,.15);
+    }
+    /* ─── HOME COLLECTION BADGE ─── */
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:.5rem;
+      background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(5,150,105,.2));
+      border:2px solid rgba(16,185,129,.5);
+      color:#047857;padding:.45rem 1.1rem;border-radius:100px;
+      font-size:.82rem;font-weight:800;letter-spacing:.01em;
+      box-shadow:0 4px 14px rgba(16,185,129,.2);
+    }
+    .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#10B981;animation:pulse 2s infinite;flex-shrink:0}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">🩸</div>
+    <div>
+      <div class="nav-logo-text">ஸ்ரீ நீவி லேப் <span id="navSubtitle">Sri Neevi Lab</span></div>
+      <div style="font-size:.65rem;color:var(--text-muted);margin-top:-2px" data-i18n="navTagline">இரத்த பரிசோதனை நிலையம் — பேராவூரணி</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+  </ul>
+  <div class="nav-actions">
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ta" onclick="setLang('ta')">தமிழ்</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="hi" onclick="setLang('hi')">हिं</button>
+    </div>
+    <a href="tel:+919700200044" class="btn btn-ghost" data-i18n="navCall">📞 அழைக்கவும்</a>
+    <button class="btn btn-primary" id="loginBtn" data-i18n="navAdmin">🔐 அட்மின்</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-orb orb-1"></div>
+  <div class="hero-bg-orb orb-2"></div>
+  <div class="hero-bg-orb orb-3"></div>
+  <div class="hero-grid">
+    <!-- LEFT: CONTENT -->
+    <div class="hero-content">
+      <!-- Home Collection Badge — Bold & Highlighted -->
+      <div style="margin-bottom:1rem">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <strong>&#127968; Free Home Sample Collection Available</strong>
+        </div>
+      </div>
+      <!-- Trust Row -->
+      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1.2rem;flex-wrap:wrap">
+        <span class="nabl-badge">&#10003;&#10003; NABL Accredited</span>
+        <span class="nabl-badge" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.3);color:#1d4ed8">&#128230; Doorstep Pickup</span>
+      </div>
+      <!-- Location — given prominence -->
+      <div style="margin-bottom:1.5rem">
+        <span class="location-pill">
+          &#128205; <strong>Peravurani &amp; 20km Radius</strong>
+          <span style="font-weight:500;opacity:.85">&mdash; Valangaiman &bull; Pattukkottai &bull; Aranthangi</span>
+        </span>
+      </div>
+      <h1 class="hero-title">
+        <span data-i18n="heroTitle1">National Quality</span><br/>
+        <span class="highlight" data-i18n="heroTitle2">Blood Testing</span>
+      </h1>
+      <p class="hero-desc" data-i18n="heroDesc">Sri Neevi Lab &mdash; NABL accredited blood testing laboratory in Peravurani. Samples collected at your doorstep with accurate results delivered within 24 hours.</p>
+      <div class="hero-actions">
+        <a href="tel:+919700200044" class="btn btn-primary btn-lg">&#128222; Contact for Booking</a>
+        <a href="tel:+919700200044" class="btn btn-outline btn-lg">97002 00044</a>
+      </div>
+      <!-- Hero Stats: solid bold colors, fully visible -->
+      <div style="display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap">
+        <div>
+          <div style="font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:900;color:#dc2626;line-height:1">775+</div>
+          <div style="font-size:.82rem;color:#334155;font-weight:700;margin-top:.25rem">Clients Served</div>
+        </div>
+        <div>
+          <div style="font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:900;color:#2563eb;line-height:1">20km</div>
+          <div style="font-size:.82rem;color:#334155;font-weight:700;margin-top:.25rem">Home Collection Area</div>
+        </div>
+        <div>
+          <div style="font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:900;color:#059669;line-height:1">24hr</div>
+          <div style="font-size:.82rem;color:#334155;font-weight:700;margin-top:.25rem">Report Delivery</div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT: CONFIDENCE DASHBOARD CARD -->
+    <div class="hero-visual">
+      <div class="hero-visual-wrap">
+        <!-- Floating chips — fully inside wrapper, visible -->
+        <div class="floating-chip floating-chip-1">&#127968; Free Home Collection</div>
+        <div class="floating-chip floating-chip-2">&#10003; Results in 24 Hours</div>
+        <!-- Health Trust Dashboard -->
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-title">&#10084; Sri Neevi Health Dashboard</div>
+            <div class="hero-card-badge">&#11044; Live</div>
+          </div>
+          <!-- Row 1: Clients -->
+          <div class="hero-mini-stat" style="border-left:3px solid #dc2626">
+            <div>
+              <div class="label">Patients Served &mdash; Trusted by Community</div>
+              <div class="value" style="color:#dc2626;font-size:1.3rem;font-weight:900">775+ Patients</div>
+            </div>
+            <div style="font-size:1.8rem">&#128101;</div>
+          </div>
+          <!-- Row 2: Home Collection -->
+          <div class="hero-mini-stat" style="border-left:3px solid #059669">
+            <div>
+              <div class="label">Free Home Collection Available</div>
+              <div class="value" style="color:#047857;font-weight:800">Peravurani &amp; 20km Area</div>
+            </div>
+            <div style="font-size:1.8rem">&#127968;</div>
+          </div>
+          <!-- Row 3: Reports -->
+          <div class="hero-mini-stat" style="border-left:3px solid #2563eb">
+            <div>
+              <div class="label">Accurate Reports Delivered To You</div>
+              <div class="value" style="color:#1d4ed8;font-weight:800">Within 24 Hours</div>
+            </div>
+            <div style="font-size:1.8rem">&#9889;</div>
+          </div>
+          <div class="tag-row">
+            <span class="tag green">NABL</span>
+            <span class="tag">CBC</span>
+            <span class="tag">HbA1c</span>
+            <span class="tag green">Thyroid</span>
+            <span class="tag amber">Lipid</span>
+            <span class="tag">LFT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="number">100K+</div><div class="label" data-i18n="strip1">நடத்தப்பட்ட பரிசோதனைகள்</div></div>
+    <div class="stat-item"><div class="number">500+</div><div class="label" data-i18n="strip2">மகிழ்ச்சியான வாடிக்கையாளர்கள்</div></div>
+    <div class="stat-item"><div class="number">20 கி.மீ</div><div class="label" data-i18n="strip3">சேவை பகுதி</div></div>
+    <div class="stat-item"><div class="number">24hr</div><div class="label" data-i18n="strip4">அறிக்கை வழங்கல்</div></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label" data-i18n="featLabel">ஏன் ஸ்ரீ நீவி லேப்?</div>
+      <h2 class="section-title"><span data-i18n="featTitle">உங்களுக்காக</span> <span class="highlight" data-i18n="featTitle2">சிறந்த சுகாதார சேவை</span></h2>
+      <p class="section-desc" data-i18n="featDesc">நவீன கண்டறியும் தொழில்நுட்பம் மற்றும் வீட்டு சேவையின் வசதியை இணைக்கிறோம் — ஏனென்றால் உங்கள் ஆரோக்கியம் சிரமப்பட வேண்டியதில்லை.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+        <div class="feature-title" data-i18n="f1t">இலவச வீட்டு சேகரிப்பு</div>
+        <p class="feature-desc" data-i18n="f1d">எங்கள் சான்றிதழ் பெற்ற தொழில்நுட்பவியலாளர்கள் உங்கள் வாசலுக்கே வருவார்கள். பயணம் இல்லை, வரிசை இல்லை — வசதியான மாதிரி சேகரிப்பு மட்டுமே.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-title" data-i18n="f2t">விரைவான முடிவுகள்</div>
+        <p class="feature-desc" data-i18n="f2d">24 மணி நேரத்திற்குள் விரிவான பரிசோதனை அறிக்கைகளைப் பெறுங்கள். அவசர நிலைகளுக்கு விரைவான முடிவுகள் கிடைக்கும்.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔬</div>
+        <div class="feature-title" data-i18n="f3t">NABL அங்கீகரிக்கப்பட்ட ஆய்வகம்</div>
+        <p class="feature-desc" data-i18n="f3d">அனைத்து மாதிரிகளும் NABL அங்கீகரிக்கப்பட்ட ஆய்வகங்களில் செயலாக்கப்படுகின்றன. துல்லியமான, நம்பகமான மற்றும் மருத்துவ சரிபார்க்கப்பட்ட முடிவுகள்.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <div class="feature-title" data-i18n="f4t">மலிவான தொகுப்புகள்</div>
+        <p class="feature-desc" data-i18n="f4d">₹499 முதல் விரிவான சுகாதார தொகுப்புகள். தனிப்பட்ட பரிசோதனைகளுடன் ஒப்பிடும்போது 60% வரை சேமிப்பு.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📍</div>
+        <div class="feature-title" data-i18n="f5t">பேராவூரணி & சுற்றுப்புறம்</div>
+        <p class="feature-desc" data-i18n="f5d">பேராவூரணி மற்றும் 20 கி.மீ சுற்றுவட்டத்தில் உள்ள கிராமங்கள் உட்பட அனைத்து பகுதிகளுக்கும் வீட்டு சேகரிப்பு சேவை வழங்கப்படுகிறது.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <div class="feature-title" data-i18n="f6t">பாதுகாப்பான & இரகசியமான</div>
+        <p class="feature-desc" data-i18n="f6d">உங்கள் சுகாதார தரவு முழுவதுமாக தனிப்பட்டது. டிஜிட்டல் அறிக்கைகள் உங்கள் மின்னஞ்சல் மற்றும் WhatsApp-ல் பாதுகாப்பாக வழங்கப்படும்.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / CTA -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="cta-section">
+      <div class="section-label" data-i18n="ctaLabel">இப்போதே முன்பதிவு செய்யுங்கள்</div>
+      <div class="cta-title" data-i18n="ctaTitle">உங்கள் ஆரோக்கியத்தை<br/>கவனித்துக்கொள்ள தயாரா?</div>
+      <p class="cta-desc" data-i18n="ctaDesc">வீட்டு மாதிரி சேகரிப்பை திட்டமிட இப்போதே அழைக்கவும். எங்கள் குழு வாரம் 7 நாட்களும் கிடைக்கும்.</p>
+      <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+        <a href="tel:+919700200044" class="cta-phone" style="margin:0">📞 97002 00044</a>
+        <a href="tel:+917205908073" class="cta-phone" style="margin:0;font-size:1.4rem">📞 72059 08073</a>
+      </div>
+      <div class="cta-actions">
+        <a href="tel:+919700200044" class="btn btn-primary btn-lg" data-i18n="ctaBtn1">அழைத்து முன்பதிவு செய்யுங்கள்</a>
+        <a href="packages.html" class="btn btn-outline btn-lg" data-i18n="ctaBtn2">தொகுப்புகளை காண்க</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="nav-logo-icon">🩸</div>
+          <div class="nav-logo-text">ஸ்ரீ நீவி லேப் <span>Sri Neevi Lab</span></div>
+        </a>
+        <p data-i18n="footerDesc">பேராவூரணியில் NABL அங்கீகரிக்கப்பட்ட இரத்த பரிசோதனை நிலையம். பேராவூரணி மற்றும் 20 கி.மீ சுற்றுவட்டத்தில் வீட்டு சேகரிப்பு சேவை.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerPkg">தொகுப்புகள்</h4>
+        <ul>
+          <li><a href="packages.html">All in one package - Single</a></li>
+          <li><a href="packages.html">All in one package - Followup</a></li>
+          <li><a href="packages.html">Diabetic & Thyroid Basic</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerContact">தொடர்பு</h4>
+        <ul>
+          <li><a href="tel:+919700200044">+91 97002 00044</a></li>
+          <li><a href="tel:+917205908073">+91 72059 08073</a></li>
+          <li><a href="#" data-i18n="footerLoc">பேராவூரணி, தஞ்சாவூர் மாவட்டம்</a></li>
+          <li><a href="#" data-i18n="footerHours">திங்கள்–ஞாயிறு: காலை 7 – இரவு 8</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ஸ்ரீ நீவி லேப். <span data-i18n="footerRights">அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></span>
+      <span data-i18n="footerMotto">தரமான வாழ்க்கை அனைவருக்கும் 💜</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal">
+    <button class="modal-close-btn" id="modalClose">✕</button>
+    <div class="modal-logo">
+      <div class="icon">🔐</div>
+      <h2 data-i18n="loginTitle">அட்மின் அணுகல்</h2>
+      <p data-i18n="loginSub">தொடர தயவுசெய்து கடவுச்சொல்லை உள்ளிடவும்</p>
+    </div>
+    <div class="form-group">
+      <label for="pwInput" data-i18n="loginLabel">கடவுச்சொல்</label>
+      <div class="input-wrap">
+        <input type="password" id="pwInput" data-i18n-placeholder="loginPlaceholder" placeholder="கடவுச்சொல்லை உள்ளிடவும்..." autocomplete="current-password"/>
+        <button class="toggle-pw" id="togglePw" tabindex="-1">👁</button>
+      </div>
+      <div class="error-msg" id="pwError" data-i18n="loginError">தவறான கடவுச்சொல். மீண்டும் முயற்சிக்கவும்.</div>
+    </div>
+    <button class="btn btn-primary btn-lg modal-submit" id="loginSubmit" data-i18n="loginBtn">டாஷ்போர்டை அணுகவும் →</button>
+  </div>
+</div>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

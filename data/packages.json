@@ -1,0 +1,59 @@
+[
+  {
+    "id": "all-in-one-single",
+    "name": "All in one package - Single Checkup",
+    "price": 1499,
+    "originalPrice": 2999,
+    "gender": "Both",
+    "color": "#059669",
+    "popular": true,
+    "tests": [
+      "Complete Blood Count",
+      "Liver Function Test",
+      "Renal Function Test",
+      "Lipid Profile",
+      "Thyroid Profile",
+      "Urine Analysis"
+    ],
+    "testCount": 6,
+    "description": "Comprehensive single checkup for overall health."
+  },
+  {
+    "id": "all-in-one-followup",
+    "name": "All in one package - Followup upto an year",
+    "price": 4999,
+    "originalPrice": 8999,
+    "gender": "Both",
+    "color": "#7C3AED",
+    "popular": false,
+    "tests": [
+      "Complete Blood Count",
+      "Liver Function Test",
+      "Renal Function Test",
+      "Lipid Profile",
+      "Thyroid Profile",
+      "HbA1c",
+      "Quarterly Follow-up Checkups"
+    ],
+    "testCount": 7,
+    "description": "Annual health monitoring with periodic follow-ups."
+  },
+  {
+    "id": "diabetic-thyroid-basic",
+    "name": "Diabetic, thyroid and basic blood test",
+    "price": 999,
+    "originalPrice": 1999,
+    "gender": "Both",
+    "color": "#2563EB",
+    "popular": false,
+    "tests": [
+      "Fasting Blood Sugar",
+      "Post Prandial Blood Sugar",
+      "HbA1c",
+      "Thyroid Profile (T3, T4, TSH)",
+      "Complete Blood Count"
+    ],
+    "testCount": 5,
+    "description": "Essential screening for diabetes and thyroid function."
+  }
+]

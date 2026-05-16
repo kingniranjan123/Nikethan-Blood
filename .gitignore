@@ -1,0 +1,17 @@
+# Exclude image files (not needed for the web app)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+
+# Exclude PDF files (raw source documents)
+*.pdf
+
+# Keep all CSV / JSON / HTML / JS / CSS
+# (no need to ignore those)
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/

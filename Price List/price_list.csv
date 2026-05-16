@@ -1,0 +1,1535 @@
+﻿S.NO,ID,INVESTIGATION NAME,MRP,SPL PRICE
+1,3717,"1,3 - Beta - D-Glucan ( BDG )",10000,5000
+2,2549,"17 - Ketosteroids (24 Hrs. Urine)",6000,3000
+3,2294,"17 - Oh Ketosteroid",6000,3000
+4,1,"17 - Oh Progesterone, Serum",1250,625
+5,2,"24 Hrs 5-Hiaa  (Hydroxy Indole Acetic Acid) (Urine)",3000,1500
+6,25,"24 Hrs Aldosterone, (Urine)",3000,1500
+7,30,"24 Hrs Amino Levulinic Acid Ala (Quantitative), (Urine)",7000,3500
+8,89,"24 Hrs Bun - Urea Nitrogen, Urine 24H",400,200
+9,947,"24 Hrs Catecholamines (Urine)",6000,3000
+10,1290,"24 Hrs Citrate (Urine)",1750,875
+11,811,"24 Hrs Epinephrine (Urine)",5000,2500
+12,881,"24 Hrs Hydroxy Proline (Urine)",6750,3375
+13,877,"24 Hrs Metanephrine (Urine)",2750,1375
+14,1311,"24 Hrs Normetanephrine (Urine)",3750,1875
+15,3187,"24 Hrs Urine Chromium",5000,2500
+16,4964,"24 Hrs Urine For Electrolytes With Bicarbonate",550,275
+17,2475,"24 Hrs Urine For Protein / Creatinine Ratio",550,275
+18,2596,"24 Hrs Urine Osmolality",1000,500
+19,3105,"24 Hrs. Urine Porphobilinogen ( Qualitative )",4000,2000
+20,5091,"24Hrs Urine Mercury",5000,2500
+21,3883,"Abpa - Mini",3250,1625
+22,3,"Absolute Basophil Count",180,90
+23,4,"Absolute Eosinophil Count",180,90
+24,5,"Absolute Lymphocyte Count",180,90
+25,6,"Absolute Monocyte Count",180,90
+26,7,"Absolute Neutrophil Count",180,90
+27,3542,"Acacia (EIA)",500,250
+28,3478,"Acentylsalicyclic Acid- Drug (EIA)",500,250
+29,9,"Acetone (Ketones), Urine",200,100
+30,10,"Acetyl Choline Receptor Antibodies (Achr Abs), Serum",4250,2125
+31,11,"Acid Phosphatase - Prostatic, Serum",850,425
+32,12,"Acid Phosphatase - Total, Serum",500,250
+33,2495,"Activated Partial Thromboplastin Time [Aptt] Blood Bank",350,175
+34,794,"Activated Protein - C",5250,2625
+35,1318,"Activated Protein C Resistance",5850,2925
+36,3241,"Acyl Carnitine, Quantitative Neonatal Dried Blood Spot",8500,4250
+37,2285,"Ada - Ascitic Fluid",1000,500
+38,2276,"Ada - Peritonial Fluid",1000,500
+39,2283,"Ada - Synovial Fluid",1000,500
+40,2268,"Ada ( Pleural Fluid )",1000,500
+41,3720,"Adamts 13 Activity",25500,12750
+42,813,"Adenosine Deaminase (Ada)",1000,500
+43,14,"Adenosine Deaminase (Ada)  - Csf",1000,500
+44,15,"Adenosine Deaminase (Ada) - Ascitic Fluid",1000,500
+45,4180,"Adenovirus Igg Antibody",3000,1500
+46,4181,"Adenovirus Igm Antibody",3000,1500
+47,5331,"Adiponectin - Serum",5000,2500
+48,4339,"Adrenaline (Epinephrine) Plasma",5250,2625
+49,13,"Adreno Corticotropic Hormone (Acth), Edta Plasma",2200,1100
+50,890,"Afb - Culture & Sensitivity Bactec Mgit (4 Drugs)",7000,3500
+51,19,"Afb - Smear Examination By Zn Stain",250,125
+52,18,"Afb Culture - Bactec Mgit",2000,1000
+53,2722,"Afb Culture Second Line Drugs",9500,4750
+54,2868,"Albert'S Staining For C.Diptheriae",350,175
+55,2305,"Albumin - Body Fluid",250,125
+56,2275,"Albumin - Peritonial Fluid",250,125
+57,2261,"Albumin - Pleural Fluid",250,125
+58,21,"Albumin - Urine",250,125
+59,2272,"Albumin ( Pleural Fluid )",250,125
+60,3135,"Albumin (Amniotic Fluid)",250,125
+61,1443,"Albumin Gradient",350,175
+62,20,"Albumin, Serum",250,125
+63,1787,"Alcohol ( Ethanol ) Quantitative Serum",2000,1000
+64,23,"Alcohol (Ethanol) Quantitative, Urine",2500,1250
+65,2540,"Aldolase",1500,750
+66,24,"Aldosterone, Serum",2000,1000
+67,1643,"Alk Expression - Ihc",1650,825
+68,27,"Alkaline Phosphatase Bone Specific, Serum",3000,1500
+69,26,"Alkaline Phosphatase, Serum",350,175
+70,4041,"Allergen  Cynodon Dactylon (Inhalent)",1000,500
+71,3258,"Allergen - House Dust Mite - Blomia Tropicalis",1000,500
+72,3260,"Allergen - Mosquito",1000,500
+73,4962,"Allergen Drug - Metronidazole",2750,1375
+74,3250,"Allergen -House Dust Mite - Dermatophagoides Farinae",1000,500
+75,3313,"Allergen-Pigeon  Feathers And Droppings - Specific Ige",1000,500
+76,3314,"Allergen-Pigeon  Feathers And Droppings - Specific Igg",2250,1125
+77,3838,"Allergic Bronchopulmonary Aspergillosis (Abpa) Screen",2200,1100
+78,2790,"Allergy  Shrimp - Non Veg (Immunocap/FEIA)",1000,500
+79,2823,"Allergy  Tree & Shrub Panel (4 Allergens )",3250,1625
+80,2764,"Allergy  Wheat - Veg (Immunocap/FEIA)",1000,500
+81,2794,"Allergy Acacia - Inhalant (Immunocap/FEIA)",1000,500
+82,2760,"Allergy Almond - Veg (Immunocap/FEIA)",1000,500
+83,2883,"Allergy Alternaria - Inhalant (Immunocap/FEIA)",1000,500
+84,2753,"Allergy Apple - Veg (Immunocap/FEIA)",1000,500
+85,2795,"Allergy Aspergillus Fumigates - Inhalant (Immunocap/FEIA)",1000,500
+86,2806,"Allergy Aspergillus Fumigatus - Inhalant (Immunocap/FEIA)",1000,500
+87,2748,"Allergy Banana - Veg (Immunocap/FEIA)",1000,500
+88,2766,"Allergy Barley - Veg (Immunocap/FEIA)",1000,500
+89,2787,"Allergy Beef   - Non Veg (Immunocap/FEIA)",1000,500
+90,2807,"Allergy Bermuda Grass - Inhalant (Immunocap/FEIA)",1000,500
+91,2741,"Allergy Cabbage - Veg (Immunocap/FEIA)",1000,500
+92,2808,"Allergy Candida Albicans - Inhalant (Immunocap/FEIA)",1000,500
+93,2739,"Allergy Carrot - Veg (Immunocap/FEIA)",1000,500
+94,2759,"Allergy Cashew Nut - Veg (Immunocap/FEIA)",1000,500
+95,2793,"Allergy Cat Dander - Inhalant (Immunocap/FEIA)",1000,500
+96,2747,"Allergy Celery - Veg (Immunocap/FEIA)",1000,500
+97,2774,"Allergy Chesse (Cheddar Type) - Veg (Immunocap/FEIA)",1000,500
+98,2770,"Allergy Chick Pea - Veg (Immunocap/FEIA)",1000,500
+99,2783,"Allergy Chicken  - Non Veg (Immunocap/FEIA)",1000,500
+100,2746,"Allergy Chillie - Veg (Immunocap/FEIA)",1000,500
+101,2882,"Allergy Cladosporium - Inhalant (Immunocap/FEIA)",1000,500
+102,2796,"Allergy Cockroach - Inhalant (Immunocap/FEIA)",1000,500
+103,2761,"Allergy Coconut - Veg (Immunocap/FEIA)",1000,500
+104,2779,"Allergy Coffee - Veg (Immunocap/FEIA)",1000,500
+105,2809,"Allergy Commom Pigweed - Inhalant (Immunocap/FEIA)",1000,500
+106,2797,"Allergy Common Ragweed - Inhalant (Immunocap/FEIA)",1000,500
+107,2798,"Allergy Common Silver Birch - Inhalant (Immunocap/FEIA)",1000,500
+108,1422,"Allergy Cow Milk (Immunocap/FEIA)",1000,500
+109,2789,"Allergy Crab   - Non Veg (Immunocap/FEIA)",1000,500
+110,2745,"Allergy Cucumber - Veg (Immunocap/FEIA)",1000,500
+111,2799,"Allergy Dog Dander - Inhalant (Immunocap/FEIA)",1000,500
+112,2780,"Allergy Egg - Non Veg (Immunocap/FEIA)",1000,500
+113,2737,"Allergy Egg Plant - Veg (Immunocap/FEIA)",1000,500
+114,926,"Allergy Egg White, Serum",1000,500
+115,925,"Allergy Egg Yolk, Serum",1000,500
+116,2800,"Allergy Elm - Inhalant (Immunocap/FEIA)",1000,500
+117,2788,"Allergy Fish (Cod) - Non Veg (Immunocap/FEIA)",1000,500
+118,1778,"Allergy For Citrous Fruits",1000,500
+119,1779,"Allergy For Fish",1000,500
+120,1780,"Allergy For Tamarind",1000,500
+121,2816,"Allergy Fruit Panel  (12 Allergen)",8250,4125
+122,2775,"Allergy Garlic - Veg (Immunocap/FEIA)",1000,500
+123,2778,"Allergy Gluten - Veg (Immunocap/FEIA)",1000,500
+124,2801,"Allergy Goosefoot - Inhalant (Immunocap/FEIA)",1000,500
+125,2878,"Allergy Grapes - Veg (Immunocap/FEIA)",1000,500
+126,2822,"Allergy Grass Panel  ( 3 Allergens )",2500,1250
+127,2758,"Allergy Hazel Nut - Veg (Immunocap/FEIA)",1000,500
+129,2820,"Allergy Indoor Panel (4 Allergens )",3250,1625
+130,2812,"Allergy Johnson Grass - Inhalant (Immunocap/FEIA)",1000,500
+131,2756,"Allergy Kiwi - Veg (Immunocap/FEIA)",1000,500
+132,2819,"Allergy Legume Panel  (4 Allergens)",3250,1625
+133,2750,"Allergy Lemon - Veg (Immunocap/FEIA)",1000,500
+134,2769,"Allergy Lentil - Veg (Immunocap/FEIA)",1000,500
+135,2742,"Allergy Lettuce - Veg (Immunocap/FEIA)",1000,500
+136,2791,"Allergy Lobster - Non Veg (Immunocap/FEIA)",1000,500
+137,2768,"Allergy Maize - Veg (Immunocap/FEIA)",1000,500
+138,2754,"Allergy Mango - Veg (Immunocap/FEIA)",1000,500
+139,2804,"Allergy Mesquite - Inhalant (Immunocap/FEIA)",1000,500
+140,2773,"Allergy Milk - Veg (Immunocap/FEIA)",1000,500
+141,2805,"Allergy Mugwort - Inhalant (Immunocap/FEIA)",1000,500
+142,2744,"Allergy Mushroom - Veg (Immunocap/FEIA)",1000,500
+143,2777,"Allergy Mustard Seed - Veg (Immunocap/FEIA)",1000,500
+144,2784,"Allergy Mutton  - Non Veg (Immunocap/FEIA)",1000,500
+145,2792,"Allergy Non Veg Panel (8 Allergens)",6250,3125
+146,2817,"Allergy Nuts Panel  ( 5 Allergen)",4250,2125
+147,2767,"Allergy Oat - Veg (Immunocap/FEIA)",1000,500
+148,2751,"Allergy Orange - Veg (Immunocap/FEIA)",1000,500
+149,2881,"Allergy Parthenium - Inhalant (Immunocap/FEIA)",1000,500
+150,2772,"Allergy Pea - Veg (Immunocap/FEIA)",1000,500
+151,2757,"Allergy Peach - Veg (Immunocap/FEIA)",1000,500
+152,2762,"Allergy Peanut - Veg (Immunocap/FEIA)",1000,500
+153,2749,"Allergy Pear - Veg (Immunocap/FEIA)",1000,500
+154,2811,"Allergy Penicillium Chrysogenum - Inhalant (Immunocap/FEIA)",1000,500
+155,2755,"Allergy Pineapple - Veg (Immunocap/FEIA)",1000,500
+156,2879,"Allergy Pomegranate - Veg (Immunocap/FEIA)",1000,500
+157,2785,"Allergy Pork  - Non Veg (Immunocap/FEIA)",1000,500
+158,2740,"Allergy Potato - Veg (Immunocap/FEIA)",1000,500
+159,2880,"Allergy Regweed - Inhalant (Immunocap/FEIA)",1000,500
+160,2765,"Allergy Rice - Veg (Immunocap/FEIA)",1000,500
+161,3197,"Allergy Screening Tryptase",3500,1750
+162,2776,"Allergy Sesame Seed - Veg (Immunocap/FEIA)",1000,500
+163,2771,"Allergy Soyabean - Veg (Immunocap/FEIA)",1000,500
+164,2743,"Allergy Spinach - Veg (Immunocap/FEIA)",1000,500
+165,2818,"Allergy Starch Panel (3 Allergens)",2500,1250
+166,2752,"Allergy Strawberry - Veg (Immunocap/FEIA)",1000,500
+167,936,"Allergy Test For Chocolate, Serum",1000,500
+168,1693,"Allergy Test For Paracetamol",1000,500
+169,2813,"Allergy Timothy - Inhalant (Immunocap/FEIA)",1000,500
+170,2738,"Allergy Tomato - Veg (Immunocap/FEIA)",1000,500
+171,2815,"Allergy Vegetable Panel (11 Allergen)",9000,4500
+172,2763,"Allergy Walnut - Veg (Immunocap/FEIA)",1000,500
+173,3881,"Allergy: 107 Allergens",6500,3250
+174,3409,"Almond- Veg (EIA)",500,250
+175,28,"Alpha 1 Antitrypsin, Serum",3000,1500
+176,29,"Alpha Feto Protein (Afp), Serum",850,425
+177,1655,"Alpha Feto Protein (Afp), Serum (Triple)",1000,500
+178,3497,"Alpha Lacto Globulin (EIA)",500,250
+179,3536,"Alternaria Alternate (EIA)",500,250
+180,1110,"Amacr (Alpha-Methylacyl-Coa Racemase/P5045)",4500,2250
+181,2443,"Amenorrhoea Profile",2250,1125
+182,5118,"AMH ( Anti mullerian hormone) - Elisa",1250,625
+183,2391,"Amh + Panel",3500,1750
+184,3324,"Amino Acid Profile Urine",7750,3875
+185,2403,"Amino Acid Quantitative Plasma",8000,4000
+186,31,"Amino Levulinic Acid Ala (Quantitative), Urine Spot",6500,3250
+187,32,"Ammonia",1200,600
+188,3788,"Amoebic Serology Igg, Serum",2500,1250
+189,3469,"Amoxicillin- Drug (EIA)",500,250
+190,3468,"Ampicillin- Drug (EIA)",500,250
+191,2287,"Amylase - Ascitic Fluid",550,275
+192,2278,"Amylase - Peritonial Fluid",550,275
+193,2267,"Amylase ( Pleural Fluid )",550,275
+194,33,"Amylase (Spot Urine)",550,275
+195,34,"Amylase, Body Fluid",550,275
+196,35,"Amylase, Serum",550,275
+197,2388,"Ana  Profile (17 Antigen)",5000,2500
+198,4639,"Ana Profile (25 Antigen)",5500,2750
+199,3832,"Ana Reflex  To  Ena Profile",6000,3000
+200,878,"Anaerobic Culture",1600,800
+201,3531,"Analgin (EIA)",500,250
+202,955,"Anca Profile (Immunoblot), Serum",3750,1875
+203,5297,"Androgen receptor",4500,2250
+204,37,"Androstenedione, Serum",3500,1750
+205,1665,"Anemia Profile",2500,1250
+206,8,"Angiotensin Converting Enzyme (Ace), Serum",1750,875
+207,1333,"Anti  Intrinstic Antibody",3100,1550
+208,948,"Anti - Jo Antibody, Serum",2200,1100
+210,3673,"Anti Aquaporine 4 Antibody ( Eia)",2200,1100
+211,2686,"Anti B Antibody Titre",2900,1450
+212,38,"Anti Ccp, Serum",1500,750
+213,869,"Anti Centromere Ab, Serum",2200,1100
+214,4976,"Anti Complement Factor H",7500,3750
+215,1595,"Anti Cysticercosis-Igg",2450,1225
+216,16,"Anti Diuretic Hormone (Adh) (Vasopressin), Edta",7000,3500
+217,39,"Anti Ds Dna",1100,550
+218,3312,"Anti Ds-Dna Antibody - Ifa (Qualitative)",2750,1375
+219,4526,"Anti Factor X A Assay",7000,3500
+220,1011,"Anti Glomerular Basement Membrane Ab - Igg, Serum",3000,1500
+221,748,"Anti Hav - Igg",1000,500
+222,41,"Anti Hav - Igm",1000,500
+223,40,"Anti Hav Total",1000,500
+224,42,"Anti Hbc - Igm",1000,500
+225,43,"Anti Hbc Ab - Total",1000,500
+226,44,"Anti Hbe",1000,500
+227,45,"Anti Hbs",1000,500
+228,5042,"Anti Hbs (Cmia Method)",2200,1100
+229,47,"Anti Hdv-Total Antibodies To Hepatitis Delta Virus",6500,3250
+230,2327,"Anti Histone Antibody",3000,1500
+231,1135,"Anti Intinsic Factor Antibody",3500,1750
+232,1091,"Anti Mag Antibodies",7000,3500
+233,50,"Anti Mitochondrial Antibody",1600,800
+234,3674,"Anti Mog ( Myelin Oligodendrocyte Glucoprotein) ( Eia )",2250,1125
+235,3337,"Anti Mog (Myelin Oligodendrocyte Glycoprotein)  Ifa",7250,3625
+236,3675,"Anti Mog + Anti Nmo /Aquaporine 4 Antibody ( Eia )",3750,1875
+237,247,"Anti Mullerian Hormone ( Amh ) By Eclia",1500,750
+238,3336,"Anti -Nmo/Aquaporin -4  +  Anti Mog Ifa",9000,4500
+239,798,"Anti Nuclear Anti Body - (Ana) Ifa",1250,625
+240,36,"Anti Nuclear Antibody (Ana) ( Clia )",800,400
+241,2358,"Anti Phospholipid - Igg Igm",2000,1000
+242,51,"Anti Phospholipid Ab - Igg",1000,500
+243,52,"Anti Phospholipid Ab - Igm",1000,500
+244,53,"Anti Smith Antibody",2900,1450
+245,58,"Anti Smooth Muscle  Antibody (Asma), Serum",3750,1875
+246,2394,"Anti Soluble Liver Antigen Sla",2500,1250
+247,54,"Anti Sperm Antibody (Asab), Sperm",1250,625
+248,55,"Anti Thrombin Iii, Serum",2700,1350
+249,1385,"Anti Thyroglobulin - Serum",1100,550
+250,870,"Anti Topisomerase A B",2000,1000
+251,3140,"Apla Syndrome Profile",4750,2375
+252,1047,"Aplar2 Antibody (Anti Pla2R)",6000,3000
+253,56,"Apolipoproteins A1 (Apo-A1)",650,325
+254,57,"Apolipoproteins B (Apo-B)",650,325
+255,3406,"Apple- Veg (EIA)",500,250
+256,1702,"Arsenic",3500,1750
+257,1323,"Asca Iga-Anti Saceharomyces Cerevisiae Antibody",4000,2000
+258,1322,"Asca Igg-Anti Saceharomyces Cerevisiae Antibody",4000,2000
+259,59,"Aso Titre  Quantification",700,350
+260,3492,"Asparagus (EIA)",500,250
+261,810,"Aspergilles Specific (Serum) Igg",2400,1200
+262,1573,"Aspergillus Antibody",2500,1250
+263,3443,"Aspergillus Fumigates- Inhalents (EIA)",500,250
+264,1750,"Aspergillus Fumigatus For Ige",1100,550
+265,2390,"Aspergillus Galactomannan Assay",5500,2750
+266,3317,"Aspergillus Igm Antibody",2650,1325
+267,1572,"Aspergillus Specific Ige",2000,1000
+268,3472,"Aspirin- Drug (EIA)",500,250
+269,1068,"Autoimmune Encephalitis Profile",20000,10000
+270,2680,"Autoimmune Hepatitis Panel",5500,2750
+271,3875,"Autoimmune Hepatitis Panel 1",6000,3000
+272,3318,"Automated Identification And Mic",1250,625
+273,4649,"Autopsy Large Biopsy",3000,1500
+274,61,"Bacterial Culture For Fluid",1000,500
+275,60,"Bacterial Culture, Tissue",1000,500
+276,3494,"Baker'S Yeast (EIA)",500,250
+277,3404,"Banana- Veg (EIA)",500,250
+278,3686,"Barbiturate - Urine",1650,825
+279,3518,"Barley (EIA)",500,250
+280,3857,"Bcl6 In Endometrial Biopsy By Ihc",7000,3500
+281,3419,"Beans- Veg (EIA)",500,250
+282,3431,"Beef- Non Veg (EIA)",500,250
+283,3420,"Beet Root- Veg (EIA)",500,250
+284,62,"Bence Jones Protein( Spot Urine )",200,100
+285,63,"Benzodiazapine  (Qualitative), Urine",1400,700
+286,4607,"Benzodiazapine Quantitative  In (Urine)",11000,5500
+287,4146,"Benzodiazepines - Urine Screening Qualitative",1500,750
+288,3439,"Bermuda Grass- Inhalents (EIA)",500,250
+289,3125,"Beta 2 Glycoprotein Iga",1450,725
+290,756,"Beta 2 Glycoprotein Igg",1450,725
+291,757,"Beta 2 Glycoprotein Igm",1450,725
+292,64,"Beta 2 Microglobulin",1800,900
+293,3018,"Beta 2 Microglobulin (Amniotic Fluid)",1800,900
+294,4023,"Beta Crosslaps; Beta Ctx; Collagen Type 1C-Telopeptide",2500,1250
+295,4077,"Beta HCG (CLIA)",400,200
+296,65,"Beta Hcg, Serum",400,200
+297,3496,"Beta Lactoglobulin (EIA)",500,250
+298,2423,"Bicarbonate (24 Hrs. Urine)",550,275
+299,66,"Bicarbonate (Hco3), Serum",450,225
+300,799,"Bile Acids Serum",2200,1100
+301,67,"Bile Pigments ( Urine )",150,75
+302,2632,"Bile Pigments (Body Fluid)",220,110
+303,2633,"Bile Salt (Body Fluid)",300,150
+304,68,"Bile Salts  ( Urine )",150,75
+305,4893,"Bilirubin (Total)- Body Fluid",150,75
+306,69,"Bilirubin (Total) Serum",150,75
+307,71,"Bilirubin Direct, Serum",150,75
+308,70,"Bilirubin Indirect, Serum",150,75
+309,1230,"Bilirubin(Total/Direct/Indirect)",300,150
+310,3327,"Bioavailable Testosterone",3250,1625
+311,72,"Biopsy  Large",1600,800
+312,73,"Biopsy  Medium",1100,550
+313,74,"Biopsy  Small",600,300
+314,2837,"Biopsy Emergency",1750,875
+315,938,"Biopsy Extra Large Specimen",2200,1100
+316,3278,"Biopsy Medium 2 Small Container",1250,625
+317,4061,"Biopsy More Than Extra Large",3750,1875
+318,1148,"Biopsy Slide For (Second Opinion)",600,300
+319,4592,"Biotidinase ( Dbs)",550,275
+320,2316,"Biotinidase Quantitative",8600,4300
+321,3416,"Black Pepper- Veg (EIA)",500,250
+322,3792,"Bleeding Disorder Panel",5000,2500
+323,75,"Bleeding Time (Bt)",70,35
+324,3680,"Block And Slide Return 1 To 3 Blocks",400,200
+325,3681,"Block And Slide Return 4 To 5 Blocks",750,375
+326,1429,"Block For Review 6 To 10 Blocks",1650,825
+327,1430,"Block For Review More Than 10 Blocks",3000,1500
+328,1428,"Block For Review Upto 5 Blocks",1100,550
+329,2702,"Block Preparation",600,300
+330,3683,"Blocks And Slides Return Above 5 Blocks",750,375
+331,3447,"Blomia Tropicalis- Inhalents (EIA)",500,250
+333,626,"Blood Grouping And Rh Test",350,175
+334,644,"Blood Urea",180,90
+335,3195,"Blood-Urine - Tms And Gcms",15000,7500
+336,77,"Bnp (B Type Natriuretic Peptide)",3000,1500
+337,3996,"Body Fluid  - Bicarbonate ( Hco3)",550,275
+338,3997,"Body Fluid  - Magnesium ( Mg)",550,275
+339,78,"Body Fluid - Adenosine Deaminase (Ada)",1000,500
+340,3828,"Body Fluid - Afp",900,450
+341,3829,"Body Fluid - Beta Hcg",450,225
+342,3826,"Body Fluid - Ca 125",1000,500
+343,3827,"Body Fluid - Ca 19.9",1300,650
+344,1130,"Body Fluid - Globulin",300,150
+345,1016,"Body Fluid - Lipase",1100,550
+346,4681,"Body Fluid Alkaline Phosphatase",350,175
+347,339,"Body Fluid Chyle",400,200
+348,79,"Body Fluids - Cell Count",280,140
+349,80,"Body Fluids - Chloride",280,140
+350,1026,"Body Fluids - Differential Count",220,110
+351,83,"Body Fluids - Sugar",120,60
+352,2924,"Boh  Basic Panel",4250,2125
+353,3261,"Boh  Basic Panel1",4750,2375
+354,4876,"Bone Marrow  Smear Examination And Cytochemistry",1100,550
+355,1247,"Bone Marrow Small Biopsy",850,425
+356,84,"Bone Marrow Study",1100,550
+357,1667,"Bone Mineral Profile",2800,1400
+358,4507,"Bordetella Pertussis Igg Antibodies Quantitative By Eia - Serum",4250,2125
+359,3418,"Brinjal/Egg Plant / Aubergine- Veg (EIA)",500,250
+360,2635,"Brucella Antibody",1950,975
+361,85,"Brucella Igg Antibody",1600,800
+362,86,"Brucella Igm Antibody",1600,800
+363,3464,"Brufen ( Ibuprofen )- Drug (EIA)",500,250
+364,87,"Bt And Ct",150,75
+365,3538,"Budgerigar Feathers (EIA)",500,250
+366,88,"Bun - Blood Urea Nitrogen, Serum",220,110
+367,4544,"Bun/Creatinine Ratio",550,275
+368,3548,"Butter (EIA)",500,250
+369,90,"C - Peptide - Fasting",1000,500
+370,91,"C - Peptide - Pp",1000,500
+371,975,"C - Peptide - Random",1000,500
+372,92,"C Anca - Elisa, Serum",1800,900
+373,760,"C Anca - If Immunofluorescence Method, Serum",3250,1625
+374,844,"C1 Esterase Inhibitor",5750,2875
+375,93,"C3 - Compliment 3, Serum",900,450
+376,94,"C4 - Complement 4, Serum",900,450
+377,95,"Ca-125",900,450
+378,98,"Ca-15.3",1250,625
+379,99,"Ca-19.9",1350,675
+380,1675,"Ca-27.29",10500,5250
+381,97,"Ca-72.4",3000,1500
+382,3396,"Cabbage- Veg (EIA)",500,250
+383,100,"Calcitonin",2100,1050
+384,101,"Calcium -  24 Hrs Urine",450,225
+385,102,"Calcium ( Spot Urine )",350,175
+386,3020,"Calcium (Amniotic Fluid)",350,175
+387,1784,"Calcium Creatinine Ratio - Urine Spot",550,275
+388,103,"Calcium, Serum",350,175
+389,2937,"Calprotectin  - Stool  ( Clia )",3250,1625
+390,630,"Cancer Screening Test For Female",3000,1500
+391,631,"Cancer Screening Test For Male",3000,1500
+392,3444,"Candida Albicans- Inhalents (EIA)",500,250
+393,2229,"Cango Red 1",650,325
+394,3553,"Caraway (Jeera) (EIA)",500,250
+395,104,"Carbamazepine",1100,550
+396,3421,"Cardamom- Veg (EIA)",500,250
+397,3761,"Cardiac Marker Test",3500,1750
+398,105,"Cardiolipin Antibody - Iga, Serum",1000,500
+399,2357,"Cardiolipin Antibody - Igg Igm",1900,950
+400,106,"Cardiolipin Antibody - Igg, Serum",1000,500
+401,107,"Cardiolipin Antibody - Igm, Serum",1000,500
+403,3487,"Carrot (EIA)",500,250
+404,3499,"Casein (EIA)",500,250
+405,3514,"Cashew Nut (EIA)",500,250
+406,3458,"Cat Epithelium- Inhalents (EIA)",500,250
+407,2402,"Catecholamine (Adrenaline And Non-Adrenaline) Plasma",9000,4500
+408,895,"Cd 1A (Pan T -Cell Marker)",2750,1375
+409,1141,"Cd 27 Prognostic Markers ( Lymphoma )",1450,725
+410,1393,"Cd 5",2750,1375
+411,1140,"Cd 7 Prognostic Markers ( Lymphoma )",1650,825
+412,896,"Cd 99",1650,825
+413,3129,"Cd11B (Myeloid Marker)",3500,1750
+414,4547,"Cd138",1650,825
+415,2326,"Cd2",2750,1375
+416,2265,"Cd38",2750,1375
+417,1464,"Cea-Carcino Embryonic Antigen- Body Fluid",950,475
+418,110,"Cea-Carcino Embryonic Antigen, Serum",950,475
+419,3465,"Cefaclor- Drug (EIA)",500,250
+420,3355,"Cefactor",500,250
+421,3488,"Celeriac/Celery (EIA)",500,250
+422,694,"Cell Block",600,300
+423,111,"Cell Count (Ascitic Fluid)",300,150
+424,112,"Cell Count, Csf",300,150
+425,3509,"Cephalexin (EIA)",500,250
+426,3470,"Cephalosproin C- Drug (EIA)",500,250
+427,113,"Ceruloplasmin - Serum",1100,550
+428,3854,"Cervical Swab Culture And Sensitivity",550,275
+429,843,"Ch-50 (Complement, Total),",5000,2500
+430,3495,"Cheddar Cheese  (EIA)",500,250
+431,3415,"Chick Pea (Channa Dal) - Veg (EIA)",500,250
+432,3457,"Chicken Feathers- Inhalents (EIA)",500,250
+433,3432,"Chicken- Non Veg (EIA)",500,250
+434,3023,"Chikungunya  Igg  Antibody",1350,675
+435,5028,"Chikungunya Igg (Elisa)",1100,550
+436,5027,"Chikungunya Igm ( Elisa)",1100,550
+437,114,"Chikungunya Igm (Immunochromatography)",700,350
+438,3524,"Chilli Pepper (EIA)",500,250
+439,815,"Chlamydia Iga, Serum",2750,1375
+440,814,"Chlamydia Igg, Serum",2750,1375
+441,2532,"Chlamydia Igm",2750,1375
+442,4593,"Chlamydia Trachimatis Antibody (Igm)",2750,1375
+443,1601,"Chlamydia Trachomatis (Cat)",1750,875
+444,115,"Chloride ( 24 Hrs Urine )",550,275
+445,3973,"Chloride ( Fluid)",280,140
+446,116,"Chloride ( Spot Urine )",280,140
+447,3021,"Chloride (Amniotic Fluid)",280,140
+448,117,"Chloride, Serum",280,140
+449,3532,"Chloroquine (EIA)",500,250
+450,3417,"Chocolate- Veg (EIA)",500,250
+451,118,"Cholesterol - Total, Body Fluid",280,140
+452,1701,"Chromium",5000,2500
+453,1771,"Chromium - Serum",5500,2750
+454,1772,"Chromium - Urine",4500,2250
+455,887,"Chromogranin - A",4500,2250
+456,2699,"Chyle",550,275
+457,5140,"Chylomicron ( Body fluid)",1200,600
+458,3475,"Ciprofloxacin- Drug (EIA)",500,250
+459,3508,"Cladosporium Herbarum (EIA)",500,250
+460,610,"Clotting Time",70,35
+461,3523,"Cloves (EIA)",500,250
+462,2630,"Clozapine, Serum",6000,3000
+463,1574,"CLPD - NHL BASIC",10000,5000
+464,120,"Cmv (Cytomegalovirus) - Igg",750,375
+465,121,"Cmv (Cytomegalovirus) - Igm",750,375
+466,2651,"Cmv Igg Avidity Test",3000,1500
+467,2723,"Coagulant Panel",11000,5500
+468,3757,"Coagulation Profile - Maxi",12750,6375
+469,3756,"Coagulation Profile - Mini",500,250
+470,3528,"Cocks Foot  (Orchard Grass) (EIA)",500,250
+471,3527,"Cocoa (EIA)",500,250
+472,3516,"Coconut (EIA)",500,250
+473,3517,"Coconut Milk (EIA)",500,250
+474,3526,"Coffee (EIA)",500,250
+475,2421,"Cold Aggulutinin",750,375
+476,3350,"Colistin Mic By Broth Dilution With Organism Identification",1850,925
+477,3349,"Colistin Mic By Broth Micro Dilution",600,300
+478,2467,"Common Bile Duct Stone Analysis",1600,800
+479,3454,"Common Ragweed- Inhalents (EIA)",500,250
+480,5146,"Complete Allergy panel (303) (ALEX)",15000,7500
+481,1695,"Complete Breast Panel",7750,3875
+482,3821,"Complete Haemogram With Peripheral Smear",650,325
+483,122,"Complete Hemogram",400,200
+484,3089,"Complete Hemogram (Blood Bank)",400,200
+485,3579,"Complete Hemogram With Nlr",550,275
+486,1149,"Complete Hemogram With Out Esr",300,150
+487,123,"Coombs Direct",750,375
+488,124,"Coombs Indirect",750,375
+489,125,"Copper - 24 Hrs. Urine",1500,750
+490,126,"Copper - Serum",1100,550
+491,2693,"Copper (Random Urine)",1300,650
+492,1227,"Copper Stain (Liver Biopsy)",1000,500
+493,1051,"Corrected Calcium",440,220
+494,127,"Cortisol -  Am",700,350
+495,128,"Cortisol - Pm",700,350
+496,4591,"Cortisol (Random)",700,350
+497,860,"Cortisol 24 Hrs Urine",850,425
+498,1199,"Cortisol Saliva",800,400
+499,1200,"Cortisol Spot Urine",800,400
+500,3566,"Covid-19 (Sars-Cov-2) Qualitative Rt-Pcr",440,220
+501,3566,"COVID-19 (SARS-CoV-2) Qualitative RT-PCR",400,200
+502,3402,"Cow'S Milk (Kefir)- Veg (EIA)",500,250
+503,2981,"Coxsackie Virus Antibody   Igg",3800,1900
+504,2982,"Coxsackie Virus Antibody   Igm",3800,1900
+505,129,"Cpk - Creatine Phospho Kinase (Total), Serum",450,225
+506,130,"Cpk-Mb, Serum",650,325
+507,3428,"Crab- Non Veg (EIA)",500,250
+508,131,"Creatinine - 24 Hrs. Urine",280,140
+509,2292,"Creatinine - Ascitic Fluid",280,140
+510,132,"Creatinine ( Drain Fluid )",280,140
+511,133,"Creatinine ( Spot Urine )",170,85
+512,3131,"Creatinine (Amniotic Fluid)",280,140
+513,983,"Creatinine (Fluid)",280,140
+514,134,"Creatinine Clearance  Serum",440,220
+515,135,"Creatinine Clearance ( 24 Hrs Urine )",550,275
+516,136,"Creatinine, Serum",170,85
+517,137,"Crp-C Reactive Protein",550,275
+518,984,"Cryoglobulins",1650,825
+519,3983,"Cryptococcus Antigen Detection By Agglutination",3500,1750
+520,138,"Csf - Chloride",280,140
+521,151,"Csf - Differencial Count",280,140
+522,1063,"Csf - Globulin",450,225
+523,139,"Csf - Glucose",150,75
+524,1644,"Csf - Igg",1350,675
+525,1645,"Csf - Igm",1320,660
+526,4407,"Csf - Measles Igg",2200,1100
+527,4408,"Csf - Measles Igm",2200,1100
+528,82,"Csf - Protein",280,140
+529,3831,"Csf - Pyruvate",1750,875
+530,142,"Csf - Sodium",280,140
+531,143,"Csf - Total Protein",280,140
+532,144,"Csf - Total Wbc Count",280,140
+533,145,"Csf - Vdrl",300,150
+535,787,"Csf Electrolytes",550,275
+536,1734,"Csf Fluid For Cryptococcus Antigen",3500,1750
+537,1436,"Csf For Cytology",770,385
+538,866,"Csf For Ocb",4600,2300
+539,3399,"Cucumber- Veg (EIA)",500,250
+540,3423,"Curd- Veg (EIA)",500,250
+541,3185,"Cyclosporine",4000,2000
+542,3977,"Cyfra (Ca 21.1)",4000,2000
+543,867,"Cystatin C Serum",2200,1100
+544,3340,"Cystine Quantitative -Urine",8500,4250
+545,5268,"Cyto special stain",1000,500
+546,146,"Cytology Fluid",750,375
+547,3408,"Date- Veg (EIA)",500,250
+548,3599,"Dbs Tms Profile",8000,4000
+549,147,"D-Dimer",1000,500
+550,2293,"D-Dimer - Ascitic Fluid",1000,500
+551,1460,"D-Dimer - Body Fluid",1000,500
+552,148,"Dengue - Igg Elisa",800,400
+553,149,"Dengue - Igm Elisa",800,400
+554,1577,"Dengue  Ns1 Elisa",900,450
+555,2360,"Dengue Igg Igm",1600,800
+556,1578,"Dengue Profile",2000,1000
+557,3506,"Deodorant (EIA)",500,250
+558,3446,"Dermatophagoides - Farinae- Inhalents (EIA)",500,250
+559,3445,"Dermatophagoides - Pteronyssinus- Inhalents (EIA)",500,250
+560,3664,"Des Gamma Carboxy Prothrombin (Dcp)/Pivka Ii, Serum",4500,2250
+561,3086,"Desmoglein (Dsg) Level 1",6600,3300
+562,3087,"Desmoglein (Dsg) Level 3",6000,3000
+563,3558,"Dexomethasone (EIA)",500,250
+564,150,"Dhea Dehydroepiandrosterone - Serum",3000,1500
+565,1093,"Dheas",1100,550
+566,1770,"Dht- Di Hydro Testosterone Serum",3300,1650
+567,3764,"Diabetes Mellitus",5500,2750
+568,3354,"Diclofenac",2000,1000
+569,3483,"Diclofenac- Drug (EIA)",500,250
+570,152,"Differential Count (Dc)",220,110
+571,898,"Digoxin (Lanoxin) Serum",1300,650
+572,1223,"Dilute Russells Viper Venom Test ( Drvvt )",2200,1100
+573,4134,"Diphtheria Antibody Igg",4000,2000
+574,1685,"Dog Dandruff",1000,500
+575,3545,"Dog Dandruff (EIA)",500,250
+576,1684,"Dog Epithelium",1000,500
+577,3448,"Dog Epithelium- Inhalents (EIA)",500,250
+578,1686,"Dog Saliva",1000,500
+579,4177,"Dopamine Serum",4000,2000
+580,716,"Double Screening",2100,1050
+581,1691,"Double Screening With Afp",2100,1050
+582,2561,"Double Screening With Plgf",3300,1650
+583,724,"Double Screening with Scan",3250,1625
+584,4597,"Drug - Amphetamines ( Urine) - Quantative",1500,750
+585,3484,"Drug Allergy Panel  - (EIA)",6500,3250
+586,996,"Drugs Of  Abuse Panel (Urine) 6 Drugs",2500,1250
+587,2319,"Drugs Of Abuse Panel (Urine) 12 Drugs",4500,2250
+588,2419,"Drugs Of Abuse Panel (Urine) 14 Drugs",5000,2500
+589,2384,"Drugs Of Abuse Panel (Urine) 9 Drugs",3500,1750
+590,3539,"Duck Fethers (EIA)",500,250
+591,154,"Ebv Ebstein Barr Virus - Igm Antibodies",2200,1100
+592,3607,"Ebv Epstein Barr Virus Igg",2200,1100
+593,1069,"Echinococcus  Igg ( Elisa)",2200,1100
+594,3564,"Echinococcus (Hydwtid Serology) Igg",2200,1100
+595,4216,"Echovirus Antibody, Igg",3250,1625
+596,4217,"Echovirus Antibody, Igm",3250,1625
+597,2802,"Eczema (Veg & Non Veg - 20 Allerngens) Panel",15500,7750
+598,3029,"Eczema Panel For Vegetarians",12500,6250
+599,3174,"Egfr + Alk Ihc",4500,2250
+600,3425,"Egg- Non Veg (EIA)",500,250
+601,3424,"Egg White- Non Veg (EIA)",500,250
+602,3426,"Egg Yolk- Non Veg (EIA)",500,250
+603,4705,"Electrolytes (Na,K,Cl)",350,175
+604,616,"Electrolytes With Bicarbonate",550,275
+605,2827,"Electron Microscopy For Renal Biopsy",12500,6250
+606,3541,"Elm (EIA)",500,250
+607,2575,"Eml4 - Alk",6000,3000
+608,758,"Ena ( Extractable Nuclear Antigen ) Profile",5500,2750
+609,4666,"Endometrium Comprehensive Ihc",10500,5250
+610,4653,"Endomysial Antibody Iga",3500,1750
+611,4652,"Endomysial Antibody Igg",4500,2250
+612,1382,"Endomysial Antibody-Iga",3500,1750
+613,3806,"Endoscopy Biopsy",1250,625
+614,3168,"Enhanced First Trimester Screening ( Efts ) / 1T Quad",4500,2250
+615,4501,"Eosinophils In Urine",350,175
+616,4062,"Epidermal (Pemphigus) Antibody Ifa In Dilutions",6250,3125
+617,3471,"Erythromycin- Drug (EIA)",450,225
+618,155,"Esr - Erythrocyte Sedimentation Rate",90,45
+619,4179,"Estimated Protein Excretion",450,225
+620,156,"Estradiol (E2), Serum",500,250
+621,4078,"Estradiol E2 (CLIA)",500,250
+622,157,"Estriol - Free",1100,550
+623,1656,"Estriol - Free (Triple)",1100,550
+624,2894,"Estrone (E1 )",9500,4750
+625,5017,"Everolimus",7750,3875
+626,2839,"Extended Boh Panel",6200,3100
+627,3754,"Eye Swab Culture (Left)",600,300
+628,3753,"Eye Swab Culture (Right)",600,300
+629,158,"Factor  Viii Activity",2750,1375
+630,807,"Factor Ix Activity",3200,1600
+631,808,"Factor V",3500,1750
+632,4151,"Factor Vii Functional",4000,2000
+633,2493,"Factor Viii (Blood Bank)",2650,1325
+634,3998,"Factor X",6500,3250
+635,3732,"Factor Xiii",3500,1750
+636,826,"Factor Xiii Activity",3500,1750
+637,4133,"Fatty Acids With Very Long Chains C22 To C26 -Plasma",20000,10000
+638,160,"Fdp - Fibrinogen Degradation Products, Plasma",1100,550
+639,3151,"Fecal  Elastase",5500,2750
+640,3765,"Female  Hormone Profile",3250,1625
+641,161,"Ferritin, Serum",900,450
+642,2874,"Fertility Index(Amh,Lh,Fsh,Prl,E2,Tsh)",3000,1500
+643,2563,"Fertility Profile 1",1600,800
+644,2929,"Fetal Autopsy",6250,3125
+645,884,"Fever Profile Mini",1650,825
+646,3804,"Fever Profile Serology",5000,2500
+647,162,"Fibrinogen",1000,500
+648,2496,"Fibrinogen ( Blood Bank)",1000,500
+649,2969,"Filaria Antibody Detection",1600,800
+650,3546,"Fire Ant (EIA)",500,250
+651,3219,"First Trimester  With Plgf  (Astria)",4000,2000
+652,2930,"First Trimester Screening (Astria)",2200,1100
+653,3427,"Fish (Cod)- Non Veg (EIA)",500,250
+654,4294,"Flu panel complete COVID  H1N1 Adeno RSV",7500,3750
+655,765,"Fnac - Slide (Second Opinion)",850,425
+656,702,"Fnac (Fine Needle Aspiration Cytology)",900,450
+657,4919,"Fnac Four Slides",1100,550
+658,4916,"Fnac Single Slide",400,200
+659,1435,"Fnac Stained & Unstained Slides 6 To 10 Nos",1250,625
+660,2328,"Fnac Stained & Unstained Slides More Than 10 Slides",1600,800
+661,1434,"Fnac Stained & Unstained Slides Upto 5 Nos",1300,650
+662,4918,"Fnac Three Slides",1000,500
+663,4917,"Fnac Two Slides",750,375
+664,4439,"Folic Acid (Folate) Clia",1000,500
+665,163,"Folic Acid / Folate - Serum",1000,500
+666,4074,"Follicle Stimulating hormone FSH (CLIA)",450,225
+667,4186,"Fractional Excretion  Of Magnesium (Fema)",1100,550
+668,2858,"Fractional Excretion  Of Uric Acid (Feua)",1100,550
+669,4034,"Fractional Excretion Of Urea (Fe Urea)",1100,550
+670,842,"Free Androgen Index",3000,1500
+671,166,"Free Beta Hcg, Serum",1750,875
+672,1657,"Free Beta Hcg, Serum (Triple)",1400,700
+673,5377,"Free Light Chains - Kappa &Lambda (Urine)",3850,1925
+674,1380,"Free Light Chains-Kappa & Lambda",3850,1925
+675,167,"Free Psa (Prostate Specific Antigen), Serum",1100,550
+676,2366,"Free Psa Total Psa Ratio",1540,770
+677,168,"Free T3",200,100
+678,169,"Free T4",200,100
+679,2361,"Free T4 Tsh",450,225
+680,170,"Free Testosterone, Serum",1100,550
+681,4068,"Free Thyroxine FT4 (CLIA)",200,100
+682,4067,"Free Triiodothyronine FT3 (CLIA)",200,100
+683,2350,"Frozen Tissue Biopsy",8500,4250
+684,171,"Fructosamine",1500,750
+685,2472,"Fructose (Semen)",200,100
+686,172,"Fsh - Follicle Stimulating Hormone, Serum",450,225
+687,4045,"Fsh & Lh Stimulation By Gonadotropin Releasing Hormone (Gnrh)",5500,2750
+688,1059,"Fta - Abs Fluorescent Treponemal Antibody Absorption Test, Serum",2200,1100
+689,173,"Fungus Culture",1250,625
+690,1077,"Fungus Culture With Automated Identification & Antibiogram",1500,750
+691,174,"G6Pd (Glucose 6 Phosphate Dehydrogenase) - Qualitative",750,375
+692,913,"G6Pd (Glucose 6 Phosphate Dehydrogenase) - Quantitative",750,375
+693,1028,"Gad-Glutamic Acid Decarboxylase",3250,1625
+694,2595,"Galactosemia Enzymes Assay",4000,2000
+695,945,"Gallbladder Stone Analysis",1650,825
+696,175,"Gamma Glutamyl Transferase (Ggt), Serum",280,140
+697,3391,"Garlic- Veg (EIA)",500,250
+698,2471,"Gastric Juice Analysis",1750,875
+699,845,"Gastrin, Serum",2650,1325
+700,832,"Gbm Antibody",2750,1375
+701,3356,"Gelatin",450,225
+702,3479,"Gelatin- Drug (EIA)",500,250
+703,3594,"Gene Expert For Covid 19",6000,3000
+704,3820,"Gene Xpert Plus",6600,3300
+705,3820,"Gene Xpert PLUS",7000,3500
+706,3353,"Gentamicin",450,225
+707,3482,"Gentamicin- Drug (EIA)",500,250
+708,3450,"German Cockroach- Inhalents (EIA)",500,250
+709,777,"Gfr-Glomerular Filteration Rate",900,450
+710,3549,"Ghee (EIA)",500,250
+711,3394,"Ginger- Veg (EIA)",500,250
+712,1438,"Gliadin Antibody Iga",3300,1650
+713,1098,"Gliadin Antibody Igg",3300,1650
+714,1099,"Gliadin Antibody Igm",3300,1650
+715,176,"Globulin(Serum)",300,150
+716,177,"Glucose  (F)",60,30
+717,178,"Glucose  (Pp)",60,30
+718,2284,"Glucose - Ascitic Fluid",120,60
+719,179,"Glucose - Body Fluid",120,60
+720,2273,"Glucose - Peritonial Fluid",120,60
+721,2280,"Glucose - Synovial Fluid",120,60
+722,957,"Glucose ( 2  Hrs .  Pp With 75 Grams Glucose )",250,125
+723,2269,"Glucose ( Pleural Fluid )",120,60
+724,855,"Glucose ( Post Lunch )",60,30
+725,1012,"Glucose ( Pre-Lunch )",60,30
+726,180,"Glucose (1 1/2 Hrs. Pp)",60,30
+727,181,"Glucose (2 Hrs. Pp)",60,30
+728,182,"Glucose (Post-Dinner)",60,30
+729,809,"Glucose (Pre-Dinner)",60,30
+730,184,"Glucose (Rbs)",60,30
+731,185,"Glucose -1 Hrs Pp",60,30
+732,3395,"Gluten- Veg (EIA)",500,250
+733,4480,"Glycosaminoglycan Urine",4750,2375
+734,186,"Grams Stain",300,150
+735,3405,"Grape Fruit- Veg (EIA)",500,250
+736,187,"Growth Hormone",1000,500
+737,822,"Gtt  Extended 75Gms (3Hours)",350,175
+738,720,"Gtt With 75 Gm Of Glucose",350,175
+739,3449,"Guinea Pig Epithelium- Inhalents (EIA)",500,250
+740,951,"Gullain - Barre Syndrome",4400,2200
+741,3196,"Gynace Oncology Test",5500,2750
+742,188,"H.Pylori Iga- Elisa",2000,1000
+743,189,"H.Pylori Igg-Elisa",2000,1000
+744,1083,"H.Pylori Igm-Elisa",2000,1000
+745,2649,"H.Pylori Stool Antigen",2000,1000
+746,190,"Haemoglobin",120,60
+747,3155,"Haemoglobin (Blood Bank)",280,140
+748,191,"Haemoglobin Electrophoresis",1400,700
+749,3169,"Haemoglobin Electrophoresis By Hplc Method",1500,750
+750,192,"Haemoglobin-Free, Urine",350,175
+751,829,"Hams Test",750,375
+752,3694,"Hand Swab Culture And Sensitivity",600,300
+753,193,"Hanging Drop For V.Cholerae, Stool",300,150
+754,816,"Hanta Virus",3250,1625
+755,840,"Haptoglobin",2750,1375
+756,3515,"Hazel  Nut (EIA)",500,250
+757,194,"Hba1C-Glycated Haemoglobin, Blood",350,175
+758,195,"Hbe Ag",1100,550
+759,3150,"Hbeag Profile",3500,1750
+760,197,"Hbsag ( Elisa )",600,300
+761,196,"Hbsag ( Immunochromatography )",400,200
+762,3752,"Hc - Any 5 Markers",8000,4000
+763,1169,"Hcv ( Immuno Chromatography )",600,300
+764,46,"Hcv (Elisa)",1100,550
+765,203,"Hdl Cholesterol (Direct)",280,140
+766,1726,"He4-(Human Epididymis Protein 4)",2200,1100
+767,4029,"Heat Coagulation Test  - Urine",350,175
+768,3277,"Heavy Metals Profile",4750,2375
+769,3968,"Hemophilia Panel  (Aptt, Factor V111 And Factor 1X)",4750,2375
+770,973,"Hepatitis  E  Virus - Igg (Hev Igg)",2000,1000
+771,974,"Hepatitis  E  Virus - Igm ( Hev Igm )",2000,1000
+772,1735,"Hepatitis B Virus - Genotyping",7750,3875
+773,4004,"Hepatitis Delta Antibody (Anti-Hdv), Igm",3500,1750
+774,731,"Hepatitis Panel",8000,4000
+775,2520,"Herpes Simples Virus 1  Igg",1000,500
+776,2521,"Herpes Simplex Virus 1 Igm",1000,500
+777,2523,"Herpes Simplex Virus 2 Igg",1000,500
+778,2522,"Herpes Simplex Virus 2 Igm",1000,500
+779,4219,"Hit Antibody (Heparin Induced Thrombocytopenia)",6500,3250
+780,624,"Hiv 1 & 2 Immunochromatography",450,225
+781,622,"Hiv I & Ii - Elisa",600,300
+782,208,"Hiv I & Ii Western Blot",3500,1750
+783,3671,"Hla-Celiac Disease (Dqb1*02,  1*03, Dqa1*05;01)",6000,3000
+784,1755,"Homa  - Ir (Homeostatic Model Assessment Of Insulin Resistance)",1250,625
+785,210,"Homocysteine , Serum",1700,850
+786,1005,"Homocysteine Urine",1700,850
+787,755,"Homogentisic Acid ( Urine )",1800,900
+788,2709,"Homovanilic Acid (Hva) -  Urine",8000,4000
+789,4085,"Homovanilic Acid Spot",5000,2500
+790,1088,"Hormone Profile Female",2250,1125
+791,1087,"Hormone Profile Male",2750,1375
+792,3459,"House Dust- Inhalents (EIA)",500,250
+793,3507,"House Fly (EIA)",500,250
+794,3460,"House Mites- Inhalents (EIA)",500,250
+795,857,"Hpv(Human Papillomavirus) + Liquid Pap Smear (Lbc)",3500,1750
+796,857,"HPV(Human Papillomavirus) + Liquid PAP smear (LBC)",3250,1625
+797,211,"Hs Crp (Cardio Crp)",700,350
+798,961,"Hsv 1 & 2 Ig M Herpes Simplex Virus",1100,550
+799,212,"Hsv 1 & 2 Igg Herpes Simplex Virus",1100,550
+800,3728,"Htlv 1 And 2 Virus Total Antibody",7000,3500
+801,3466,"Human Insulin- Drug (EIA)",500,250
+802,3297,"Hypersensitive Pneumonitis Profile",16000,8000
+803,4100,"Hypersensitivity Pneumonitis  (Hp) Panel",10500,5250
+804,950,"Idp - Profile ( Guillian Barre Syndrome Profile )",4400,2200
+805,4080,"Ige-Total (Clia)",600,300
+806,851,"Igf Bp-3",7000,3500
+807,1018,"Igg 4 Serum Antibodies",4500,2250
+808,1777,"Igg Index ( Csf)",4750,2375
+809,4618,"Iglon 5  Antibodies",16000,8000
+810,1468,"Ihc -  Ck 5 / 6",1650,825
+811,2657,"Ihc -  Pas Special Stain",650,325
+812,5148,"IHC - 10 markers",15000,7500
+813,1503,"Ihc - 7 Markers",10000,5000
+814,2656,"Ihc - Afb Special Staining",650,325
+815,2310,"Ihc - Any 2 Markers",3300,1650
+816,4047,"Ihc - Any 4 Markers",6200,3100
+817,4050,"Ihc - Any 6 Markers",9500,4750
+818,4610,"Ihc - Braf V600E",2200,1100
+819,2576,"Ihc - Congo Red Stain",650,325
+820,797,"Ihc - Egfr",1650,825
+821,1398,"Ihc - Ema",1650,825
+822,825,"Ihc - Final Diagnostic Panel",13000,6500
+823,2577,"Ihc - Giemsa Stain",650,325
+825,2579,"Ihc - Grocott'S Methenamine Silver Stain (Gms)",650,325
+826,956,"Ihc - Her2U",2200,1100
+827,2580,"Ihc - Iron Stain",650,325
+828,2578,"Ihc - Lapra Stain",650,325
+829,2581,"Ihc - Mat Stain",650,325
+830,3180,"Ihc - Microsatellite Instability Test",9500,4750
+831,1502,"Ihc - Non Hodgkin S Lymphoma Panel",10500,5250
+832,1447,"Ihc - P63",1650,825
+833,2642,"Ihc - Pd 1",4200,2100
+834,2407,"Ihc - Pdl1",4600,2300
+835,3755,"Ihc - Ros",5000,2500
+836,3622,"Ihc - Saa",2750,1375
+837,2658,"Ihc - Special Stain",660,330
+838,3748,"Ihc - Sv40",5000,2500
+839,2582,"Ihc - Toludin Blue Stain",660,330
+840,1467,"Ihc - Ttf1",1650,825
+841,1399,"Ihc - Vimentin",1650,825
+842,1301,"Ihc Alk 1",1650,825
+843,1189,"Ihc Calretinin",1650,825
+844,1547,"Ihc Cd34",1650,825
+845,1191,"Ihc Cea",1650,825
+846,821,"Ihc Chromogranin",1650,825
+847,1397,"Ihc- Ck 7",1650,825
+848,1190,"Ihc Ck5",1650,825
+849,1548,"Ihc Ckit",9350,4675
+850,1204,"Ihc Cytokeratin - Pan Keratin",1650,825
+851,1164,"Ihc Diagnostic Panel Unknow Promary Customised Panels Of Ab",9900,4950
+852,754,"Ihc- Er, Pr, Her 2",5500,2750
+853,3743,"Ihc Igg4",5000,2500
+854,985,"Ihc Ki - 67",1650,825
+855,5265,"Ihc mlh 1",3000,1500
+856,5267,"Ihc msh 2",3000,1500
+857,5266,"Ihc msh 6",3000,1500
+858,820,"Ihc Neuron Specific Enolase",1650,825
+859,3612,"Ihc Plar 2",4400,2200
+860,5264,"Ihc pms2",3000,1500
+861,1202,"Ihc S100",1650,825
+862,1225,"Ihc Soft Tissue Sacroma Diagnostic Panel",11000,5500
+863,3242,"Ihc Unlimited Markers",13200,6600
+864,1590,"Ihc-14 Markers",16500,8250
+865,2619,"Ihc-Afp",1650,825
+866,1420,"Ihc-Any 3 Markers",4950,2475
+867,2620,"Ihc-Atrx",1650,825
+868,2621,"Ihc-Bcl-2",1650,825
+869,2622,"Ihc-Bcl-6",1650,825
+870,2623,"Ihc-Berep4",1650,825
+871,2624,"Ihc-Beta-Catenin",1650,825
+872,3177,"Ihc-C4D",5000,2500
+873,2626,"Ihc-Calcitonin",1650,825
+874,1388,"Ihc-Cd 20",1650,825
+875,1569,"Ihc-Cd117",1650,825
+876,2565,"Ihc-Diagnostic Panel",11000,5500
+877,1277,"Ihc-Er,Pr",3300,1650
+878,1231,"Ihc-Er,Pr,Her2,Ki67",6500,3250
+879,3222,"Ihc-Glioma Panel",10000,5000
+880,1286,"Ihc-Hepper1",1650,825
+881,1292,"Ihc-Lca",1650,825
+882,1095,"Ihc-Lymphoma Diagnostic Panel",11000,5500
+883,2564,"Ihc-Lymphoma Panel",11000,5500
+884,1229,"Ihc-Neuro Endocrine Markers",6500,3250
+885,2593,"Ihc-P16",4500,2250
+886,1293,"Ihc-Pck",1650,825
+887,3183,"Ihc-Pdl-1 22 C3",11000,5500
+888,2625,"Ihc-Sall-4",1650,825
+889,1568,"Ihc-Single Marker",1650,825
+890,1375,"Ihc-Thyroglobulin",1650,825
+891,4143,"Immature Platelet Fraction (Ipf)",400,200
+892,1792,"Immuno Fixation Electrophoresis - Quantitative",7750,3875
+893,3751,"Immunofixation Electrophoresis  -  Urine",7750,3875
+894,734,"Immunofixation Electrophoresis Qualitative",7000,3500
+895,2485,"Immunoflorescence (Renal Biopsy)",3250,1625
+896,2486,"Immunoflorescence (Skin Biopsy)",3250,1625
+897,2340,"Immunoflorescence With Light Microscopy(Renal Biopsy)",5500,2750
+898,2497,"Immunoflorescence With Light Microscopy(Skin Biopsy)",5500,2750
+899,3979,"Immunofluorescence With Light Microscopy - Liver",5500,2750
+900,838,"Immunoglobulin A (Iga)",660,330
+901,214,"Immunoglobulin G (Igg)",660,330
+902,215,"Immunoglobulin M (Igm)",660,330
+903,3041,"Immunoglobulin Profile",2000,1000
+904,2461,"Inborn Errors Of Metabolism  Profile  (Blood Spot)",6500,3250
+905,858,"Inborn Errors Of Metabolism (Metabolic Screening - Urine)",7500,3750
+906,853,"Indian Ink Stain",200,100
+907,885,"Infectious Mononucleosis",990,495
+908,2814,"Inhalant Maxi  Panel",12500,6250
+909,2810,"Inhalent Mini Profile (13 Allergen)",11000,5500
+910,3339,"Inhalent Rhinitis Profile (14 Allergen)",11000,5500
+911,3461,"Inhalents Allergy Panel (22) - (EIA)",6500,3250
+912,745,"Inhibin A",1550,775
+913,3123,"Inhibin B",2750,1375
+914,217,"Insulin Antibody, Serum",3250,1625
+915,775,"Insulin Link Growth Factor ( Igf1)",4250,2125
+916,917,"Insulin Random",700,350
+917,218,"Insulin-Fasting, Serum",650,325
+918,219,"Insulin-Post Prandial, Serum",650,325
+919,3570,"Inter Leukin 6",3250,1625
+920,220,"Ionised Calcium, Serum",750,375
+921,221,"Iron - Serum",500,250
+922,2221,"Iron Deficiency Profile",1900,950
+923,4221,"Iron Profile Maxi",2250,1125
+924,3759,"Iron Profile Mini",1100,550
+925,2906,"Islet Cell Antibody",3250,1625
+926,3974,"Japanese Encephalitis Virus Antibody Igm",3500,1750
+927,3452,"Jute- Inhalents (EIA)",500,250
+928,3498,"Kefir (EIA)",500,250
+929,2585,"Ketone (Serum)",1000,500
+930,3434,"Kiwi- Non Veg (EIA)",500,250
+931,223,"Lactate",1100,550
+932,1457,"Lactate - Csf",1100,550
+933,4213,"Lactate Pyruvate Ratio",2750,1375
+934,3543,"Lamb'S Quarters (EIA)",500,250
+935,1681,"Lamotrigine",6200,3100
+936,1226,"Lap Score (Leucocyte Alkaline Phosphatase)",1980,990
+937,4092,"Lc1 ( Liver Cytosol Antibody )",5000,2500
+938,2286,"Ldh - Ascitic Fluid",440,220
+939,224,"Ldh - Body Fluid",550,275
+940,81,"Ldh - Csf",550,275
+941,2277,"Ldh - Peritonial Fluid",550,275
+942,2282,"Ldh - Synovial Fluid",550,275
+943,2270,"Ldh ( Pleural Fluid )",550,275
+944,225,"Ldh-Lactate Dehydrogenase, Serum",550,275
+945,226,"Ldl Cholesterol",500,250
+946,227,"Le Cell Detection, Blood",400,200
+947,228,"Lead, Blood",2250,1125
+948,229,"Lead, Urine Spot",2250,1125
+949,3393,"Lemon- Veg (EIA)",500,250
+950,3414,"Lentil (Toor Dal)- Veg (EIA)",500,250
+951,5332,"Leptin - Serum",6000,3000
+952,2629,"Leptin, Serum",5500,2750
+953,899,"Lepto Spira Igg ( Elisa )",1250,625
+954,231,"Lepto Spira Igm ( Elisa )",1250,625
+955,230,"Leptospira Igg ( Immunochromatography )",1100,550
+956,3490,"Lettuce (EIA)",500,250
+957,2385,"Leukernia Diagnostic Panel (Cll)",14000,7000
+958,4262,"Levetiracetam, Serum",7250,3625
+959,3510,"Levofloxacin (EIA)",500,250
+960,2236,"Lh Fsh Prolactine",1100,550
+961,4113,"LH, FSH, PROLACTIN (CLIA)",1100,550
+962,1479,"Lh/Fsh Ratio",1000,500
+963,232,"Lh-Luteinizing Hormone, Serum",450,225
+964,3987,"Light Microscopy - Liver",3750,1875
+965,3121,"Light Microscopy(Renal Biopsy)",3750,1875
+966,3122,"Light Microscopy(Skin Biopsy)",3750,1875
+967,2288,"Lipase - Ascitic Fluid",1100,550
+968,2279,"Lipase - Peritonial Fluid",1100,550
+969,233,"Lipase, Serum",1100,550
+970,611,"Lipid Profile",550,275
+971,234,"Lipoprotein  A (Lp-A)",1300,650
+972,3295,"Lipoprotein Electrophoresis",4000,2000
+973,856,"Liquid Pap Smear (By Liquid Based Cytology)",900,450
+974,235,"Lithium-Serum",1100,550
+975,614,"Liver Function Test",550,275
+976,928,"Liver/Kidney Microsomal Antibody (Lkm-1)",2200,1100
+977,3429,"Lobstar- Non Veg (EIA)",500,250
+978,236,"Lupus Anti Coagulants",2000,1000
+979,4628,"Lupus Anticoagulant ( Cl)",2000,1000
+980,4075,"Luteinizing hormone LH (CLIA)",450,225
+981,3033,"Lyme Borrelia Burgdorferi Igg Ab",3000,1500
+982,3035,"Lyme Borrelia Burgdorferi Igg By Eia",8000,4000
+983,3034,"Lyme Borrelia Burgdorferi Igm Ab",3000,1500
+984,3036,"Lyme Borrelia Burgdorferi Igm By Eia",8000,4000
+985,4053,"Lysozyme Muramidase",12000,6000
+986,237,"Magnesium ( 24 Hrs Urine )",650,325
+987,238,"Magnesium ( Spot Urine )",550,275
+988,239,"Magnesium (Serum)",550,275
+989,3520,"Maize (EIA)",500,250
+990,240,"Malaria Antigen",1750,875
+991,3766,"Male Hormone Profile",6000,3000
+992,783,"Manganese. Serum",3750,1875
+993,3511,"Mango (EIA)",500,250
+994,719,"Mantoux",150,75
+995,2228,"Mcv",220,110
+996,3440,"Meadow Fescue- Inhalents (EIA)",500,250
+997,241,"Measles Igg Ab",2100,1050
+998,242,"Measles Igm Ab",2100,1050
+999,3504,"Melon (EIA)",500,250
+1000,929,"Mercury Serum",5000,2500
+1001,4880,"Mercury Urine",5000,2500
+1002,802,"Meta Chromatic Granules ( Blood )",400,200
+1003,803,"Meta Chromatic Granules ( Urine )",400,200
+1004,1300,"Metaboiic  Screening Hplc-Urine",6500,3250
+1005,3769,"Metabolic Profile",2750,1375
+1006,3480,"Metamizole- Drug (EIA)",500,250
+1007,1159,"Metanephrines ( Plasma )",4200,2100
+1008,1042,"Meth-Haemoglobin, Blood",2000,1000
+1009,1596,"Methionine,Plasma",9000,4500
+1010,4218,"Methotrexate",4200,2100
+1011,4044,"Methylmalonic Acid Qualitative",3000,1500
+1012,4043,"Methylmalonic Acid Quantitative",3500,1750
+1013,243,"Mf - Qbc",400,200
+1014,244,"Microalbumin - Spot",550,275
+1015,245,"Microalbuminuria, 24 Hrs Urine",600,300
+1016,2854,"Microfilaria Antibody",1600,800
+1017,918,"Microfilaria Antigen",1600,800
+1018,3502,"Milk Powder (EIA)",500,250
+1019,2562,"Mini Fertility Profile",1300,650
+1020,3657,"Minimal Fetal Autopsy",3750,1875
+1021,3551,"Moong Dal (EIA)",500,250
+1022,3451,"Mosquito- Inhalents (EIA)",500,250
+1023,246,"Mp - Qbc",400,200
+1024,3265,"Msud-Maple Syrup Urine Disorder Neonatal Screen",1250,625
+1025,2567,"Mucopolysaccharidosis (Qualitative Urine)",1300,650
+1026,3529,"Mucor Racemosus (EIA)",500,250
+1027,3455,"Mugwort ( Artemisia Vulgaris )- Inhalents (EIA)",500,250
+1028,4608,"Multiple Myeloma Advance Maxi Panel",8000,4000
+1029,248,"Mumps Igg Ab",2000,1000
+1030,249,"Mumps Igm Ab",2000,1000
+1031,3400,"Mushroom ( Champignons )- Veg (EIA)",500,250
+1032,1721,"Musk Antibody",5500,2750
+1033,3397,"Mustard- Veg (EIA)",500,250
+1034,3433,"Mutton- Non Veg (EIA)",500,250
+1035,3812,"Mx Pcr Fever Profile Maxi",4750,2375
+1036,3812,"Mx PCR Fever profile Maxi",4500,2250
+1037,3813,"Mx Pcr Fever Profile Mini",4200,2100
+1038,3813,"Mx PCR Fever profile MINI",4500,2250
+1039,3811,"Mx Pcr Fever Profile With Covid",5500,2750
+1040,3808,"Mx-Pcr Fever Profile",4750,2375
+1041,4650,"Myasthenia Gravis",12500,6250
+1042,3840,"Mycoplasma Pneumoniae Igg Antibody",3300,1650
+1043,3841,"Mycoplasma Pneumoniae Igm Antibody",3300,1650
+1044,3762,"Myeloma Panel Test",2300,1150
+1045,250,"Myoglobin - Serum",1600,800
+1046,251,"Myoglobin - Urine",1600,800
+1047,3678,"Myositis  Profile, Serum(Immunoblot 12 Antigens)",11000,5500
+1048,4754,"Myositis Profile Extended Igg 16 Antigens",17000,8500
+1049,3822,"Nasal  Fluid - Sugar",120,60
+1050,3824,"Nasal Fluid - Cell Count",280,140
+1051,3823,"Nasal Fluid - Protein",280,140
+1052,2470,"Nasal Stone Analysis (Rhinolith)",1600,800
+1053,252,"Nasal Swab Culture & Sensitivity",600,300
+1054,4110,"Nbs 181 Parameters",8500,4250
+1055,3372,"Nbs Inborn Metabolic Disorders (Imd) Panel (Gc-Ms)",6500,3250
+1056,3371,"Nbs Inborn Metabolic Disorders (Imd) Panel Lcms",6500,3250
+1057,1474,"Neonatal 17-Oh Progesterone",550,275
+1058,3365,"Neonatal Cystic Fibrosis",900,450
+1059,1475,"Neonatal G6Pd",550,275
+1060,1477,"Neonatal Phenyl Ketonuria(Pku)",550,275
+1061,3364,"Neonatal Screening 3 Parameter With 17 Oh",1250,625
+1062,3362,"Neonatal Screening 3 Parameter With Cystic Fibrosis",1600,800
+1063,1476,"Neonatal Total Galactose",550,275
+1064,1441,"Neonatal Tsh Screening",550,275
+1065,2902,"Neuro Maxi Package",16500,8250
+1066,2710,"Neuron Specific Enolase (Nse)",4750,2375
+1067,2975,"New Born 7 Parameters  Screening",2750,1375
+1068,3025,"Newborn Screening 3 Parameters",1100,550
+1069,3969,"Ngal (Neutrophil Gelatinase Associated Lipocalin), Urine",9500,4750
+1070,1591,"Nhl Ihc Unlimited Markers",13500,6750
+1071,2404,"Nickel",3750,1875
+1072,1208,"Nicotine Metabolite Serum",2500,1250
+1073,3223,"Nipple Discharge Fnac Single Slide",500,250
+1074,3224,"Nipple Discharge Fnac Two Slides",700,350
+1075,4731,"Nipple Discharge Left",600,300
+1076,4048,"Nipple Discharge Right",600,300
+1077,1451,"Nmda  Receptor Antibody",8500,4250
+1078,1381,"Nocardia Stain(Kinyoun)",500,250
+1079,3438,"Non Veg Allergy Panel (14) - (EIA)",4250,2125
+1080,812,"Nor Epinephrine - 24Hrs Urine",4600,2300
+1081,2400,"Nor Epinephrine Plasma",5000,2500
+1082,3476,"Norfloxacin- Drug (EIA)",500,250
+1083,1588,"Normetanephrine Edta Plasma",4200,2100
+1084,3254,"Norvo Virus Stool Antigen",2500,1250
+1085,762,"Nt - Pro Bnp ( N-Terminal Natriuretic Peptide)",2750,1375
+1086,4031,"Ntx (Collagen Cross-Linked N- Telopeptide), Urine",5500,2750
+1087,3522,"Nutmeg (EIA)",500,250
+1088,3552,"Oat (EIA)",500,250
+1089,253,"Occult Blood Test, Stool",300,150
+1090,254,"Occult Blood Test, Urine",280,140
+1091,3533,"Ofloxacin (EIA)",500,250
+1092,1448,"Og Antenatal Profile",3500,1750
+1093,1473,"Og Bad Obstertric History",4250,2125
+1094,1472,"Og Fertility Profile Female",2200,1100
+1095,1455,"Og Fertility Profile-Male",2200,1100
+1096,1478,"Og New Born Screening (5 Parameter)",2000,1000
+1097,880,"Og Pcod Profile",2000,1000
+1098,834,"Ogtt With 100 Gms 3 Hrs.",400,200
+1099,982,"Oligo Bands For Multiple Sclerosis In Csf",4250,2125
+1100,3540,"Olive Tree (EIA)",500,250
+1101,3493,"Olives (EIA)",500,250
+1102,3392,"Onion- Veg (EIA)",500,250
+1103,4145,"Opiates(Morphine) - Urine",350,175
+1104,3818,"Oppertunity Infectious Panel",6500,3250
+1105,725,"Oral Glucose Challenging Test (Ogct)",200,100
+1106,3503,"Orange (EIA)",500,250
+1107,2317,"Organic Acid Qualitative Urine Spot",6500,3250
+1108,3572,"Organisms Automated Identification",1000,500
+1109,255,"Osmolality - Serum",1000,500
+1110,256,"Osmolality - Urine",1000,500
+1111,3022,"Osmolality ( Amniotic Fluid)",1000,500
+1112,839,"Osmotic Fragillity Test",1200,600
+1113,257,"Osteocalcin Bgp - Bone Gla Protein, Serum",4600,2300
+1114,3239,"Ovarian Antibody ( Aoa)",5200,2600
+1115,258,"Oxalate - 24 Hrs. Urine",2200,1100
+1116,2573,"Oxalate Creatinine Ratio",2500,1250
+1117,3929,"Oxcarbazepine, Serum",7000,3500
+1118,259,"P Anca",1700,850
+1119,759,"P Anca - I F Method",3250,1625
+1120,1456,"Pandy Test",250,125
+1121,260,"Pap Smear",400,200
+1122,3124,"Pappa A",1250,625
+1123,4035,"Paracetamol Acetaminophen Serum",2500,1250
+1124,3473,"Paracetamol- Drug (EIA)",500,250
+1125,912,"Paraneoplastic Syndrome Profile",5750,2875
+1126,2616,"Parietal Cell Antibody",3250,1625
+1127,262,"Partial Thromboplastin Time Ptt",350,175
+1128,3772,"Partial Thromboplastin Time Ptt ( Hemostar 4  Ca)",400,200
+1129,2870,"Parvovirus B19 Antibody Igg",4000,2000
+1130,2869,"Parvovirus B19 Antibody Igm",4000,2000
+1131,894,"Paul Bunnell",900,450
+1132,3232,"Pcod Plus",3000,1500
+1133,3164,"Pcod Profile",2750,1375
+1134,1666,"Pcos Profile",3250,1625
+1135,3836,"Pcp Pneumonia",650,325
+1136,3156,"Pcv (Blood Bank)",250,125
+1137,264,"Pcv- (Haematocrit)",250,125
+1138,3401,"Pea- Veg (EIA)",500,250
+1139,3513,"Peach (EIA)",500,250
+1140,3412,"Peanut- Veg (EIA)",500,250
+1141,3512,"Pear (EIA)",500,250
+1142,3442,"Penicillium Notatum- Inhalents (EIA)",500,250
+1143,3462,"Penicilum G- Drug (EIA)",500,250
+1144,3463,"Penicilum V- Drug (EIA)",500,250
+1145,3872,"Penta Screening",5000,2500
+1146,1462,"Pericortial Fluid Analysis",1200,600
+1147,265,"Peripheral Smear Examination",300,150
+1148,4150,"Peripheral Smear Examination With Imaging (Madurai)",350,175
+1149,1461,"Peritonial Fluid Analysis",1200,600
+1150,4651,"Pfa Serum (Hit Antibody Heparin Included Thrombocytopenia)",7000,3500
+1151,2492,"Ph ( Blood Bank)",150,75
+1152,3027,"Phadiatop",2500,1250
+1153,3026,"Phadiatop (Infant/ Paediatric)",2500,1250
+1154,852,"Ph-Body Fluid",150,75
+1155,3534,"Phenacetin (EIA)",500,250
+1156,3271,"Phenylketonurea ( Urine Spot  - Qualitative)",1600,800
+1157,3791,"Phosphatidylserine Antibodies Panel Igg & Igm",5000,2500
+1158,3699,"Phospholipase A2 Receptor Antibody  (Pla2R) Quantitative",6000,3000
+1159,266,"Phosphorus  ( Spot )",250,125
+1160,268,"Phosphorus - 24 Hrs Urine",450,225
+1161,3133,"Phosphorus (Amniotic Fluid)",280,140
+1162,267,"Phosphorus (Serum)",250,125
+1163,3407,"Pineapple- Veg (EIA)",500,250
+1164,1024,"Pituitary Hormones Profile",9000,4500
+1165,269,"Platelet Count",220,110
+1166,2488,"Platelet Count ( Blood Bank)",300,150
+1167,1466,"Pleural Fluid Analysis Basic",1000,500
+1168,1452,"Pleural Fluid Analysis Complete",1200,600
+1169,1648,"Plgf (Placental Growth Factor)",2700,1350
+1170,1651,"Pneumocystis Jiroveci For Smear",500,250
+1171,3491,"Poppy Seed (EIA)",500,250
+1172,3430,"Pork- Non Veg (EIA)",500,250
+1173,4082,"Post Ejaculation Urinalysis (Peu)",500,250
+1174,3972,"Potassium ( Fluid)",280,140
+1175,3134,"Potassium (Amniotic Fluid)",280,140
+1176,270,"Potassium, Serum",280,140
+1177,271,"Potassium, Urine 24H",450,225
+1178,272,"Potassium, Urine Spot",350,175
+1179,3486,"Potato (EIA)",500,250
+1180,778,"Pregnancy Oral Glucose 100Gms",350,175
+1181,273,"Procalcitonin, Serum",3000,1500
+1182,274,"Progesterone",550,275
+1183,1745,"Progesterone (Animal)",550,275
+1184,4079,"Progesterone P4 (Clia)",550,275
+1185,4076,"Prolactin PRL (CLIA)",450,225
+1186,4375,"Prolactin, Active & Macroprolactin Serum",1600,800
+1187,275,"Prolactin, Serum",450,225
+1188,3763,"Prostatic Cancer Marker",2200,1100
+1189,283,"Protein - 24 Hrs. Urine",450,225
+1190,2289,"Protein - Ascitic Fluid",280,140
+1191,276,"Protein - Body Fluid",280,140
+1192,2274,"Protein - Peritonial Fluid",280,140
+1193,2281,"Protein - Synovial Fluid",280,140
+1194,2271,"Protein ( Pleural Fluid )",280,140
+1195,277,"Protein ( Spot Urine )",280,140
+1196,613,"Protein A/G Ratio",450,225
+1197,278,"Protein C(Citrated Plasma)",3300,1650
+1198,279,"Protein Electrophoresis - Serum",1400,700
+1199,280,"Protein Electrophoresis - Urine",1100,550
+1200,281,"Protein S ( Citrated Plasma )",3300,1650
+1201,1020,"Protein S Activity, Plasma",5200,2600
+1202,282,"Prothrombin Time",300,150
+1203,3771,"Prothrombin Time  ( Hemostar 4 Ca)",350,175
+1204,2494,"Prothrombin Time (Pt) Blood Bank",350,175
+1205,284,"Psa - Immunohistochemistry",1650,825
+1206,2380,"Psa Profile(Free + Total)",1250,625
+1207,285,"Psa-Prostate Specific Antigen- Total, Serum",650,325
+1208,119,"Psuedo Cholinesterase",1500,750
+1209,286,"Pth-Para Thyroid Hormone (Intact Molecule), Serum",1600,800
+1210,3904,"Ptt & Mixing Studies -  Plasma",450,225
+1211,3398,"Pumkin- Veg (EIA)",500,250
+1212,287,"Pus Culture & Sensitivity",600,300
+1213,1073,"Pus Culture With Automated Identification & Antibiogram",850,425
+1214,3474,"Pyrozolone- Drug (EIA)",500,250
+1215,288,"Pyruvate",1700,850
+1216,5379,"Quadruple marker (Prisca)",3500,1750
+1217,717,"Quadruple Screening",2850,1425
+1218,744,"Quadruple Screening with Scan",3500,1750
+1219,1045,"R V V T (Russel Viper Venom Test)",1500,750
+1220,3435,"Rabbit Meat- Non Veg (EIA)",500,250
+1221,3127,"Rabies Virus Antibodies Total Antibody",5500,2750
+1222,3410,"Rajma Dal- Veg (EIA)",500,250
+1223,3726,"Ratio Aldosterone Renin",4250,2125
+1224,289,"Rbc Count",180,90
+1225,2490,"Rbc Count ( Blood Bank)",180,90
+1226,4052,"Rbc Folate",3100,1550
+1227,2968,"Recurrent Pregnancy Loss Work Up (Biochemical Panel)",11000,5500
+1228,3900,"Reducing  Substance  - Urine",200,100
+1229,290,"Reducing Substances - Stool",200,100
+1230,3530,"Reed Common (EIA)",500,250
+1231,1641,"Renal Function Test Mini",550,275
+1232,726,"Renal Function Test Profile",1200,600
+1233,718,"Renal Stone Analysis",1600,800
+1234,847,"Renin (Plasma)",2600,1300
+1235,5371,"Renin Activity (Plasma )",7000,3500
+1236,291,"Reticulocyte Count",400,200
+1237,292,"Rh Antibody Titre",750,375
+1238,3758,"Rheumatoid Arthritis Profile",2750,1375
+1239,293,"Rheumatoid Factor",550,275
+1240,3521,"Rice (EIA)",500,250
+1241,1764,"Roma (Ca 125 + He4)",2400,1200
+1242,3990,"Root Canal Swab For Culture And Sensitivity",850,425
+1243,3544,"Rough Pigweed  (EIA)",500,250
+1244,347,"Rpr - Vdrl",350,175
+1245,3153,"Rubella Igg  - Avidity Test",3100,1550
+1246,294,"Rubella Igg ( Elisa )",700,350
+1247,295,"Rubella Igm",700,350
+1248,3519,"Rye (EIA)",500,250
+1249,3537,"Rye Grass (EIA)",500,250
+1250,897,"S - 100",1600,800
+1251,296,"S.Phenytoin",1100,550
+1252,1330,"Saa-Serum Amyloid A Protein",6000,3000
+1253,1170,"Salivary Calculium",1500,750
+1254,3554,"Salmon (EIA)",500,250
+1256,2888,"Screening For Inborn Errors Of Metabolism (Plsma)",7000,3500
+1257,848,"Scrub Typhus Ig M",1700,850
+1258,789,"Semen  Analysis (Processed In Rot)",350,175
+1259,4357,"Semen Analysis - Automated (Processed In Chennai)",1100,550
+1260,297,"Semen Culture",650,325
+1261,4734,"Serology (Hiv/Hbsag/Hcv)",2300,1150
+1262,3672,"Serum Anti Endomysial Igg Igm Iga",6000,3000
+1263,2609,"Serum Ascites Albumin Gradient (Saag)",1100,550
+1264,749,"Serum Erythropoietin Assay",2750,1375
+1265,4040,"Serum Oxalate Level",2750,1375
+1266,850,"Serum Phenobarbitone Level",1750,875
+1267,888,"Serum Selenium",4500,2250
+1268,841,"Sex Hormone Binding Globulin",2500,1250
+1269,1649,"Sflt -Soluble Fms -Like Tyrosine Kinase-1",5600,2800
+1270,1650,"Sflt-1 / Pigf Ratio.",8000,4000
+1271,298,"Sgot (Ast), Serum",180,90
+1272,299,"Sgpt (Alt), Serum",180,90
+1273,3456,"Sheepwool- Inhalents (EIA)",500,250
+1274,300,"Sickling Test",400,200
+1275,3547,"Silk (EIA)",500,250
+1276,3453,"Silver Birch ( Betula Verrucosa )- Inhalents (EIA)",500,250
+1277,3760,"Sle (Systemic Lupus Erythematosus) Profile",5000,2500
+1278,782,"Slide / Block For Opinion",850,425
+1279,1432,"Slides & Blocks For Review 6 To 10 Nos",2000,1000
+1280,1433,"Slides & Blocks For Review More Than 10 Nos",3000,1500
+1281,1431,"Slides & Blocks For Review Upto 5 Nos",900,450
+1282,1426,"Slides For Review 6 To 10 Slides",1350,675
+1283,1427,"Slides For Review More Than 10 Slides",3000,1500
+1284,1425,"Slides For Review Upto 5 Slides",900,450
+1285,967,"Slite Skin Smear For Leprabacilli",900,450
+1286,301,"Smear For Fungus",400,200
+1287,302,"Smear For Mf",400,200
+1288,303,"Smear For Mp",400,200
+1289,4523,"Smear For Parasite ( Buffy Coat Of Wucherria Ban Crofti)",600,300
+1290,3555,"Smoke (EIA)",500,250
+1291,304,"Sodium ( 24 Hrs Urine )",440,220
+1292,305,"Sodium ( Spot Urine )",220,110
+1293,3019,"Sodium (Amniotic Fluid)",280,140
+1294,1065,"Sodium (Fluid)",280,140
+1295,306,"Sodium , Serum",220,110
+1296,3157,"Soluble Transferrin Receptor (Stfr)",2500,1250
+1297,3390,"Soy Bean- Veg (EIA)",500,250
+1298,3610,"Special Stain",650,325
+1299,2986,"Special Stain  Biopsy",650,325
+1300,3186,"Specific Gravity - Urine",170,85
+1301,1064,"Specific Gravity Fluid",170,85
+1302,3489,"Spinach (EIA)",500,250
+1303,307,"Sputum Culture & Sensitivity",600,300
+1304,4049,"Sputum For Cytology",800,400
+1305,4261,"Sputum For Eosinophilis",350,175
+1306,3311,"Squash Cytology Large",2200,1100
+1307,3310,"Squash Cytology Small",1700,850
+1308,767,"Ssa - Ro ( Soluble Substance A Antibody, Serum )",2000,1000
+1309,768,"Ssb - La ( Soluble Substance B Antibody, Serum )",2000,1000
+1310,949,"Staining For Pcp",650,325
+1311,954,"Staining Pas",650,325
+1312,5373,"Stent - Culture & Sensitivity with MIC",1000,500
+1313,3191,"Stone  Analysis  - Vesical Calculus",1650,825
+1314,2952,"Stone Analysis - Renal (Automated)",2500,1250
+1315,2978,"Stone Screening Profile 1",2500,1250
+1316,308,"Stool - Culture",600,300
+1317,1079,"Stool Culture With Automated Identification & Antibiogram",850,425
+1318,1054,"Stool For Clostriduom Difficile Toxin",2750,1375
+1319,1545,"Stool For Cryptosporidium",170,85
+1320,3255,"Stool For Enterohmorrhagic E.Coli",3250,1625
+1321,309,"Stool Routine",200,100
+1322,3505,"Straw Dust (EIA)",500,250
+1323,3403,"Strawberry- Veg (EIA)",500,250
+1324,3467,"Strepromycin- Drug (EIA)",500,250
+1325,1015,"Stroke Package - Maxi",16500,8250
+1326,977,"Stroke Package Mini",9500,4750
+1327,3557,"Succinylcholine (EIA)",500,250
+1328,886,"Sucroselysis Test  (Serum & Blood )",1650,825
+1329,859,"Sudan Ii For Fat",330,165
+1330,3535,"Sulpha (EIA)",2200,1100
+1331,1078,"Suputum Culture With Automated Identification & Antibiogram",850,425
+1332,823,"Surveillance Settle Plate - Open Plate Test",550,275
+1333,1387,"Surveillance Swabs Aerobic - (1 Sample)",300,150
+1334,2550,"Surveillance Swabs Aerobic - (2 Samples)",600,300
+1335,2551,"Surveillance Swabs Aerobic - (3 Samples)",900,450
+1336,2552,"Surveillance Swabs Aerobic - (4 Samples)",1200,600
+1337,735,"Surveillance Swabs Aerobic - 1 (5 Samples)",1500,750
+1338,736,"Surveillance Swabs Aerobic - 2 ( 10 Sample)",3000,1500
+1339,1304,"Surveillance Swabs Anaerobic - ( 1 Sample)",300,150
+1340,1305,"Surveillance Swabs Anaerobic - ( 2 Sample)",600,300
+1341,1306,"Surveillance Swabs Anaerobic - ( 3 Sample)",900,450
+1342,1307,"Surveillance Swabs Anaerobic - ( 4 Sample)",1200,600
+1343,737,"Surveillance Swabs Anaerobic - 1( 5 Samples)",1500,750
+1344,738,"Surveillance Swabs Anaerobic - 2 ( 10 Sample)",4000,2000
+1345,4768,"Swab Cath Lab",550,275
+1346,4769,"Swab Cssd",550,275
+1347,4756,"Swab Dialysis Unit",550,275
+1348,4774,"Swab Dressing Room",550,275
+1349,4765,"Swab Embryology Operation Theatre",550,275
+1350,4770,"Swab Emergency Room",550,275
+1351,4775,"Swab Endoscopy Room",550,275
+1352,4779,"Swab Eye Operation Theatre",550,275
+1353,4773,"Swab General Ward",550,275
+1354,4760,"Swab Icu",550,275
+1355,4766,"Swab Ivf Operation Theatre",550,275
+1356,4758,"Swab Labour Ward",550,275
+1357,4772,"Swab Lasik Operation Theatre",550,275
+1358,4778,"Swab Main Operation Theatre",550,275
+1359,4776,"Swab Major Operation Theatre",550,275
+1360,4781,"Swab Micu",550,275
+1361,4777,"Swab Minor Operation Theatre",550,275
+1362,4757,"Swab Nicu",550,275
+1363,4767,"Swab Operation Theatre",550,275
+1364,4762,"Swab Ortho Operation Theatre",550,275
+1365,4780,"Swab Pediatric Ward",550,275
+1366,4759,"Swab Post Operative Ward",550,275
+1367,4763,"Swab Post Operative Ward 1",550,275
+1368,4764,"Swab Post Operative Ward 2",550,275
+1369,4771,"Swab Retina Operation Theatre",550,275
+1370,4761,"Swab Semi Icu",550,275
+1371,310,"Synovial / Joint Fluid Analysis And Cytology",880,440
+1372,311,"Synovial / Joint Fluid Cytology (Pus)",880,440
+1373,4220,"Synovial Fluid By Polarizing Microscopy",2000,1000
+1374,1639,"Synovial Fluid For Crystals",300,150
+1375,2258,"Tacrolimus Blood Level",5000,2500
+1376,312,"Tb Quantiferon Gold",2750,1375
+1377,3525,"Tea (EIA)",500,250
+1378,4027,"Testosterone  ( Animal )",600,300
+1379,313,"Testosterone (Total), Serum",660,330
+1380,4668,"Testosterone Lh Ratio For (Animal)",1100,550
+1381,4232,"Testosterone Total (Clia)",600,300
+1382,3556,"Tetanus Toxoid (EIA)",500,250
+1383,3559,"Tetracycline (EIA)",500,250
+1384,3560,"Tetrazine (EIA)",500,250
+1385,2290,"Tgl - Ascitic Fluid",450,225
+1386,4530,"Thallium",4500,2250
+1387,3028,"Theophyline",2500,1250
+1388,314,"Throat Swab Culture & Sensitivity",600,300
+1389,1075,"Throat Swab Culture With Automated Identification & Antibiogram",900,450
+1390,3697,"Thrombin Time ( Tt)",1100,550
+1391,3839,"Thrombocheck Total",22500,11250
+1392,2641,"Thrombophilia Package",18000,9000
+1393,2721,"Thrombophilia Profile (Kle)",16000,8000
+1394,3149,"Thrombopillia Comprehensive Profile",17500,8750
+1395,3259,"Thrombopillia Profile (Ngl)",15000,7500
+1396,315,"Thyroglobulin, Serum",1100,550
+1397,316,"Thyroid Antibodies-Atab",1600,800
+1398,714,"Thyroid Function Test - Free",450,225
+1399,612,"Thyroid Function Test - Total",350,175
+1400,317,"Thyroid Peroxidase Antibody  (Tpo)",1100,550
+1401,1131,"Thyroid Profile",700,350
+1402,4064,"Thyroid stimulating hormone TSH (CLIA)",170,85
+1403,1646,"Thyroxine Binding Globulin,Serum",7500,3750
+1404,4066,"Thyroxine T4(CLIA)",170,85
+1405,318,"Tibc- Iron Binding Capacity-Total , Serum",450,225
+1406,3441,"Timothy - Inhalents (EIA)",500,250
+1407,846,"Tissue Transglutaminase (Ttg) Antibody-Iga,Serum",2200,1100
+1408,3101,"Tissue Transglutaminase Igg Antibody",1500,750
+1409,3102,"Tissue Transglutaminase Igm Antibody",1500,750
+1410,3485,"Tomato (EIA)",500,250
+1411,3981,"Torch Igg",1500,750
+1412,3982,"Torch Igm",1500,750
+1413,739,"Torch Panel",3000,1500
+1414,319,"Total Cholesterol",200,100
+1415,320,"Total Ige, Serum",550,275
+1416,2599,"Total Lipids",550,275
+1417,321,"Total Protein (Serum)",220,110
+1418,322,"Total T3",180,90
+1419,323,"Total T4",180,90
+1420,324,"Total Wbc Count (Tc )",200,100
+1421,4028,"Toxoplasma Avidity",2000,1000
+1422,325,"Toxoplasma-Igg, Serum",700,350
+1423,326,"Toxoplasma-Igm, Serum",700,350
+1424,328,"Transferrin",1000,500
+1425,1094,"Transferrin Saturation",1000,500
+1426,3587,"Trans-Tubular Potassium Gradient ( Ttkg )",2000,1000
+1427,327,"Treponema Pallidum Antibody",750,375
+1428,3352,"Trichophyton Rubrum",450,225
+1429,3481,"Trichophyton Rubrum- Drug (EIA)",500,250
+1430,4521,"Tricyclic Antidepressants Drug (Tca) Qualitative, Urine",1350,675
+1431,329,"Triglycerides",200,100
+1432,1463,"Triglycerides - Body Fluid",250,125
+1433,4065,"Triiodothyronine T3(CLIA)",170,85
+1434,3477,"Trimethoprim- Drug (EIA)",500,250
+1435,5378,"Triple marker (Prisca)",2500,1250
+1436,743,"Triple Screening",2000,1000
+1437,742,"Triple Screening with scan",3250,1625
+1438,2453,"Troponin - T ( Quantitative )",2000,1000
+1439,5239,"Troponin I - High sensitive",2800,1400
+1440,330,"Troponin I  Quantitative",2000,1000
+1441,1177,"Troponin I Qualitative",1250,625
+1442,331,"Troponin T (Card)",1300,650
+1443,332,"Tsh",180,90
+1444,1437,"Tsh - Receptor Antibody",4500,2250
+1445,333,"Tube Test Widal",400,200
+1446,3767,"Tumor Marker - Female",5600,2800
+1447,3768,"Tumor Marker - Male",4200,2100
+1448,793,"Tumour Necrosis Factor (Tnf) - Alpha",5250,2625
+1449,3437,"Tuna- Non Veg (EIA)",500,250
+1450,3436,"Turkey- Non Veg (EIA)",500,250
+1451,1365,"Tv / Moniliasis",350,175
+1452,2571,"Typhi Dot Igg",750,375
+1453,334,"Typhi Dot Igm, Serum",750,375
+1454,2262,"U1Rnp (Mixed Connective Tissue)",2250,1125
+1455,4438,"Uibc, Serum",180,90
+1456,3363,"Up To 5 - Slide And Block Issue",550,275
+1457,3550,"Urad Dal (EIA)",500,250
+1458,335,"Urea - 24 Hrs Urine",350,175
+1459,2291,"Urea - Ascitic Fluid",280,140
+1460,1459,"Urea - Body Fluid",280,140
+1461,1027,"Urea ( Spot Urine )",180,90
+1462,3130,"Urea (Amniotic Fluid)",280,140
+1463,336,"Uric Acid - 24 Hrs Urine",350,175
+1464,3132,"Uric Acid (Amniotic Fluid)",280,140
+1465,337,"Uric Acid, Serum",280,140
+1466,1775,"Uric Acid-Spot Urine",220,110
+1467,354,"Urine Analysis - Complete",170,85
+1468,338,"Urine Culture & Sensitivity",550,275
+1469,1074,"Urine Culture With Automated Identification & Antibiogram",850,425
+1470,2241,"Urine Drug Of Abuse (Nicotine)",600,300
+1471,4272,"Urine Element Analysis Profile",3750,1875
+1472,3192,"Urine For Chylomicron (Qualitative)",1200,600
+1473,2566,"Urine For Cytology",800,400
+1474,2230,"Urine For Fat Globules",200,100
+1475,2939,"Urine For Hemosiderin",1300,650
+1476,340,"Urine For Protein/Creatinine Ratio",450,225
+1477,1014,"Urine For Sodium/Creatnine Ratio",450,225
+1478,3825,"Urine For Tgl",280,140
+1479,2425,"Urine Fractional Excretion Of Sodium (Fena)",1100,550
+1480,341,"Urine Glucose (F)",60,30
+1481,3928,"Urine Glucose (Post -Dinner)",60,30
+1482,3926,"Urine Glucose (Post -Lunch)",60,30
+1483,342,"Urine Glucose (Pp)",60,30
+1484,3927,"Urine Glucose (Pre -Dinner)",60,30
+1485,3925,"Urine Glucose (Pre-Lunch)",60,30
+1486,343,"Urine Glucose (R)",60,30
+1487,344,"Urine Gravindex",180,90
+1488,830,"Urine Haemoglobinuria",180,90
+1489,3172,"Urine Metanephrine (Random)",3250,1625
+1490,3282,"Urine Nbs Analysis 223 Metabolites Profile",8500,4250
+1491,345,"Urine Porphobilinogen ( Qualitative )",3500,1750
+1492,940,"Urine Potassium /Creatinine Ratio",450,225
+1493,346,"Urobilinogen",200,100
+1494,3568,"Uv Efficacy Against Bacterial Pathogens",1000,500
+1495,727,"Vaginal Smear Examination",350,175
+1496,1662,"Vaginal Swab For Culture And Sensitivity",700,350
+1497,732,"Vaginal Swab For Fungus Culture",900,450
+1498,733,"Valporic Acid",1100,550
+1499,1021,"Vasculitis Profile",8000,4000
+1500,2786,"Veg Allergy Maxi Panel (20 Allergens)",15500,7750
+1501,2782,"Veg Allergy Mini  Panel (10 Allergens)",8000,4000
+1502,3422,"Veg Allergy Panel (33) - (EIA)",9500,4750
+1503,746,"Vericella Zoster Igg",2000,1000
+1504,747,"Vericella Zoster Igm",2000,1000
+1505,1469,"Vgkc (K+ Channel Receptor)",9500,4750
+1506,1299,"Vitamin A",5850,2925
+1507,946,"Vitamin B 1 ( Thiamine)",5200,2600
+1508,348,"Vitamin B12",900,450
+1509,4147,"Vitamin B12 (Clia)",900,450
+1510,1377,"Vitamin B2(Riboflavin)",5000,2500
+1511,4210,"Vitamin B3/Nicotinic Acid",2000,1000
+1512,4209,"Vitamin B5/ Pantothenic",2000,1000
+1513,349,"Vitamin B6 (Pyridoxine)",5000,2500
+1514,4208,"Vitamin B7/Biotin",2000,1000
+1515,1379,"Vitamin C(Ascorbic Acid)",5000,2500
+1516,4148,"Vitamin D (Clia)",1400,700
+1517,4212,"Vitamin D (D2/D3/Total D)",5600,2800
+1518,1111,"Vitamin D Total  ( 25 Oh Vitamin D)",1400,700
+1519,4207,"Vitamin D2",2500,1250
+1520,774,"Vitamin D3 - 1,25-Dihydroxy",3750,1875
+1521,1378,"Vitamin E(Tocopherol)",5000,2500
+1522,4206,"Vitamin K",2750,1375
+1523,1228,"Vma -Spot Urine",3000,1500
+1524,351,"Vma-Vanillylmandelic Acid ( 24 Hrs Urine )",3750,1875
+1525,3961,"Voltage Gated Calcium Channel ( Vgcc)Antibody",14500,7250
+1526,2491,"Volume (Blood Bank)",150,75
+1527,1312,"Von Willebrand Factor Assay",11250,5625
+1528,5044,"Voriconazole",8000,4000
+1529,3411,"Walnut- Veg (EIA)",500,250
+1530,2476,"Warm Agglutinin",750,375
+1531,1009,"Water Culture",350,175
+1532,2489,"Wbc Count ( Blood Bank)",300,150
+1533,1025,"Weil Felix Test",1250,625
+1534,1725,"Wet Mount For Amoebiasis",350,175
+1535,1310,"Wet Mount For Ascaris",350,175
+1536,1192,"Wet Mount Preparation",350,175
+1537,3413,"Wheat- Veg (EIA)",500,250
+1538,352,"Widal Test",350,175
+1539,3501,"Yogurat (EIA)",500,250
+1540,353,"Zinc",1000,500
+

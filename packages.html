@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ta" id="htmlRoot">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>தொகுப்புகள் - ஸ்ரீ நீவி லேப்</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .lang-switcher{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:3px;margin-right:.5rem}
+    .lang-btn{padding:.3rem .65rem;border-radius:7px;border:none;background:transparent;color:var(--text-secondary);font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.03em;font-family:inherit}
+    .lang-btn.active{background:var(--gradient-primary);color:#fff;box-shadow:0 2px 10px rgba(124,58,237,.4)}
+    .lang-btn:hover:not(.active){background:rgba(255,255,255,.1);color:var(--text-primary)}
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">🩸</div>
+    <div>
+      <div class="nav-logo-text">ஸ்ரீ நீவி லேப் <span id="navSubtitle">Sri Neevi Lab</span></div>
+      <div style="font-size:.65rem;color:var(--text-muted);margin-top:-2px" data-i18n="navTagline">இரத்த பரிசோதனை நிலையம் — பேராவூரணி</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="packages.html" data-i18n="navPackages" class="active">தொகுப்புகள்</a></li>
+    <li><a href="index.html#features" data-i18n="navServices">சேவைகள்</a></li>
+    <li><a href="index.html#prices" data-i18n="navPrices">விலைகள்</a></li>
+    <li><a href="index.html#contact" data-i18n="navContact">தொடர்பு</a></li>
+  </ul>
+  <div class="nav-actions">
+    <div class="lang-switcher">
+      <button class="lang-btn" data-lang="ta" onclick="setLang('ta')">தமிழ்</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="hi" onclick="setLang('hi')">हिं</button>
+    </div>
+    <a href="tel:+919700200044" class="btn btn-ghost" data-i18n="navCall">📞 அழைக்கவும்</a>
+  </div>
+</nav>
+
+<!-- PACKAGES -->
+<section class="section" id="packages" style="padding-top:8rem;min-height:80vh">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label" data-i18n="pkgLabel">சுகாதார தொகுப்புகள்</div>
+      <h2 class="section-title"><span data-i18n="pkgTitle">உங்களுக்கு ஏற்ற</span> <span class="highlight" data-i18n="pkgTitle2">சிறந்த தொகுப்பை தேர்வு செய்யுங்கள்</span></h2>
+      <p class="section-desc" data-i18n="pkgDesc">ஒவ்வொரு தேவைக்கும் பட்ஜெட்டுக்கும் ஏற்றவாறு கவனமாக வடிவமைக்கப்பட்ட சுகாதார திரையிடல் தொகுப்புகளில் இருந்து தேர்வு செய்யுங்கள்.</p>
+    </div>
+    <div class="packages-grid" id="packagesGrid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:1rem;display:inline-flex">
+          <div class="nav-logo-icon">🩸</div>
+          <div class="nav-logo-text">ஸ்ரீ நீவி லேப் <span>Sri Neevi Lab</span></div>
+        </a>
+        <p data-i18n="footerDesc">பேராவூரணியில் NABL அங்கீகரிக்கப்பட்ட இரத்த பரிசோதனை நிலையம். பேராவூரணி மற்றும் 20 கி.மீ சுற்றுவட்டத்தில் வீட்டு சேகரிப்பு சேவை.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerPkg">தொகுப்புகள்</h4>
+        <ul>
+          <li><a href="packages.html">All in one package - Single</a></li>
+          <li><a href="packages.html">All in one package - Followup</a></li>
+          <li><a href="packages.html">Diabetic & Thyroid Basic</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footerContact">தொடர்பு</h4>
+        <ul>
+          <li><a href="tel:+919700200044">+91 97002 00044</a></li>
+          <li><a href="tel:+917205908073">+91 72059 08073</a></li>
+          <li><a href="#" data-i18n="footerLoc">பேராவூரணி, தஞ்சாவூர் மாவட்டம்</a></li>
+          <li><a href="#" data-i18n="footerHours">திங்கள்–ஞாயிறு: காலை 7 – இரவு 8</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ஸ்ரீ நீவி லேப். <span data-i18n="footerRights">அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></span>
+      <span data-i18n="footerMotto">தரமான வாழ்க்கை அனைவருக்கும் 💜</span>
+    </div>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
