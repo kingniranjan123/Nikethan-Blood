@@ -3,13 +3,110 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>தொகுப்புகள் - ஸ்ரீ நீவி லேப்</title>
+  <title>Health Packages — Sri Neevi Lab, Peravurani</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
     .lang-switcher{display:flex;align-items:center;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:3px;margin-right:.5rem}
     .lang-btn{padding:.3rem .65rem;border-radius:7px;border:none;background:transparent;color:var(--text-secondary);font-size:.75rem;font-weight:700;cursor:pointer;transition:all .2s;letter-spacing:.03em;font-family:inherit}
     .lang-btn.active{background:var(--gradient-primary);color:#fff;box-shadow:0 2px 10px rgba(124,58,237,.4)}
     .lang-btn:hover:not(.active){background:rgba(255,255,255,.1);color:var(--text-primary)}
+
+    /* ── SEARCH BAR ── */
+    .pkg-search-bar{
+      max-width:700px;margin:0 auto 2.5rem;display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;justify-content:center
+    }
+    .pkg-search-input{
+      flex:1;min-width:220px;padding:.75rem 1.2rem;border-radius:12px;
+      border:1.5px solid var(--border);background:var(--bg-card);
+      color:var(--text);font-size:.95rem;font-family:inherit;outline:none;
+      transition:border-color .2s;
+    }
+    .pkg-search-input:focus{border-color:var(--primary)}
+    .pkg-filter-pill{
+      padding:.55rem 1.1rem;border-radius:100px;border:1.5px solid var(--border);
+      background:transparent;color:var(--text-secondary);font-size:.82rem;font-weight:700;
+      cursor:pointer;transition:all .2s;font-family:inherit;
+    }
+    .pkg-filter-pill.active{background:var(--gradient-primary);color:#fff;border-color:transparent}
+
+    /* ── CAROUSEL WRAPPER ── */
+    .pkg-carousel-outer{overflow:hidden;position:relative;padding:1rem 0 2.5rem}
+    .pkg-carousel-track{
+      display:flex;gap:2rem;transition:transform .5s cubic-bezier(.4,0,.2,1);
+      will-change:transform;
+    }
+    /* ── PACKAGE CARD ── */
+    .pkg-card{
+      min-width:320px;max-width:340px;flex-shrink:0;
+      background:var(--bg-card);border:1px solid var(--border);
+      border-radius:20px;padding:2rem;
+      box-shadow:0 8px 32px rgba(0,0,0,.06);
+      position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;
+    }
+    .pkg-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.12)}
+    .pkg-card-accent{position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0}
+    .pkg-card-badge{
+      position:absolute;top:1.2rem;right:1.2rem;
+      background:var(--gradient-primary);color:#fff;
+      font-size:.7rem;font-weight:800;padding:.25rem .7rem;border-radius:100px;
+    }
+    .pkg-card-gender{
+      font-size:.75rem;font-weight:700;color:var(--text-muted);
+      margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.05em;
+    }
+    .pkg-card-name{font-family:'Outfit',sans-serif;font-size:1.25rem;font-weight:800;margin-bottom:.5rem}
+    .pkg-card-price{
+      font-family:'Outfit',sans-serif;font-size:2rem;font-weight:900;
+      color:var(--primary);margin-bottom:.25rem;
+    }
+    .pkg-card-original{font-size:.85rem;color:var(--text-muted);text-decoration:line-through;margin-bottom:.25rem}
+    .pkg-card-savings{
+      display:inline-block;background:rgba(16,185,129,.12);color:#047857;
+      border:1px solid rgba(16,185,129,.25);border-radius:100px;
+      font-size:.72rem;font-weight:800;padding:.15rem .6rem;margin-bottom:1rem;
+    }
+    .pkg-card-desc{font-size:.85rem;color:var(--text-secondary);margin-bottom:1rem;line-height:1.6}
+    .pkg-tests-list{list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-direction:column;gap:.35rem}
+    .pkg-tests-list li{font-size:.82rem;color:var(--text-secondary);display:flex;align-items:center;gap:.4rem}
+    .pkg-tests-list li::before{content:"✓";color:#10B981;font-weight:800;flex-shrink:0}
+    .pkg-card-btn{
+      width:100%;padding:.75rem;border-radius:12px;border:none;
+      background:var(--gradient-primary);color:#fff;font-size:.9rem;font-weight:700;
+      cursor:pointer;font-family:inherit;transition:opacity .2s;
+    }
+    .pkg-card-btn:hover{opacity:.85}
+
+    /* ── CAROUSEL DOTS ── */
+    .pkg-dots{display:flex;justify-content:center;gap:.5rem;margin-top:1.5rem}
+    .pkg-dot{
+      width:8px;height:8px;border-radius:50%;background:var(--border);
+      cursor:pointer;transition:all .2s;
+    }
+    .pkg-dot.active{width:24px;border-radius:4px;background:var(--primary)}
+
+    /* ── CAROUSEL ARROWS ── */
+    .pkg-arrow{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);
+      background:var(--bg-card);color:var(--text);font-size:1.1rem;
+      cursor:pointer;display:flex;align-items:center;justify-content:center;
+      box-shadow:0 4px 12px rgba(0,0,0,.08);transition:all .2s;z-index:5;
+    }
+    .pkg-arrow:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+    .pkg-arrow-left{left:-22px}
+    .pkg-arrow-right{right:-22px}
+
+    .pkg-no-results{text-align:center;padding:4rem 2rem;color:var(--text-muted)}
+
+    /* Enquiry prompt on packages page */
+    .pkg-enquiry-cta{
+      text-align:center;margin-top:4rem;padding:3rem 2rem;
+      background:var(--bg-card);border:1px solid var(--border);border-radius:20px;
+      max-width:600px;margin-left:auto;margin-right:auto;
+    }
+    .pkg-enquiry-cta h3{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;margin-bottom:.5rem}
+    .pkg-enquiry-cta p{color:var(--text-secondary);margin-bottom:1.5rem}
+    .pkg-enquiry-cta a{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 2rem;background:var(--gradient-primary);color:#fff;border-radius:12px;font-weight:700;text-decoration:none;font-size:.95rem}
   </style>
 </head>
 <body>
@@ -23,19 +120,14 @@
       <div style="font-size:.65rem;color:var(--text-muted);margin-top:-2px" data-i18n="navTagline">இரத்த பரிசோதனை நிலையம் — பேராவூரணி</div>
     </div>
   </a>
-  <ul class="nav-links">
-    <li><a href="packages.html" data-i18n="navPackages" class="active">தொகுப்புகள்</a></li>
-    <li><a href="index.html#features" data-i18n="navServices">சேவைகள்</a></li>
-    <li><a href="index.html#prices" data-i18n="navPrices">விலைகள்</a></li>
-    <li><a href="index.html#contact" data-i18n="navContact">தொடர்பு</a></li>
-  </ul>
+  <ul class="nav-links"></ul>
   <div class="nav-actions">
     <div class="lang-switcher">
       <button class="lang-btn" data-lang="ta" onclick="setLang('ta')">தமிழ்</button>
       <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" data-lang="hi" onclick="setLang('hi')">हिं</button>
     </div>
-    <a href="tel:+919700200044" class="btn btn-ghost" data-i18n="navCall">📞 அழைக்கவும்</a>
+    <a href="tel:+919700200044" class="btn btn-primary">&#128222; Contact for Booking</a>
   </div>
 </nav>
 
@@ -43,11 +135,35 @@
 <section class="section" id="packages" style="padding-top:8rem;min-height:80vh">
   <div class="section-inner">
     <div class="section-header">
-      <div class="section-label" data-i18n="pkgLabel">சுகாதார தொகுப்புகள்</div>
-      <h2 class="section-title"><span data-i18n="pkgTitle">உங்களுக்கு ஏற்ற</span> <span class="highlight" data-i18n="pkgTitle2">சிறந்த தொகுப்பை தேர்வு செய்யுங்கள்</span></h2>
-      <p class="section-desc" data-i18n="pkgDesc">ஒவ்வொரு தேவைக்கும் பட்ஜெட்டுக்கும் ஏற்றவாறு கவனமாக வடிவமைக்கப்பட்ட சுகாதார திரையிடல் தொகுப்புகளில் இருந்து தேர்வு செய்யுங்கள்.</p>
+      <div class="section-label">HEALTH PACKAGES</div>
+      <h1 class="section-title">Find Your <span class="highlight">Perfect Package</span></h1>
+      <p class="section-desc">Choose from our carefully designed health screening packages tailored for every need and budget.</p>
     </div>
-    <div class="packages-grid" id="packagesGrid"></div>
+
+    <!-- Search & Filter -->
+    <div class="pkg-search-bar">
+      <input class="pkg-search-input" id="pkgSearchInput" type="text" placeholder="&#128269; Search packages or tests..."/>
+      <button class="pkg-filter-pill active" data-gender="">All</button>
+      <button class="pkg-filter-pill" data-gender="Male">Male</button>
+      <button class="pkg-filter-pill" data-gender="Female">Female</button>
+    </div>
+
+    <!-- Carousel -->
+    <div style="position:relative;padding:0 2rem">
+      <button class="pkg-arrow pkg-arrow-left" id="pkgPrev">&#8249;</button>
+      <div class="pkg-carousel-outer" id="pkgCarouselOuter">
+        <div class="pkg-carousel-track" id="pkgTrack"></div>
+      </div>
+      <button class="pkg-arrow pkg-arrow-right" id="pkgNext">&#8250;</button>
+    </div>
+    <div class="pkg-dots" id="pkgDots"></div>
+
+    <!-- Enquiry CTA -->
+    <div class="pkg-enquiry-cta" style="margin-top:3rem">
+      <h3>Not Sure Which Package?</h3>
+      <p>Our team will help you choose the right test. Get a free consultation call.</p>
+      <a href="index.html#enquiry">&#128222; Send an Enquiry</a>
+    </div>
   </div>
 </section>
 
@@ -60,34 +176,130 @@
           <div class="nav-logo-icon">🩸</div>
           <div class="nav-logo-text">ஸ்ரீ நீவி லேப் <span>Sri Neevi Lab</span></div>
         </a>
-        <p data-i18n="footerDesc">பேராவூரணியில் NABL அங்கீகரிக்கப்பட்ட இரத்த பரிசோதனை நிலையம். பேராவூரணி மற்றும் 20 கி.மீ சுற்றுவட்டத்தில் வீட்டு சேகரிப்பு சேவை.</p>
+        <p data-i18n="footerDesc">பேராவூரணியில் NABL அங்கீகரிக்கப்பட்ட இரத்த பரிசோதனை நிலையம்.</p>
       </div>
       <div class="footer-col">
-        <h4 data-i18n="footerPkg">தொகுப்புகள்</h4>
-        <ul>
-          <li><a href="packages.html">All in one package - Single</a></li>
-          <li><a href="packages.html">All in one package - Followup</a></li>
-          <li><a href="packages.html">Diabetic & Thyroid Basic</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 data-i18n="footerContact">தொடர்பு</h4>
+        <h4>Contact</h4>
         <ul>
           <li><a href="tel:+919700200044">+91 97002 00044</a></li>
           <li><a href="tel:+917205908073">+91 72059 08073</a></li>
-          <li><a href="#" data-i18n="footerLoc">பேராவூரணி, தஞ்சாவூர் மாவட்டம்</a></li>
-          <li><a href="#" data-i18n="footerHours">திங்கள்–ஞாயிறு: காலை 7 – இரவு 8</a></li>
+          <li>Peravurani, Thanjavur District</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 ஸ்ரீ நீவி லேப். <span data-i18n="footerRights">அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</span></span>
-      <span data-i18n="footerMotto">தரமான வாழ்க்கை அனைவருக்கும் 💜</span>
+      <span>© 2025 Sri Neevi Lab. All rights reserved.</span>
+      <span>Quality Healthcare for All 💜</span>
     </div>
   </div>
 </footer>
 
 <script src="translations.js"></script>
 <script src="app.js"></script>
+<script>
+(function(){
+  const COLORS = ['#7C3AED','#2563EB','#059669','#DC2626','#DB2777','#D97706','#0891B2'];
+  let allPkgs = [], filtered = [], currentIdx = 0, autoTimer = null;
+
+  function loadPackages(){
+    // Pull from localStorage (admin-managed) or fallback to default 3
+    try {
+      const stored = localStorage.getItem('sn_packages');
+      if(stored){ allPkgs = JSON.parse(stored); }
+    } catch(e){}
+    if(!allPkgs.length){
+      allPkgs = [
+        {id:'aio-single',name:'All in One Package – Single Checkup',price:1499,originalPrice:2999,gender:'Both',description:'Comprehensive single checkup for overall health.',tests:['Complete Blood Count','Liver Function Test','Renal Function Test','Lipid Profile','Thyroid Profile','Blood Sugar (FBS/PPBS)','HbA1c'],popular:true,color:'#7C3AED'},
+        {id:'aio-followup',name:'All in One Package – Followup (Upto 1 Year)',price:4999,originalPrice:8999,gender:'Both',description:'Annual health monitoring with periodic follow-ups.',tests:['Complete Blood Count','Liver Function Test','Renal Function Test','Lipid Profile','Thyroid Profile','Blood Sugar','HbA1c','Iron Studies'],popular:false,color:'#2563EB'},
+        {id:'diabetic',name:'Diabetic, Thyroid & Basic Blood Test',price:999,originalPrice:1999,gender:'Both',description:'Essential screening for diabetes and thyroid function.',tests:['Fasting Blood Sugar','Post Prandial Blood Sugar','HbA1c','Thyroid Profile (T3,T4,TSH)','Complete Blood Count'],popular:false,color:'#059669'},
+      ];
+    }
+    filtered = [...allPkgs];
+  }
+
+  function buildCard(pkg, idx){
+    const color = pkg.color || COLORS[idx % COLORS.length];
+    const savings = pkg.originalPrice > 0 ? Math.round((1-pkg.price/pkg.originalPrice)*100) : 0;
+    return `<div class="pkg-card" data-idx="${idx}">
+      <div class="pkg-card-accent" style="background:${color}"></div>
+      ${pkg.popular ? '<div class="pkg-card-badge">⭐ Most Popular</div>' : ''}
+      <div class="pkg-card-gender">&#128101; ${pkg.gender || 'Unisex'}</div>
+      <div class="pkg-card-name">${pkg.name}</div>
+      <div class="pkg-card-price">&#8377;${(pkg.price||0).toLocaleString()}</div>
+      ${pkg.originalPrice ? `<div class="pkg-card-original">&#8377;${pkg.originalPrice.toLocaleString()}</div>` : ''}
+      ${savings > 0 ? `<div class="pkg-card-savings">${savings}% OFF</div>` : ''}
+      <div class="pkg-card-desc">${pkg.description||''}</div>
+      <ul class="pkg-tests-list">
+        ${(pkg.tests||[]).slice(0,5).map(t=>`<li>${t}</li>`).join('')}
+        ${(pkg.tests||[]).length>5?`<li style="color:var(--primary);font-weight:700">+${pkg.tests.length-5} more tests</li>`:''}
+      </ul>
+      <button class="pkg-card-btn" onclick="window.location='index.html#enquiry'">&#128222; Book This Package</button>
+    </div>`;
+  }
+
+  function renderCarousel(){
+    const track = document.getElementById('pkgTrack');
+    const dots = document.getElementById('pkgDots');
+    if(!track) return;
+    if(!filtered.length){
+      track.innerHTML = '<div class="pkg-no-results" style="min-width:100%;padding:4rem">No packages found. Try a different search.</div>';
+      dots.innerHTML = '';
+      return;
+    }
+    track.innerHTML = filtered.map((p,i) => buildCard(p,i)).join('');
+    // Build dots
+    dots.innerHTML = filtered.map((_,i) => `<div class="pkg-dot${i===0?' active':''}" onclick="goTo(${i})"></div>`).join('');
+    currentIdx = 0;
+    goTo(0);
+    startAuto();
+  }
+
+  window.goTo = function(idx){
+    const track = document.getElementById('pkgTrack');
+    const dots = document.querySelectorAll('.pkg-dot');
+    const cards = track.querySelectorAll('.pkg-card');
+    if(!cards.length) return;
+    const cardW = cards[0].offsetWidth + 32; // gap=2rem=32px
+    currentIdx = Math.max(0, Math.min(idx, filtered.length-1));
+    track.style.transform = `translateX(-${currentIdx * cardW}px)`;
+    dots.forEach((d,i) => d.classList.toggle('active', i===currentIdx));
+  };
+
+  function startAuto(){
+    if(autoTimer) clearInterval(autoTimer);
+    autoTimer = setInterval(() => {
+      const next = (currentIdx+1) % filtered.length;
+      goTo(next);
+    }, 3500);
+  }
+
+  function applyFilter(){
+    const q = (document.getElementById('pkgSearchInput')?.value||'').toLowerCase();
+    const genderBtn = document.querySelector('.pkg-filter-pill.active');
+    const gender = genderBtn?.dataset.gender || '';
+    filtered = allPkgs.filter(p => {
+      const matchG = !gender || p.gender === gender || p.gender === 'Both';
+      const matchQ = !q || p.name.toLowerCase().includes(q) || (p.tests||[]).some(t=>t.toLowerCase().includes(q));
+      return matchG && matchQ;
+    });
+    renderCarousel();
+  }
+
+  // Init
+  loadPackages();
+  renderCarousel();
+
+  document.getElementById('pkgSearchInput')?.addEventListener('input', applyFilter);
+  document.querySelectorAll('.pkg-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pkg-filter-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter();
+    });
+  });
+  document.getElementById('pkgPrev')?.addEventListener('click', () => { clearInterval(autoTimer); goTo(currentIdx-1); startAuto(); });
+  document.getElementById('pkgNext')?.addEventListener('click', () => { clearInterval(autoTimer); goTo(currentIdx+1); startAuto(); });
+})();
+</script>
 </body>
 </html>

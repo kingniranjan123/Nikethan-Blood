@@ -118,23 +118,32 @@ async function loadAll() {
 
 // ── NAVIGATION ──
 function setupNav() {
-  const titles = { analytics:'📈 Analytics Dashboard', clients:'👥 Client List', packages:'📦 Package List', prices:'💰 Price List' };
+  const titles = {
+    analytics:'&#128202; Analytics Dashboard',
+    clients:'&#128101; Client List',
+    packages:'&#128230; Package List',
+    prices:'&#128176; Price List',
+    enquiries:'&#128221; Customer Enquiries'
+  };
   document.querySelectorAll('[data-page]').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const pg = link.dataset.page;
-      if (pg === 'parser') return; // disabled
+      if (pg === 'parser') return;
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('[data-page]').forEach(l => l.classList.remove('active'));
       document.getElementById('page-' + pg).classList.add('active');
       link.classList.add('active');
-      document.getElementById('topbarTitle').textContent = titles[pg];
-      if (pg === 'analytics') setupAnalytics(); // refresh
+      document.getElementById('topbarTitle').innerHTML = titles[pg] || pg;
+      if (pg === 'analytics') setupAnalytics();
       if (pg === 'clients') renderClients();
       if (pg === 'packages') renderPackages('all');
       if (pg === 'prices') renderPrices();
+      if (pg === 'enquiries') renderEnquiries();
     });
   });
+  // Update enquiry badge on load
+  updateEnquiryBadge();
 }
 
 // ── PAGINATION CONTROLS ──
@@ -695,3 +704,89 @@ function toast(message, type = 'success') {
   container.appendChild(el);
   setTimeout(() => { el.style.opacity = '0'; el.style.transform = 'translateX(100%)'; el.style.transition = 'all .3s'; setTimeout(() => el.remove(), 300); }, 3000);
 }
+
+// ── ENQUIRIES ──
+function updateEnquiryBadge() {
+  const enquiries = JSON.parse(localStorage.getItem('sn_enquiries') || '[]');
+  const newCount = enquiries.filter(e => e.status === 'New').length;
+  const badge = document.getElementById('enquiryBadge');
+  if (badge) { badge.textContent = newCount > 0 ? newCount : ''; }
+}
+
+function renderEnquiries() {
+  const enquiries = JSON.parse(localStorage.getItem('sn_enquiries') || '[]');
+  const tbody = document.getElementById('enquiriesTableBody');
+  if (!tbody) return;
+
+  // Update stats
+  const today = new Date().toLocaleDateString('en-IN');
+  const todayCount = enquiries.filter(e => e.date && e.date.startsWith(today)).length;
+  const newCount = enquiries.filter(e => e.status === 'New').length;
+  const totalEl = document.getElementById('enqTotal');
+  const newEl   = document.getElementById('enqNew');
+  const todayEl = document.getElementById('enqToday');
+  if (totalEl) totalEl.textContent = enquiries.length;
+  if (newEl)   newEl.textContent   = newCount;
+  if (todayEl) todayEl.textContent = todayCount;
+  updateEnquiryBadge();
+
+  if (!enquiries.length) {
+    tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet.</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = enquiries.map((enq, i) => `
+    <tr style="background:${enq.status==='New'?'rgba(220,38,38,.04)':''}">
+      <td>${i + 1}</td>
+      <td style="font-weight:700">${enq.name}</td>
+      <td><a href="tel:+91${enq.phone}" style="color:var(--primary);font-weight:700">${enq.phone}</a></td>
+      <td style="font-size:.82rem;color:var(--text-muted)">${enq.date}</td>
+      <td>
+        <span style="padding:.2rem .7rem;border-radius:100px;font-size:.75rem;font-weight:700;
+          background:${enq.status==='New'?'rgba(220,38,38,.12)':'rgba(5,150,105,.12)'};
+          color:${enq.status==='New'?'#dc2626':'#047857'};
+          border:1px solid ${enq.status==='New'?'rgba(220,38,38,.3)':'rgba(5,150,105,.3)'}">
+          ${enq.status}
+        </span>
+      </td>
+      <td>
+        <button onclick="toggleEnqStatus(${i})" class="btn btn-ghost btn-sm" title="Mark as ${enq.status==='New'?'Done':'New'}"
+          style="font-size:.75rem;padding:.3rem .6rem">
+          ${enq.status==='New'?'✓ Mark Done':'↩ Reopen'}
+        </button>
+        <button onclick="deleteEnquiry(${i})" class="btn btn-ghost btn-sm" style="color:#dc2626;font-size:.75rem;padding:.3rem .6rem">🗑</button>
+      </td>
+    </tr>
+  `).join('');
+
+  // Setup buttons
+  document.getElementById('clearEnquiriesBtn').onclick = () => {
+    if (confirm('Clear all enquiries? This cannot be undone.')) {
+      localStorage.setItem('sn_enquiries', '[]');
+      renderEnquiries();
+      toast('All enquiries cleared');
+    }
+  };
+  document.getElementById('exportEnquiriesBtn').onclick = () => {
+    const csv = 'Name,Phone,Date,Status\n' +
+      enquiries.map(e => `"${e.name}","${e.phone}","${e.date}","${e.status}"`).join('\n');
+    exportCSV(csv, 'enquiries.csv');
+  };
+}
+
+window.toggleEnqStatus = function(idx) {
+  const enquiries = JSON.parse(localStorage.getItem('sn_enquiries') || '[]');
+  if (!enquiries[idx]) return;
+  enquiries[idx].status = enquiries[idx].status === 'New' ? 'Done' : 'New';
+  localStorage.setItem('sn_enquiries', JSON.stringify(enquiries));
+  renderEnquiries();
+};
+
+window.deleteEnquiry = function(idx) {
+  const enquiries = JSON.parse(localStorage.getItem('sn_enquiries') || '[]');
+  enquiries.splice(idx, 1);
+  localStorage.setItem('sn_enquiries', JSON.stringify(enquiries));
+  renderEnquiries();
+  toast('Enquiry deleted');
+};
+

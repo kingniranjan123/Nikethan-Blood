@@ -83,35 +83,16 @@
   <div class="hero-grid">
     <!-- LEFT: CONTENT -->
     <div class="hero-content">
-      <!-- Home Collection Badge — Bold & Highlighted -->
-      <div style="margin-bottom:1rem">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          <strong>&#127968; Free Home Sample Collection Available</strong>
-        </div>
-      </div>
-      <!-- Trust Row -->
-      <div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1.2rem;flex-wrap:wrap">
-        <span class="nabl-badge">&#10003;&#10003; NABL Accredited</span>
-        <span class="nabl-badge" style="background:rgba(37,99,235,.1);border-color:rgba(37,99,235,.3);color:#1d4ed8">&#128230; Doorstep Pickup</span>
-      </div>
-      <!-- Location — given prominence -->
-      <div style="margin-bottom:1.5rem">
-        <span class="location-pill">
-          &#128205; <strong>Peravurani &amp; 20km Radius</strong>
-          <span style="font-weight:500;opacity:.85">&mdash; Valangaiman &bull; Pattukkottai &bull; Aranthangi</span>
-        </span>
-      </div>
       <h1 class="hero-title">
         <span data-i18n="heroTitle1">National Quality</span><br/>
         <span class="highlight" data-i18n="heroTitle2">Blood Testing</span>
       </h1>
-      <p class="hero-desc" data-i18n="heroDesc">Sri Neevi Lab &mdash; NABL accredited blood testing laboratory in Peravurani. Samples collected at your doorstep with accurate results delivered within 24 hours.</p>
+      <p class="hero-desc">Sri Neevi Lab &mdash; NABL accredited blood testing laboratory in <strong>Peravurani &amp; 20km radius</strong>. Samples collected free at your doorstep. Accurate results in 24 hours.</p>
       <div class="hero-actions">
-        <a href="tel:+919700200044" class="btn btn-primary btn-lg">&#128222; Contact for Booking</a>
-        <a href="tel:+919700200044" class="btn btn-outline btn-lg">97002 00044</a>
+        <a href="#enquiry" class="btn btn-primary btn-lg">&#128221; Send Enquiry</a>
+        <a href="tel:+919700200044" class="btn btn-outline btn-lg">&#128222; 97002 00044</a>
       </div>
-      <!-- Hero Stats: solid bold colors, fully visible -->
+      <!-- Hero Stats: solid bold colors -->
       <div style="display:flex;gap:2rem;margin-top:2.5rem;flex-wrap:wrap">
         <div>
           <div style="font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:900;color:#dc2626;line-height:1">775+</div>
@@ -127,49 +108,57 @@
         </div>
       </div>
     </div>
-    <!-- RIGHT: CONFIDENCE DASHBOARD CARD -->
+    <!-- RIGHT: WHY CHOOSE US SLIDES -->
     <div class="hero-visual">
       <div class="hero-visual-wrap">
-        <!-- Floating chips — fully inside wrapper, visible -->
         <div class="floating-chip floating-chip-1">&#127968; Free Home Collection</div>
         <div class="floating-chip floating-chip-2">&#10003; Results in 24 Hours</div>
-        <!-- Health Trust Dashboard -->
-        <div class="hero-card">
+        <div class="hero-card" id="whySlideCard">
           <div class="hero-card-header">
-            <div class="hero-card-title">&#10084; Sri Neevi Health Dashboard</div>
-            <div class="hero-card-badge">&#11044; Live</div>
+            <div class="hero-card-title">&#11088; Why Choose Sri Neevi Lab?</div>
+            <div class="hero-card-badge" style="background:rgba(220,38,38,.15);color:#dc2626;border:1px solid rgba(220,38,38,.3)">&#11044; Trusted</div>
           </div>
-          <!-- Row 1: Clients -->
-          <div class="hero-mini-stat" style="border-left:3px solid #dc2626">
-            <div>
-              <div class="label">Patients Served &mdash; Trusted by Community</div>
-              <div class="value" style="color:#dc2626;font-size:1.3rem;font-weight:900">775+ Patients</div>
+          <!-- Slides -->
+          <div id="whySlides">
+            <div class="why-slide active">
+              <div class="hero-mini-stat" style="border-left:3px solid #dc2626">
+                <div><div class="label">Patients Served — Community Trusted</div><div class="value" style="color:#dc2626;font-size:1.3rem;font-weight:900">775+ Patients</div></div>
+                <div style="font-size:1.8rem">&#128101;</div>
+              </div>
+              <div class="hero-mini-stat" style="border-left:3px solid #059669;margin-top:.75rem">
+                <div><div class="label">Free Home Sample Collection</div><div class="value" style="color:#047857;font-weight:800">Peravurani &amp; 20km Area</div></div>
+                <div style="font-size:1.8rem">&#127968;</div>
+              </div>
             </div>
-            <div style="font-size:1.8rem">&#128101;</div>
-          </div>
-          <!-- Row 2: Home Collection -->
-          <div class="hero-mini-stat" style="border-left:3px solid #059669">
-            <div>
-              <div class="label">Free Home Collection Available</div>
-              <div class="value" style="color:#047857;font-weight:800">Peravurani &amp; 20km Area</div>
+            <div class="why-slide">
+              <div class="hero-mini-stat" style="border-left:3px solid #2563eb">
+                <div><div class="label">Fast &amp; Accurate Reports</div><div class="value" style="color:#1d4ed8;font-weight:800">Delivered in 24 Hours</div></div>
+                <div style="font-size:1.8rem">&#9889;</div>
+              </div>
+              <div class="hero-mini-stat" style="border-left:3px solid #7C3AED;margin-top:.75rem">
+                <div><div class="label">Government Certified Quality</div><div class="value" style="color:#6D28D9;font-weight:800">NABL Accredited Lab</div></div>
+                <div style="font-size:1.8rem">&#128270;</div>
+              </div>
             </div>
-            <div style="font-size:1.8rem">&#127968;</div>
-          </div>
-          <!-- Row 3: Reports -->
-          <div class="hero-mini-stat" style="border-left:3px solid #2563eb">
-            <div>
-              <div class="label">Accurate Reports Delivered To You</div>
-              <div class="value" style="color:#1d4ed8;font-weight:800">Within 24 Hours</div>
+            <div class="why-slide">
+              <div class="hero-mini-stat" style="border-left:3px solid #D97706">
+                <div><div class="label">Affordable Health Packages</div><div class="value" style="color:#B45309;font-weight:800">Starting &#8377;499 Only</div></div>
+                <div style="font-size:1.8rem">&#128176;</div>
+              </div>
+              <div class="hero-mini-stat" style="border-left:3px solid #059669;margin-top:.75rem">
+                <div><div class="label">100% Safe &amp; Confidential</div><div class="value" style="color:#047857;font-weight:800">Digital Reports on WhatsApp</div></div>
+                <div style="font-size:1.8rem">&#128274;</div>
+              </div>
             </div>
-            <div style="font-size:1.8rem">&#9889;</div>
           </div>
-          <div class="tag-row">
-            <span class="tag green">NABL</span>
-            <span class="tag">CBC</span>
-            <span class="tag">HbA1c</span>
-            <span class="tag green">Thyroid</span>
-            <span class="tag amber">Lipid</span>
-            <span class="tag">LFT</span>
+          <div class="tag-row" style="margin-top:1rem">
+            <span class="tag green">NABL</span><span class="tag">CBC</span><span class="tag">HbA1c</span>
+            <span class="tag green">Thyroid</span><span class="tag amber">Lipid</span><span class="tag">LFT</span>
+          </div>
+          <div style="display:flex;justify-content:center;gap:.4rem;margin-top:.75rem" id="whyDots">
+            <span class="why-dot active" onclick="goWhySlide(0)"></span>
+            <span class="why-dot" onclick="goWhySlide(1)"></span>
+            <span class="why-dot" onclick="goWhySlide(2)"></span>
           </div>
         </div>
       </div>
@@ -233,20 +222,57 @@
   </div>
 </section>
 
+<!-- ENQUIRY FORM SECTION -->
+<section class="section" id="enquiry" style="background:linear-gradient(135deg,rgba(220,38,38,.04) 0%,rgba(37,99,235,.04) 100%)">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">QUICK ENQUIRY</div>
+      <h2 class="section-title">Book a <span class="highlight">Free Consultation</span></h2>
+      <p class="section-desc">Leave your details and our team will call you back within 30 minutes.</p>
+    </div>
+    <div style="max-width:520px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:24px;padding:2.5rem;box-shadow:0 16px 48px rgba(0,0,0,.08)">
+      <div id="enquirySuccess" style="display:none;text-align:center;padding:2rem 0">
+        <div style="font-size:3.5rem;margin-bottom:1rem">&#127881;</div>
+        <div style="font-size:1.3rem;font-weight:800;color:#059669;margin-bottom:.5rem">Enquiry Submitted!</div>
+        <p style="color:var(--text-secondary)">Our team will contact you shortly. Thank you!</p>
+        <button onclick="document.getElementById('enquirySuccess').style.display='none';document.getElementById('enquiryForm').style.display='block'" class="btn btn-outline" style="margin-top:1rem">Submit Another</button>
+      </div>
+      <form id="enquiryForm" onsubmit="submitEnquiry(event)" novalidate>
+        <div class="form-group" style="margin-bottom:1.2rem">
+          <label style="display:block;font-weight:700;font-size:.9rem;margin-bottom:.4rem;color:var(--text)">&#128100; Full Name <span style="color:#dc2626">*</span></label>
+          <input type="text" id="enqName" placeholder="Enter your full name" autocomplete="name"
+            style="width:100%;padding:.8rem 1rem;border-radius:12px;border:1.5px solid var(--border);background:var(--bg);color:var(--text);font-size:.95rem;font-family:inherit;outline:none;box-sizing:border-box;transition:border-color .2s"
+            onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+          <div id="enqNameErr" style="color:#dc2626;font-size:.8rem;margin-top:.3rem;display:none">Please enter your full name (at least 2 characters).</div>
+        </div>
+        <div class="form-group" style="margin-bottom:1.5rem">
+          <label style="display:block;font-weight:700;font-size:.9rem;margin-bottom:.4rem;color:var(--text)">&#128241; Phone Number <span style="color:#dc2626">*</span></label>
+          <input type="tel" id="enqPhone" placeholder="10-digit mobile number (e.g. 9700200044)" autocomplete="tel" maxlength="13"
+            style="width:100%;padding:.8rem 1rem;border-radius:12px;border:1.5px solid var(--border);background:var(--bg);color:var(--text);font-size:.95rem;font-family:inherit;outline:none;box-sizing:border-box;transition:border-color .2s"
+            onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='var(--border)'"/>
+          <div id="enqPhoneErr" style="color:#dc2626;font-size:.8rem;margin-top:.3rem;display:none">Please enter a valid 10-digit Indian mobile number.</div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">&#128221; Submit Enquiry</button>
+        <p style="text-align:center;font-size:.78rem;color:var(--text-muted);margin-top:1rem">&#128274; Your information is completely private and secure.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT / CTA -->
 <section class="section" id="contact">
   <div class="section-inner">
     <div class="cta-section">
-      <div class="section-label" data-i18n="ctaLabel">இப்போதே முன்பதிவு செய்யுங்கள்</div>
-      <div class="cta-title" data-i18n="ctaTitle">உங்கள் ஆரோக்கியத்தை<br/>கவனித்துக்கொள்ள தயாரா?</div>
-      <p class="cta-desc" data-i18n="ctaDesc">வீட்டு மாதிரி சேகரிப்பை திட்டமிட இப்போதே அழைக்கவும். எங்கள் குழு வாரம் 7 நாட்களும் கிடைக்கும்.</p>
+      <div class="section-label">BOOK NOW</div>
+      <div class="cta-title">Ready to Take Care of<br/>Your Health?</div>
+      <p class="cta-desc">Call us or submit an enquiry. Our team is available 7 days a week.</p>
       <div style="display:flex;justify-content:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
-        <a href="tel:+919700200044" class="cta-phone" style="margin:0">📞 97002 00044</a>
-        <a href="tel:+917205908073" class="cta-phone" style="margin:0;font-size:1.4rem">📞 72059 08073</a>
+        <a href="tel:+919700200044" class="cta-phone" style="margin:0">&#128222; 97002 00044</a>
+        <a href="tel:+917205908073" class="cta-phone" style="margin:0;font-size:1.4rem">&#128222; 72059 08073</a>
       </div>
       <div class="cta-actions">
-        <a href="tel:+919700200044" class="btn btn-primary btn-lg" data-i18n="ctaBtn1">அழைத்து முன்பதிவு செய்யுங்கள்</a>
-        <a href="packages.html" class="btn btn-outline btn-lg" data-i18n="ctaBtn2">தொகுப்புகளை காண்க</a>
+        <a href="tel:+919700200044" class="btn btn-primary btn-lg">Call &amp; Book Now</a>
+        <a href="packages.html" class="btn btn-outline btn-lg">View Packages</a>
       </div>
     </div>
   </div>

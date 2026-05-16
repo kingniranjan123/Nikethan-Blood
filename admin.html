@@ -28,7 +28,11 @@
         <span class="icon">📦</span> Package List
       </a></li>
       <li><a href="#" data-page="prices" id="nav-prices">
-        <span class="icon">💰</span> Price List
+        <span class="icon">&#128176;</span> Price List
+      </a></li>
+      <li><a href="#" data-page="enquiries" id="nav-enquiries">
+        <span class="icon">&#128221;</span> Enquiries
+        <span id="enquiryBadge" style="background:#dc2626;color:#fff;font-size:.65rem;font-weight:800;padding:.1rem .45rem;border-radius:100px;margin-left:auto"></span>
       </a></li>
       <li class="sidebar-section-label">Tools</li>
       <li><a href="#" data-page="parser" id="nav-parser">
@@ -46,13 +50,13 @@
     <!-- TOPBAR -->
     <div class="topbar">
       <div class="topbar-title" id="topbarTitle">👥 Client List</div>
-      <div class="topbar-right" style="display:flex;align-items:center;gap:1rem">
-        <div class="lang-switcher">
-          <button class="lang-btn" data-lang="ta" onclick="setLang('ta')">தமிழ்</button>
-          <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
-          <button class="lang-btn" data-lang="hi" onclick="setLang('hi')">हिं</button>
+    <div class="topbar-right" style="display:flex;align-items:center;gap:1rem">
+        <div style="display:flex;align-items:center;gap:2px;background:rgba(0,0,0,.04);border:1px solid var(--border);border-radius:8px;padding:3px">
+          <button onclick="setLang('ta')" data-lang="ta" class="lang-btn" style="padding:.3rem .6rem;border-radius:6px;border:none;background:transparent;cursor:pointer;font-size:.75rem;font-weight:700;font-family:inherit;color:var(--text-secondary);transition:all .2s">தமிழ்</button>
+          <button onclick="setLang('en')" data-lang="en" class="lang-btn" style="padding:.3rem .6rem;border-radius:6px;border:none;background:transparent;cursor:pointer;font-size:.75rem;font-weight:700;font-family:inherit;color:var(--text-secondary);transition:all .2s">EN</button>
+          <button onclick="setLang('hi')" data-lang="hi" class="lang-btn" style="padding:.3rem .6rem;border-radius:6px;border:none;background:transparent;cursor:pointer;font-size:.75rem;font-weight:700;font-family:inherit;color:var(--text-secondary);transition:all .2s">हिं</button>
         </div>
-        <span class="topbar-badge">🔐 Admin Mode</span>
+        <span class="topbar-badge">&#128272; Admin Mode</span>
         <span id="topbarDate" style="font-size:.8rem;color:var(--text-muted)"></span>
       </div>
     </div>
@@ -407,8 +411,61 @@
   </div>
 </div>
 
+<!-- ═══════════════════════════════ PAGE: ENQUIRIES ═══════════════════════════════ -->
+<div class="page" id="page-enquiries">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
+    <div>
+      <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#128221; Customer Enquiries</h2>
+      <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Submitted from the website contact form</p>
+    </div>
+    <div style="display:flex;gap:.75rem">
+      <button class="btn btn-ghost" id="clearEnquiriesBtn" style="font-size:.85rem">&#128465; Clear All</button>
+      <button class="btn btn-primary" id="exportEnquiriesBtn" style="font-size:.85rem">&#8595; Export CSV</button>
+    </div>
+  </div>
+
+  <!-- Stats row -->
+  <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
+    <div class="stat-card" style="min-width:140px">
+      <div class="stat-card-icon">&#128221;</div>
+      <div class="stat-card-label">Total Enquiries</div>
+      <div class="stat-card-value" id="enqTotal">0</div>
+    </div>
+    <div class="stat-card" style="min-width:140px">
+      <div class="stat-card-icon">&#128308;</div>
+      <div class="stat-card-label">New (Unread)</div>
+      <div class="stat-card-value" id="enqNew" style="color:#dc2626">0</div>
+    </div>
+    <div class="stat-card" style="min-width:140px">
+      <div class="stat-card-icon">&#128202;</div>
+      <div class="stat-card-label">Today</div>
+      <div class="stat-card-value" id="enqToday">0</div>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
+    <table class="data-table" style="width:100%">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Date &amp; Time</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="enquiriesTableBody">
+        <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet. They will appear here when customers submit the form.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 <!-- TOAST CONTAINER -->
 <div class="toast-container" id="toastContainer"></div>
+
 
 <script src="translations.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>

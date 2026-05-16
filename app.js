@@ -206,5 +206,78 @@ function getFallbackPrices() {
 
 // CSS shake animation
 const style = document.createElement('style');
-style.textContent = '@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}';
+style.textContent = '@keyframes shake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(8px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}} .why-slide{display:none} .why-slide.active{display:block} .why-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--border,#e2e8f0);cursor:pointer;transition:all .25s} .why-dot.active{width:20px;border-radius:4px;background:var(--primary,#dc2626)}';
+document.head.appendChild(style);
+
+// ── WHY-CHOOSE-US HERO SLIDES ──
+(function(){
+  let cur = 0;
+  const total = 3;
+  window.goWhySlide = function(idx){
+    const slides = document.querySelectorAll('.why-slide');
+    const dots   = document.querySelectorAll('.why-dot');
+    if(!slides.length) return;
+    slides.forEach(s=>s.classList.remove('active'));
+    dots.forEach(d=>d.classList.remove('active'));
+    cur = (idx + total) % total;
+    slides[cur]?.classList.add('active');
+    dots[cur]?.classList.add('active');
+  };
+  setInterval(()=>{ goWhySlide(cur+1); }, 4000);
+})();
+
+// ── ENQUIRY FORM ──
+window.submitEnquiry = function(e){
+  e.preventDefault();
+  const nameEl  = document.getElementById('enqName');
+  const phoneEl = document.getElementById('enqPhone');
+  const nameErr  = document.getElementById('enqNameErr');
+  const phoneErr = document.getElementById('enqPhoneErr');
+  let valid = true;
+
+  // Name validation
+  const name = (nameEl?.value||'').trim();
+  if(name.length < 2){
+    nameErr.style.display = 'block';
+    nameEl.style.borderColor = '#dc2626';
+    valid = false;
+  } else {
+    nameErr.style.display = 'none';
+    nameEl.style.borderColor = '#059669';
+  }
+
+  // Phone validation — 10-digit Indian mobile
+  const phone = (phoneEl?.value||'').trim().replace(/\s|-/g,'');
+  const phoneRegex = /^[6-9]\d{9}$/;
+  if(!phoneRegex.test(phone)){
+    phoneErr.style.display = 'block';
+    phoneEl.style.borderColor = '#dc2626';
+    valid = false;
+  } else {
+    phoneErr.style.display = 'none';
+    phoneEl.style.borderColor = '#059669';
+  }
+
+  if(!valid) return;
+
+  // Save to localStorage
+  const enquiries = JSON.parse(localStorage.getItem('sn_enquiries')||'[]');
+  enquiries.unshift({
+    id: Date.now(),
+    name,
+    phone,
+    date: new Date().toLocaleString('en-IN'),
+    status: 'New'
+  });
+  localStorage.setItem('sn_enquiries', JSON.stringify(enquiries));
+
+  // Show success
+  document.getElementById('enquiryForm').style.display = 'none';
+  document.getElementById('enquirySuccess').style.display = 'block';
+
+  // Reset form
+  if(nameEl) nameEl.value = '';
+  if(phoneEl) phoneEl.value = '';
+};
+
 document.head.appendChild(style);
