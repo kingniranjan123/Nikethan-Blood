@@ -319,7 +319,7 @@ function generateInvoice() {
   sendInvoiceEmail(invoice);
   updateMissingReportsBadge();
   resetBillingForm();
-  openInvoiceModal(invoice);
+  openInvoiceModal(invoice, true); // auto-print on generation
 }
 
 function resetBillingForm() {
@@ -338,7 +338,7 @@ function resetBillingForm() {
 // ══════════════════════════════════════════
 // INVOICE MODAL / PRINT
 // ══════════════════════════════════════════
-window.openInvoiceModal = function(invoice) {
+window.openInvoiceModal = function(invoice, autoPrint = false) {
   const s = getSettings();
   const labName = s.labName || 'Sri Neevi Diagnostics';
   const labAddr = s.address || 'Chennai, Tamil Nadu';
@@ -393,15 +393,16 @@ window.openInvoiceModal = function(invoice) {
     </div>`;
 
   document.getElementById('invoiceModalOverlay').classList.add('open');
+  if (autoPrint) { setTimeout(() => window.print(), 650); }
 };
 
 window.closeInvoiceModal = function() {
   document.getElementById('invoiceModalOverlay').classList.remove('open');
 };
 
-window.downloadInvoicePDF = function() {
-  window.print();
-};
+// Both buttons call window.print() — user selects "Save as PDF" or printer
+window.downloadInvoicePDF = function() { window.print(); };
+window.printInvoice        = function() { window.print(); };
 
 // ══════════════════════════════════════════
 // MISSING REPORTS BADGE
@@ -409,15 +410,14 @@ window.downloadInvoicePDF = function() {
 function updateMissingReportsBadge() {
   const invoices = getInvoices();
   const missing = invoices.filter(inv => !inv.reportUploaded).length;
-  const banner = document.getElementById('missingReportsBanner');
-  const countEl = document.getElementById('missingReportsCount');
+  const banner       = document.getElementById('missingReportsBanner');
+  const countEl      = document.getElementById('missingReportsCount');
   const sidebarBadge = document.getElementById('missingReportsBadge');
+  const reportsBadge = document.getElementById('reportsAlertBadge');
   if (banner)  { banner.classList.toggle('hidden', missing === 0); }
   if (countEl) { countEl.textContent = missing; }
-  if (sidebarBadge) {
-    sidebarBadge.style.display = missing > 0 ? '' : 'none';
-    sidebarBadge.textContent = missing;
-  }
+  if (sidebarBadge) { sidebarBadge.style.display = missing > 0 ? '' : 'none'; sidebarBadge.textContent = missing; }
+  if (reportsBadge) { reportsBadge.style.display = missing > 0 ? '' : 'none'; reportsBadge.textContent = missing; }
 }
 
 // ══════════════════════════════════════════
@@ -781,4 +781,194 @@ window._removeQRSlot = function(id) {
   qrSlotsTemp.splice(idx, 1);
   if (wasPrimary && qrSlotsTemp.length > 0) qrSlotsTemp[0].isPrimary = true;
   renderQRCodesManager();
+};
+
+// ══════════════════════════════════════════
+// REPORTS PAGE
+// ══════════════════════════════════════════
+const REPORTS_PER_PAGE = 20;
+let reportsPage = 1;
+
+function setupReportsPage() {
+  renderReports();
+  // Wire search & filters
+  const search   = document.getElementById('reportSearch');
+  const status   = document.getElementById('reportStatusFilter');
+  const month    = document.getElementById('reportMonthFilter');
+  if (search) { search.oninput  = () => { reportsPage = 1; renderReports(); }; }
+  if (status) { status.onchange = () => { reportsPage = 1; renderReports(); }; }
+  if (month)  { month.onchange  = () => { reportsPage = 1; renderReports(); }; }
+}
+
+function renderReports() {
+  const invoices = getInvoices();
+  const search   = (document.getElementById('reportSearch')?.value || '').toLowerCase().trim();
+  const status   = document.getElementById('reportStatusFilter')?.value || '';
+  const month    = document.getElementById('reportMonthFilter')?.value  || '';
+
+  populateReportMonthFilter(invoices);
+
+  // ── Stat cards ──
+  const totalRevenue = invoices.reduce((s, i) => s + (i.amount || 0), 0);
+  const uploaded     = invoices.filter(i => i.reportUploaded).length;
+  const missing      = invoices.length - uploaded;
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set('rp-total',    invoices.length);
+  set('rp-uploaded', uploaded);
+  set('rp-missing',  missing);
+  set('rp-revenue',  '₹' + totalRevenue.toLocaleString('en-IN'));
+
+  // ── Filter ──
+  const filtered = invoices.filter(inv => {
+    const matchSearch = !search ||
+      inv.client.name.toLowerCase().includes(search) ||
+      inv.client.phone.includes(search);
+    const matchStatus = !status ||
+      (status === 'missing'  && !inv.reportUploaded) ||
+      (status === 'uploaded' &&  inv.reportUploaded);
+    // date stored as DD/MM/YYYY — month key is MM/YYYY
+    const invMonth = inv.date ? inv.date.substring(3) : '';  // strips DD/
+    const matchMonth = !month || invMonth === month;
+    return matchSearch && matchStatus && matchMonth;
+  });
+
+  // ── Paginate ──
+  const start     = (reportsPage - 1) * REPORTS_PER_PAGE;
+  const paginated = filtered.slice(start, start + REPORTS_PER_PAGE);
+
+  const tbody = document.getElementById('reportsBody');
+  if (!tbody) return;
+
+  if (!paginated.length) {
+    tbody.innerHTML = `<tr><td colspan="9" class="no-data">
+      <div class="empty-state">
+        <div class="icon">📋</div>
+        <h3>No records found</h3>
+        <p>Try clearing the search or changing the filter.</p>
+      </div></td></tr>`;
+  } else {
+    tbody.innerHTML = paginated.map((inv, i) => {
+      const statusBadge = inv.reportUploaded
+        ? `<span class="badge badge-green">✅ Uploaded</span>`
+        : `<span class="badge badge-amber">⚠ Missing</span>`;
+
+      const invJson = JSON.stringify(inv).replace(/'/g, '&#39;');
+      const uploadAction = inv.reportUploaded
+        ? `<button class="btn btn-sm btn-success" onclick="_rpDownload('${inv.id}')" title="Download Report">⬇ Report</button>`
+        : `<label class="btn btn-sm btn-ghost" for="rpu_${inv.id}" title="Upload Report" style="cursor:pointer">📤 Upload</label>
+           <input type="file" id="rpu_${inv.id}" accept=".pdf,image/*" style="display:none" onchange="_rpUpload('${inv.id}',this)"/>`;
+
+      return `<tr>
+        <td style="color:var(--text-muted);font-size:.8rem">${start + i + 1}</td>
+        <td><span style="font-family:monospace;font-size:.75rem;color:var(--primary);font-weight:700">${inv.id}</span></td>
+        <td style="font-size:.8rem;white-space:nowrap">${inv.date}</td>
+        <td><strong style="font-size:.88rem">${inv.client.name}</strong><br>
+            <span style="font-size:.72rem;color:var(--text-muted)">${inv.client.location || ''}</span></td>
+        <td style="font-size:.82rem">${inv.client.phone}</td>
+        <td><span class="badge badge-purple" style="font-size:.72rem">${inv.testName}</span></td>
+        <td style="font-weight:700;color:var(--success);font-size:.88rem">₹${(inv.amount||0).toLocaleString('en-IN')}</td>
+        <td>${statusBadge}</td>
+        <td>
+          <div style="display:flex;gap:.35rem;flex-wrap:wrap;align-items:center">
+            <button class="btn btn-sm btn-primary" onclick='openInvoiceModal(${invJson})' title="View Invoice">🖨 Invoice</button>
+            ${uploadAction}
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+
+  // ── Count + Pagination ──
+  const countEl = document.getElementById('reportsCount');
+  if (countEl) {
+    const end = Math.min(start + REPORTS_PER_PAGE, filtered.length);
+    const totalPages = Math.ceil(filtered.length / REPORTS_PER_PAGE);
+    let paginationHtml = '';
+    if (totalPages > 1) {
+      const pages = [];
+      for (let p = 1; p <= totalPages; p++) {
+        if (p === 1 || p === totalPages || Math.abs(p - reportsPage) <= 2) {
+          pages.push(`<button class="btn btn-sm ${p === reportsPage ? 'btn-primary' : 'btn-ghost'}"
+            onclick="changeReportsPage(${p})" ${p === reportsPage ? 'disabled' : ''}>${p}</button>`);
+        } else if (pages[pages.length - 1] !== '…') {
+          pages.push('…');
+        }
+      }
+      paginationHtml = `
+        <div style="display:flex;justify-content:center;align-items:center;gap:.4rem;margin-top:1rem;flex-wrap:wrap">
+          <button class="btn btn-sm btn-ghost" onclick="changeReportsPage(${reportsPage - 1})" ${reportsPage === 1 ? 'disabled' : ''}>← Prev</button>
+          ${pages.join('')}
+          <button class="btn btn-sm btn-ghost" onclick="changeReportsPage(${reportsPage + 1})" ${reportsPage === totalPages ? 'disabled' : ''}>Next →</button>
+        </div>`;
+    }
+    countEl.innerHTML = `<span>Showing <strong>${start + 1}–${end}</strong> of <strong>${filtered.length}</strong> invoices</span>${paginationHtml}`;
+  }
+}
+
+function populateReportMonthFilter(invoices) {
+  const sel = document.getElementById('reportMonthFilter');
+  if (!sel || sel.dataset.populated === 'true') return;
+  const months = new Set();
+  invoices.forEach(inv => {
+    if (inv.date) months.add(inv.date.substring(3)); // MM/YYYY
+  });
+  const opts = Array.from(months).sort((a, b) => {
+    const [am, ay] = a.split('/'); const [bm, by] = b.split('/');
+    return (by - ay) || (bm - am); // newest first
+  }).map(m => {
+    const [mm, yyyy] = m.split('/');
+    const label = new Date(yyyy, parseInt(mm) - 1, 1)
+      .toLocaleDateString('en-IN', { month: 'long', year: 'numeric' });
+    return `<option value="${m}">${label}</option>`;
+  }).join('');
+  sel.innerHTML = `<option value="">All Time</option>${opts}`;
+  sel.dataset.populated = 'true';
+}
+
+window.changeReportsPage = function(p) { reportsPage = p; renderReports(); };
+
+// Upload a report from the Reports page
+window._rpUpload = function(invId, input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const invoices = getInvoices();
+    const inv = invoices.find(i => i.id === invId);
+    if (!inv) return;
+    if (!inv.reportFiles) inv.reportFiles = [];
+    inv.reportFiles.push({ name: file.name, data: ev.target.result, date: new Date().toISOString() });
+    inv.reportUploaded = true;
+    saveInvoices(invoices);
+    updateMissingReportsBadge();
+    toast('Report uploaded!', 'success');
+    renderReports();
+  };
+  reader.readAsDataURL(file);
+};
+
+// Download a report from the Reports page (first file)
+window._rpDownload = function(invId) {
+  const invoices = getInvoices();
+  const inv = invoices.find(i => i.id === invId);
+  if (!inv || !inv.reportFiles || !inv.reportFiles.length) { toast('No report file found', 'error'); return; }
+  const f = inv.reportFiles[0];
+  const a = document.createElement('a');
+  a.href = f.data; a.download = f.name || `${invId}_report.pdf`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+};
+
+// Export all filtered reports as CSV
+window.exportReportsCSV = function() {
+  const invoices = getInvoices();
+  const header   = 'Invoice ID,Date,Patient Name,Age,Gender,Phone,Location,Test,Amount,Report Status';
+  const rows     = invoices.map(inv =>
+    `"${inv.id}","${inv.date}","${inv.client.name}","${inv.client.age||''}","${inv.client.gender||''}","${inv.client.phone}","${inv.client.location||''}","${inv.testName}","${inv.amount}","${inv.reportUploaded ? 'Uploaded' : 'Missing'}"`
+  ).join('\n');
+  const blob = new Blob([header + '\n' + rows], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `SriNeevi_Reports_${new Date().toLocaleDateString('en-IN').replace(/\//g,'-')}.csv`;
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  toast('Reports exported as CSV!', 'success');
 };

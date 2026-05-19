@@ -38,6 +38,10 @@
         <span class="icon">💳</span> Billing
         <span id="missingReportsBadge" style="background:#f59e0b;color:#fff;font-size:.65rem;font-weight:800;padding:.1rem .45rem;border-radius:100px;margin-left:auto;display:none"></span>
       </a></li>
+      <li><a href="#" data-page="reports" id="nav-reports">
+        <span class="icon">📋</span> Reports
+        <span id="reportsAlertBadge" style="background:#f59e0b;color:#fff;font-size:.65rem;font-weight:800;padding:.1rem .45rem;border-radius:100px;margin-left:auto;display:none"></span>
+      </a></li>
       <li class="sidebar-section-label">Tools</li>
       <li><a href="#" data-page="parser" id="nav-parser">
         <span class="icon">🔬</span> OCR Parser
@@ -507,6 +511,51 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: REPORTS ═══════════════════════════════ -->
+      <div class="page" id="page-reports">
+        <!-- Stat Cards -->
+        <div class="stat-cards" style="margin-bottom:1.5rem">
+          <div class="stat-card"><div class="stat-card-icon">📋</div><div class="stat-card-label">Total Invoices</div><div class="stat-card-value" id="rp-total">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">✅</div><div class="stat-card-label">Reports Uploaded</div><div class="stat-card-value" id="rp-uploaded" style="color:var(--success)">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">⚠️</div><div class="stat-card-label">Reports Missing</div><div class="stat-card-value" id="rp-missing" style="color:var(--warning)">0</div></div>
+          <div class="stat-card"><div class="stat-card-icon">💰</div><div class="stat-card-label">Total Revenue</div><div class="stat-card-value" id="rp-revenue" style="font-size:1.3rem">&#8377;0</div></div>
+        </div>
+        <!-- Header -->
+        <div class="section-hdr">
+          <h2>&#128203; Reports History</h2>
+          <button class="btn btn-success btn-sm" onclick="exportReportsCSV()">&#8595; Export CSV</button>
+        </div>
+        <!-- Toolbar: search + filters -->
+        <div class="toolbar">
+          <input type="text" class="search-input" id="reportSearch" placeholder="&#128269; Search by patient name or phone number..."/>
+          <select class="filter-select" id="reportStatusFilter">
+            <option value="">All Reports</option>
+            <option value="missing">&#9888; Missing Reports</option>
+            <option value="uploaded">&#10003; Reports Uploaded</option>
+          </select>
+          <select class="filter-select" id="reportMonthFilter">
+            <option value="">All Time</option>
+          </select>
+        </div>
+        <!-- Table -->
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>#</th><th>Invoice</th><th>Date</th><th>Patient Name</th>
+                <th>Phone</th><th>Test / Package</th><th>Amount</th><th>Report Status</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="reportsBody">
+              <tr><td colspan="9" class="no-data">
+                <div class="empty-state"><div class="icon">&#128203;</div><h3>No invoices yet</h3><p>Generate invoices from the Billing page to see them here.</p></div>
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="reportsCount" style="margin-top:.75rem;font-size:.78rem;color:var(--text-muted)"></div>
       </div>
 
       <!-- ═══════════════════════════════ PAGE: SETTINGS ═══════════════════════════════ -->

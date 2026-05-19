@@ -127,6 +127,7 @@ function setupNav() {
     prices:'&#128176; Price List',
     enquiries:'&#128221; Customer Enquiries',
     billing:'&#128179; Billing',
+    reports:'&#128203; Reports History',
     settings:'&#9881;&#65039; Settings'
   };
   document.querySelectorAll('[data-page]').forEach(link => {
@@ -145,6 +146,7 @@ function setupNav() {
       if (pg === 'prices')    renderPrices();
       if (pg === 'enquiries') renderEnquiries();
       if (pg === 'billing')   { setupBillingPage(); }
+      if (pg === 'reports')   { setupReportsPage(); }
       if (pg === 'settings')  { loadSettingsPage(); }
     });
   });
