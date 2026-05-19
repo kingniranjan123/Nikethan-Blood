@@ -1,8 +1,9 @@
-﻿Package Name,Tests Included,Price
-Sri Neevi Mini,"TFT, HbA1c, CBC, FBS, PPBS",499
-Sri Neevi Basic,"Qna Basic, PPBS, Thyroid Profile",999
-Sri Neevi Value,"Qna Value, PPBS, Thyroid Profile, Urine Complete, Vitamin B12, Vitamin D Total",1499
-Sri Neevi Premium,"Sri Neevi Value, HbA1c, Iron Profile, LFT, KFT",2499
-Apollo Pro Health Regal Whole Body Program,"Comprehensive whole body checkup",15000
-Apollo Pro Health Regal Whole Body Program without Eye/ENT/Dental,"Comprehensive without specialty consults",13000
-Whole Body Program,"General whole body health check",13500
+Package Name,Price,Original Price,Gender,Tests Included,Description
+Sri Neevi Mini,499,999,Both,Complete Blood Count (CBC)|FBS|PPBS|Thyroid Profile (TFT)|HbA1c,Essential starter panel for routine health screening
+Sri Neevi Basic,999,1999,Both,Complete Blood Count|FBS|PPBS|Thyroid Profile|Lipid Profile|Urine Complete,Comprehensive basic health checkup
+Sri Neevi Value,1499,2999,Both,Complete Blood Count|FBS|PPBS|Thyroid Profile|Lipid Profile|Urine Complete|Vitamin B12|Vitamin D Total,Best value full body screening
+Sri Neevi Premium,2499,4999,Both,Complete Blood Count|FBS|PPBS|Thyroid Profile|Lipid Profile|HbA1c|Iron Profile|LFT|KFT|Urine Complete,Premium full body health package
+Sri Neevi Elite,3999,7999,Both,Complete Blood Count|FBS|PPBS|Thyroid Profile|Lipid Profile|HbA1c|Iron Profile|LFT|KFT|Urine Complete|Vitamin B12|Vitamin D|Calcium|Phosphorus|Uric Acid,Complete elite health diagnostics
+Diabetic & Thyroid,699,1299,Both,FBS|PPBS|HbA1c|Thyroid Profile (T3/T4/TSH)|CBC,Essential screening for diabetes and thyroid
+Women's Health Basic,799,1499,Female,CBC|Thyroid Profile|HbA1c|Iron Profile|Vitamin D|Urine Complete,Comprehensive women's health panel
+Men's Health Basic,799,1499,Male,CBC|Lipid Profile|KFT|Uric Acid|PSA|FBS,Essential men's health screening

@@ -34,9 +34,16 @@
         <span class="icon">&#128221;</span> Enquiries
         <span id="enquiryBadge" style="background:#dc2626;color:#fff;font-size:.65rem;font-weight:800;padding:.1rem .45rem;border-radius:100px;margin-left:auto"></span>
       </a></li>
+      <li><a href="#" data-page="billing" id="nav-billing">
+        <span class="icon">💳</span> Billing
+        <span id="missingReportsBadge" style="background:#f59e0b;color:#fff;font-size:.65rem;font-weight:800;padding:.1rem .45rem;border-radius:100px;margin-left:auto;display:none"></span>
+      </a></li>
       <li class="sidebar-section-label">Tools</li>
       <li><a href="#" data-page="parser" id="nav-parser">
         <span class="icon">🔬</span> OCR Parser
+      </a></li>
+      <li><a href="#" data-page="settings" id="nav-settings">
+        <span class="icon">⚙️</span> Settings
       </a></li>
     </ul>
     <div class="sidebar-footer">
@@ -316,33 +323,41 @@
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
           <div>
             <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#128221; Customer Enquiries</h2>
-            <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Submitted from the website contact form</p>
+            <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">All enquiries — Open, Converted, or Rejected</p>
           </div>
           <div style="display:flex;gap:.75rem">
             <button class="btn btn-ghost" id="clearEnquiriesBtn" style="font-size:.85rem">&#128465; Clear All</button>
             <button class="btn btn-primary" id="exportEnquiriesBtn" style="font-size:.85rem">&#8595; Export CSV</button>
           </div>
         </div>
-
         <!-- Stats row -->
         <div style="display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap">
-          <div class="stat-card" style="min-width:140px">
+          <div class="stat-card" style="min-width:120px">
             <div class="stat-card-icon">&#128221;</div>
-            <div class="stat-card-label">Total Enquiries</div>
+            <div class="stat-card-label">Total</div>
             <div class="stat-card-value" id="enqTotal">0</div>
           </div>
-          <div class="stat-card" style="min-width:140px">
+          <div class="stat-card" style="min-width:120px">
             <div class="stat-card-icon">&#128308;</div>
-            <div class="stat-card-label">New (Unread)</div>
-            <div class="stat-card-value" id="enqNew" style="color:#dc2626">0</div>
+            <div class="stat-card-label">Open</div>
+            <div class="stat-card-value" id="enqNew" style="color:#2563eb">0</div>
           </div>
-          <div class="stat-card" style="min-width:140px">
+          <div class="stat-card" style="min-width:120px">
             <div class="stat-card-icon">&#128202;</div>
             <div class="stat-card-label">Today</div>
             <div class="stat-card-value" id="enqToday">0</div>
           </div>
+          <div class="stat-card" style="min-width:120px">
+            <div class="stat-card-icon">&#10003;</div>
+            <div class="stat-card-label">Billed</div>
+            <div class="stat-card-value" id="enqBilled" style="color:#047857">0</div>
+          </div>
+          <div class="stat-card" style="min-width:120px">
+            <div class="stat-card-icon">&#10060;</div>
+            <div class="stat-card-label">Rejected</div>
+            <div class="stat-card-value" id="enqRejected" style="color:#dc2626">0</div>
+          </div>
         </div>
-
         <!-- Table -->
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden">
           <table class="data-table" style="width:100%">
@@ -353,13 +368,200 @@
                 <th>Phone</th>
                 <th>Date &amp; Time</th>
                 <th>Status</th>
+                <th>Reason / Invoice</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody id="enquiriesTableBody">
-              <tr><td colspan="6" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet. They will appear here when customers submit the form.</td></tr>
+              <tr><td colspan="7" style="text-align:center;padding:3rem;color:var(--text-muted)">No enquiries yet.</td></tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: BILLING ═══════════════════════════════ -->
+      <div class="page" id="page-billing">
+        <!-- Top bar with History button -->
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem">
+          <div>
+            <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#128179; Billing</h2>
+            <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Generate invoices &amp; collect payments for Sri Neevi</p>
+          </div>
+          <button class="btn btn-accent" id="openHistoryBtn" style="gap:.5rem">&#128203; Invoice History</button>
+        </div>
+        <!-- Missing reports banner -->
+        <div class="missing-reports-banner hidden" id="missingReportsBanner" onclick="openHistoryDrawer(true)">
+          <div class="icon">&#9888;&#65039;</div>
+          <div class="count" id="missingReportsCount">0</div>
+          <div class="text">
+            <strong>Reports Not Yet Uploaded</strong>
+            <span>Click to view invoices with missing lab reports</span>
+          </div>
+          <div style="margin-left:auto"><button class="btn btn-sm" style="background:rgba(245,158,11,.2);color:#92400e;border:1px solid rgba(245,158,11,.4)">View All</button></div>
+        </div>
+        <!-- Billing layout -->
+        <div class="billing-layout">
+          <!-- LEFT: Entry Form -->
+          <div class="billing-form-card">
+            <h3>&#128203; New Billing Entry</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Client Name *</label>
+                <input type="text" class="form-input" id="bName" placeholder="Full name"/>
+              </div>
+              <div class="form-group">
+                <label>Age</label>
+                <input type="number" class="form-input" id="bAge" placeholder="e.g. 45" min="1" max="120"/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Gender</label>
+                <select class="form-input" id="bGender">
+                  <option value="">Select</option>
+                  <option value="M">Male</option>
+                  <option value="F">Female</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Location / City</label>
+                <input type="text" class="form-input" id="bLocation" placeholder="e.g. Chennai"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <input type="text" class="form-input" id="bAddress" placeholder="Full address"/>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" class="form-input" id="bPhone" placeholder="10-digit mobile"/>
+              </div>
+              <div class="form-group">
+                <label>Alternate Phone</label>
+                <input type="tel" class="form-input" id="bAltPhone" placeholder="Optional"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email (for invoice)</label>
+              <input type="email" class="form-input" id="bEmail" placeholder="client@email.com (optional)"/>
+            </div>
+            <!-- Test type selection -->
+            <div class="form-group">
+              <label>Test Type *</label>
+              <div class="test-type-radios">
+                <label class="test-type-radio">
+                  <input type="radio" name="bTestType" value="package" id="bTypePackage" checked onchange="onTestTypeChange()"/>
+                  &#128230; Package
+                </label>
+                <label class="test-type-radio">
+                  <input type="radio" name="bTestType" value="individual" id="bTypeIndividual" onchange="onTestTypeChange()"/>
+                  &#128203; Individual Test
+                </label>
+              </div>
+            </div>
+            <div class="form-group" id="bPackageGroup">
+              <label>Select Package</label>
+              <select class="form-input" id="bPackageSelect" onchange="updateBillingAmount()">
+                <option value="">— Choose a package —</option>
+              </select>
+            </div>
+            <div class="form-group" id="bIndividualGroup" style="display:none">
+              <label>Select Test</label>
+              <select class="form-input" id="bTestSelect" onchange="updateBillingAmount()">
+                <option value="">— Choose a test —</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Discount (&#8377;)</label>
+              <input type="number" class="form-input" id="bDiscount" placeholder="0" min="0" value="0" oninput="updateBillingAmount()"/>
+            </div>
+            <div style="margin-top:1rem">
+              <button class="btn btn-primary" style="width:100%;padding:.8rem;font-size:1rem" id="generateInvoiceBtn">&#128203; Confirm Payment &amp; Generate Invoice</button>
+            </div>
+          </div>
+          <!-- RIGHT: Amount + QR -->
+          <div class="billing-right-panel">
+            <!-- Amount display -->
+            <div class="amount-display-card">
+              <div class="amount-display-label">Amount to Pay</div>
+              <div class="amount-display-value" id="billingAmountDisplay">&#8377;0</div>
+              <div class="amount-display-name" id="billingTestNameDisplay">Select a test or package</div>
+            </div>
+            <!-- QR Panel -->
+            <div class="qr-panel">
+              <h4>&#128242; UPI Payment</h4>
+              <div id="qrCodeContainer"></div>
+              <div class="qr-upi-id" id="qrUpiDisplay">srineevi@upi</div>
+              <div class="qr-instructions">Scan with any UPI app &bull; PhonePe, GPay, Paytm</div>
+            </div>
+            <!-- Payment confirmation note -->
+            <div style="background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.2);border-radius:var(--radius-lg);padding:1.25rem;font-size:.82rem;color:var(--text-secondary)">
+              <strong style="color:var(--success);display:block;margin-bottom:.4rem">&#9432; Manual Payment Verification</strong>
+              Verify the payment receipt before clicking &ldquo;Generate Invoice&rdquo;. Once generated, the invoice is saved and an email notification is sent.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════ PAGE: SETTINGS ═══════════════════════════════ -->
+      <div class="page" id="page-settings">
+        <div style="margin-bottom:1.5rem">
+          <h2 style="font-size:1.3rem;font-weight:800;margin:0">&#9881;&#65039; Settings</h2>
+          <p style="color:var(--text-muted);font-size:.85rem;margin:.25rem 0 0">Configure lab identity, payment methods &amp; email notifications</p>
+        </div>
+
+        <!-- Subtab Nav -->
+        <div class="settings-tab-nav">
+          <button class="settings-tab-btn active" id="stab-account" onclick="switchSettingsTab('account')">&#127973; Account</button>
+          <button class="settings-tab-btn" id="stab-payment" onclick="switchSettingsTab('payment')">&#128179; Payment</button>
+        </div>
+
+        <!-- ── TAB: ACCOUNT ── -->
+        <div class="settings-tab-content active" id="stab-content-account">
+          <div class="settings-section">
+            <h3>&#127973; Lab Information</h3>
+            <div class="settings-grid">
+              <div class="form-group"><label>Lab Name</label><input type="text" class="form-input" id="sLabName" placeholder="Sri Neevi Diagnostics"/></div>
+              <div class="form-group"><label>Tagline</label><input type="text" class="form-input" id="sTagline" placeholder="Your Health, Our Priority"/></div>
+              <div class="form-group"><label>Phone</label><input type="tel" class="form-input" id="sPhone" placeholder="1800 570 8888"/></div>
+              <div class="form-group"><label>Email</label><input type="email" class="form-input" id="sEmail" placeholder="lab@email.com"/></div>
+              <div class="form-group" style="grid-column:1/-1"><label>Full Address</label><input type="text" class="form-input" id="sAddress" placeholder="No.12, Hospital Road, Chennai, Tamil Nadu"/></div>
+            </div>
+          </div>
+          <div class="settings-section">
+            <h3>&#128140; Email Notifications (EmailJS)</h3>
+            <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Create a free account at <a href="https://emailjs.com" target="_blank" style="color:var(--primary)">emailjs.com</a>, connect your Gmail, then paste the keys below to send automated invoice &amp; report emails.</p>
+            <div class="settings-grid">
+              <div class="form-group"><label>Public Key</label><input type="text" class="form-input" id="sEmailPublicKey" placeholder="user_XXXXXXXX"/></div>
+              <div class="form-group"><label>Service ID</label><input type="text" class="form-input" id="sEmailServiceId" placeholder="service_XXXXXXXX"/></div>
+              <div class="form-group"><label>Invoice Template ID</label><input type="text" class="form-input" id="sEmailTemplateInvoice" placeholder="template_XXXXXXXX"/></div>
+              <div class="form-group"><label>Report Ready Template ID</label><input type="text" class="form-input" id="sEmailTemplateReport" placeholder="template_XXXXXXXX"/></div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="padding:.75rem 2.5rem;font-size:1rem" onclick="saveAccountSettings()">&#128190; Save Account Settings</button>
+        </div>
+
+        <!-- ── TAB: PAYMENT ── -->
+        <div class="settings-tab-content" id="stab-content-payment">
+          <div class="settings-section">
+            <h3>&#128241; UPI Configuration</h3>
+            <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1rem">Used as fallback auto-generated QR on the billing page if no QR image is uploaded.</p>
+            <div class="settings-grid">
+              <div class="form-group"><label>UPI ID</label><input type="text" class="form-input" id="sUpiId" placeholder="srineevi@upi"/></div>
+              <div class="form-group"><label>Payee Name</label><input type="text" class="form-input" id="sPayeeName" placeholder="Sri Neevi Diagnostics"/></div>
+            </div>
+          </div>
+          <div class="settings-section">
+            <h3>&#128247; Payment QR Codes</h3>
+            <p style="font-size:.82rem;color:var(--text-muted);margin-bottom:1.25rem">
+              Upload your actual UPI QR code images. The <strong style="color:var(--primary)">Primary QR</strong> is displayed to patients on the billing page.
+              Add backup QRs (e.g., different UPI apps like PhonePe, GPay, Paytm) so you can switch instantly if one fails.
+            </p>
+            <div id="qrCodesManager" style="display:flex;flex-direction:column;gap:1rem;min-height:60px"></div>
+            <button class="btn btn-ghost" style="margin-top:1.25rem;gap:.5rem" onclick="addQRSlot()">&#43; Add QR Code</button>
+          </div>
+          <button class="btn btn-primary" style="padding:.75rem 2.5rem;font-size:1rem" onclick="savePaymentSettings()">&#128190; Save Payment Settings</button>
         </div>
       </div>
 
@@ -466,9 +668,62 @@
 <!-- TOAST CONTAINER -->
 <div class="toast-container" id="toastContainer"></div>
 
+<!-- HISTORY DRAWER OVERLAY + DRAWER -->
+<div class="history-drawer-overlay" id="historyDrawerOverlay" onclick="closeHistoryDrawer()"></div>
+<div class="history-drawer" id="historyDrawer">
+  <div class="history-drawer-header">
+    <h3>&#128203; Invoice History</h3>
+    <button class="close-btn" onclick="closeHistoryDrawer()">✕</button>
+  </div>
+  <div class="history-drawer-search">
+    <input type="text" id="historySearch" placeholder="&#128269; Search invoice #, name, phone..." oninput="renderHistoryDrawer()"/>
+  </div>
+  <div style="padding:.5rem 1.5rem;border-bottom:1px solid var(--border);display:flex;gap:.5rem;flex-wrap:wrap">
+    <button class="btn btn-sm btn-ghost" id="histFilterAll" onclick="setHistFilter('all')" style="font-size:.72rem">All</button>
+    <button class="btn btn-sm btn-ghost" id="histFilterMissing" onclick="setHistFilter('missing')" style="font-size:.72rem">&#9888; Missing Reports</button>
+  </div>
+  <div class="history-drawer-body" id="historyDrawerBody">
+    <div style="text-align:center;color:var(--text-muted);padding:3rem">No invoices yet.</div>
+  </div>
+</div>
+
+<!-- INVOICE PREVIEW MODAL -->
+<div class="invoice-modal-overlay" id="invoiceModalOverlay">
+  <div class="invoice-modal-box">
+    <div class="invoice-modal-actions no-print">
+      <button class="btn btn-ghost" onclick="closeInvoiceModal()">✕ Close</button>
+      <button class="btn btn-success" onclick="downloadInvoicePDF()">&#8595; Download PDF</button>
+      <button class="btn btn-primary" onclick="window.print()">&#128438; Print Invoice</button>
+    </div>
+    <div id="invoicePrintArea"></div>
+  </div>
+</div>
+
+<!-- REJECT REASON MODAL -->
+<div class="modal-overlay reject-reason-modal" id="rejectModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>&#10060; Reject Enquiry</h3>
+      <button class="close-btn" onclick="closeRejectModal()">✕</button>
+    </div>
+    <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:1.25rem">Please provide a mandatory reason for rejection. This will be recorded against the enquiry.</p>
+    <div class="form-group">
+      <label>Rejection Reason *</label>
+      <textarea class="form-input" id="rejectReasonInput" rows="4" placeholder="e.g. Test not available, Patient cancelled, Out of service area..."></textarea>
+    </div>
+    <input type="hidden" id="rejectEnqIndex"/>
+    <div style="display:flex;gap:.75rem;margin-top:.5rem">
+      <button class="btn btn-danger" style="flex:1" onclick="confirmRejectEnquiry()">&#10060; Confirm Rejection</button>
+      <button class="btn btn-ghost" onclick="closeRejectModal()">Cancel</button>
+    </div>
+  </div>
+</div>
 
 <script src="translations.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="billing.js"></script>
 <script src="admin.js"></script>
 </body>
 </html>
