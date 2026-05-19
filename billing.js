@@ -167,10 +167,17 @@ window._swapToQR = function(qrId) {
 // ══════════════════════════════════════════
 function setupBillingPage() {
   populateBillingDropdowns();
+  populateLocationDatalist();
   refreshQR();
   updateMissingReportsBadge();
   document.getElementById('generateInvoiceBtn').addEventListener('click', generateInvoice);
   document.getElementById('openHistoryBtn').addEventListener('click', () => openHistoryDrawer(false));
+}
+
+function populateLocationDatalist() {
+  const dl = document.getElementById('tnLocationsList');
+  if (!dl || typeof TN_LOCATIONS === 'undefined') return;
+  dl.innerHTML = TN_LOCATIONS.map(loc => `<option value="${loc}">`).join('');
 }
 
 function populateBillingDropdowns() {
